@@ -57,19 +57,19 @@ export const sidebarData = [
         id: 1,
         name: "Tip Tip Barsa Paani",
         subtitle: "Mohra",
-        image: "/public/song/Tip Tip Barsa Paani.png"
+        image: "/song/Tip Tip Barsa Paani.png"
       },
       {
         id: 2,
         name: "Chura Ke Dil Mera",
         subtitle: "Main Khiladi Tu Anari",
-        image: "/public/song/Chura Ke Dil Mera.png"
+        image: "/song/Chura Ke Dil Mera.png"
       },
       {
         id: 3,
         name: "Main Khiladi Tu Anari",
         subtitle: "Main Khiladi Tu Anari",
-        image: "/public/song/Main Khiladi Tu Anari.png"
+        image: "/song/Main Khiladi Tu Anari.png"
       }
     ]
   },
@@ -81,27 +81,27 @@ export const sidebarData = [
       {
         id: 1,
         
-        image: "/public/actor/1.png"
+        image: "/actor/1.png"
       },
       {
         id: 2,
    
-        image: "/public/actor/2.png"
+        image: "/actor/2.png"
       },
       {
         id: 3,
       
-        image: "/public/actor/3.png"
+        image: "/actor/3.png"
       },
         {
         id: 4,
       
-        image: "/public/actor/4.png"
+        image: "/actor/4.png"
       },
         {
         id: 5,
       
-        image: "/public/actor/1.png"
+        image: "/actor/1.png"
       }
     ]
   }
@@ -172,14 +172,14 @@ const watchData = {
   items: [
     {
       id: 1,
-      image: "/public/watch1.png",
+      image: "/watch1.png",
       title:
         "Akshay Kumar Says Success Changed His Career Track: 'Now I Can Choose Quality'",
       isVideo: true,
     },
     {
       id: 2,
-      image: "/public/watch2.png",
+      image: "/watch2.png",
       title:
         "Akshay Kumar Says Success Changed His Career Track: 'Now I Can Choose Quality'",
       isVideo: true,
@@ -194,14 +194,14 @@ const readData = {
   items: [
     {
       id: 1,
-      image: "/public/read1.png",
+      image: "/read1.png",
       source: "Source • 02-01-2026",
       title:
         "Akshay Kumar Says Success Changed His Career Track: 'Now I Can Choose Quality'",
     },
     {
       id: 2,
-      image: "/public/read2.png",
+      image: "/read2.png",
       source: "Source • 02-01-2026",
       title:
         "Akshay Kumar Says Success Changed His Career Track: 'Now I Can Choose Quality'",
@@ -335,7 +335,7 @@ const readData = {
         
           <div className="flex  gap-6 relative  rounded-2xl ">
             <img
-              src="/public/actor/profile.png"
+              src="/actor/profile.png"
               className="w-[209px] h-[314px] rounded-[8px] object-cover"
               alt=""
             />
@@ -558,7 +558,7 @@ const readData = {
                 <h3 className="flex gap-2 items-center berlin text-[#1E1E1E] text-[24px] text-[400]"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.5 6.06226L0 12.1244V7.82013e-05L10.5 6.06226Z" fill="#4285F4"/>
                 </svg>Relationships and family</h3>
-                <img src="/public/fam.png" alt="" className="py-4" />
+                <img src="/fam.png" alt="" className="py-4" />
                 <p className="mt-1 primary-font text-[16px] text-[#1E1E1E] font-[400]">During late 90s, Kumar was in a relationship with actress Raveena Tandon. Although they were engaged, they later parted ways.[301][302] Later from 1997 to 2000, Kumar was in a relationship with actress Shilpa Shetty.[303]</p>
                 <p className="mt-1 primary-font text-[16px] text-[#1E1E1E] font-[400]">
                 Kumar met actress Twinkle Khanna, the daughter of actors Rajesh Khanna and Dimple Kapadia, during a photo session for Filmfare magazine.[304] Kumar married Khanna on 17 January 2001. Together have a son (Aarav, born 2002) and a daughter (Nitara, born 2012).[305][306] He is known as a protective father and keeps his children away from the media. He stated that he wants to "give them a normal childhood."[307] Kumar often credits Khanna for his success.[308][309]</p>
