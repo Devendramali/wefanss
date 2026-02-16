@@ -44,9 +44,17 @@ h1,h2,h3,h4,h5{
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 49.88%, rgba(255, 255, 255, 0.4) 77.78%);
 
 }
+.celebrity-swiper .swiper-slide.swiper-slide-prev{
+  margin-left: -50px !important;
+  margin-right: 100px !important;
+}
 
 .celebrity-swiper .swiper-slide.swiper-slide-active{
   width: 428px !important;
+  /* scale: 2; */
+  transform: translateX(-100px) !important;
+  margin-right: -100px !important;
+  /* : 100px !important; */
 }
 .celebrity-swiper .swiper-slide.swiper-slide-active .group ,
 .celebrity-swiper .swiper-slide.swiper-slide-active .group img{
@@ -120,16 +128,25 @@ background: linear-gradient(266.11deg, rgba(0, 0, 0, 0.9) 45.25%, rgba(0, 0, 0, 
 
 
 /* **************************************** */
-.slider1 .img12{
-  height: 320px;
+.slider1 .swiper-slide {
+  transition: all 0.4s ease;
 }
-.slider1 .swiper-slide-active .img12{
+
+.slider1 .img12 {
+  height: 320px;
+  transition: all 0.4s ease;
+}
+
+/* THIRD visible slide biggest */
+.slider1 .swiper-slide-active + .swiper-slide + .swiper-slide .img12 {
   height: 550px;
 }
 
-.slider1  .swiper-wrapper{
+.slider1 .swiper-wrapper {
   align-items: flex-end;
 }
+
+
 
 @media (max-width:430px) {
   .celebrity-swiper .swiper-slide.swiper-slide-active{
@@ -152,4 +169,33 @@ background: #00000066;
 }
 .marquee-swiper .swiper-wrapper {
   transition-timing-function: linear !important;
+}
+.swiper-backface-hidden{
+ height: 100%;
+  /* background: red; */
+}
+.swiper-backface-hidden .swiper-button-prev ,
+.swiper-backface-hidden .swiper-button-next{
+  bottom: 17% !important;
+  height: 60px;
+  width: 60px;
+
+  top: auto !important  ;
+}
+.swiper-backface-hidden .swiper-button-prev ,
+.swiper-backface-hidden .swiper-button-next{
+  background: #FFFFFF40;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  
+}
+.swiper-backface-hidden .swiper-button-prev  svg,
+.swiper-backface-hidden .swiper-button-next svg{
+  height: 20px;
+  width: 20px;
+  color: #fff;
+}
+.swiper-backface-hidden .swiper-button-next{
+  left: 80px !important;
+  right: auto !important;
 }

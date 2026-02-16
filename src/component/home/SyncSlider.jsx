@@ -27,40 +27,43 @@ export default function SyncSlider() {
       link:""
      },
     { id: 2, img: "/celebrities/2.jpg" ,
-        title:"Trivia",
+        title:"abc",
       dis:"Jennifer Lopez's iconic green Versace dress from the 2000 Grammy Awards was so popular that it led to the creation of Google Images because people couldn't find photos of it online",
       link:""
     },
     { id: 3, img: "/celebrities/3.jpg",
-        title:"Trivia",
+        title:"def",
       dis:"Jennifer Lopez's iconic green Versace dress from the 2000 Grammy Awards was so popular that it led to the creation of Google Images because people couldn't find photos of it online",
       link:""
      },
-    { id: 4, img: "/celebrities/1.jpg",  title:"Trivia",
+    { id: 4, img: "/celebrities/1.jpg",  title:"xyz",
       dis:"Jennifer Lopez's iconic green Versace dress from the 2000 Grammy Awards was so popular that it led to the creation of Google Images because people couldn't find photos of it online",
       link:"" },
   ];
 
   return (
-    <div className="w-full  px-5 flex items-center justify-center bg-blue-500 py-16">
+    <div className="w-full   px-5 flex items-center justify-center bg-blue-500 py-16">
       <div className=" grid grid-cols-12 gap-8">
       {/* THUMB SLIDER (LEFT TO RIGHT LOOP) */}
         <div className="col-span-12 md:col-span-6">
           <Swiper
-            modules={[Thumbs]}
-            onSwiper={setThumbsSwiper}
-            slidesPerView={3}
-            spaceBetween={15}
-            watchSlidesProgress
-            slideToClickedSlide
-            loop={true}
-            centeredSlides={true}
-            initialSlide={0}
-            className="mt-6 slider1"
-          >
+  modules={[Thumbs, Autoplay]}
+  onSwiper={setThumbsSwiper}
+  slidesPerView={3}
+  spaceBetween={20}
+  loop={true}
+  speed={800}
+  autoplay={{
+    delay: 2500,
+    disableOnInteraction: false,
+    reverseDirection: true,   // 🔥 IMPORTANT LINE
+  }}
+  className="mt-6 slider1"
+>
+
             {slides.map((slide) => (
               <SwiperSlide key={slide.id}>
-                <div className="rounded-xl overflow-hidden cursor-pointer">
+                <div className="rounded-xl h-[550px] flex items-end overflow-hidden cursor-pointer">
                   <img
                     src={`${slide.img}?auto=format&fit=crop&w=300&q=80`}
                     className="w-full h-full object-cover img12"
@@ -84,7 +87,7 @@ export default function SyncSlider() {
               disableOnInteraction: false,
             }}
             navigation
-            pagination={{ clickable: true }}
+            // pagination={{ clickable: true }}
             thumbs={{ swiper: thumbsSwiper }}
             className=""
           >
@@ -99,8 +102,6 @@ export default function SyncSlider() {
             ))}
           </Swiper>
         </div>
-
-        
 
       </div>
     </div>

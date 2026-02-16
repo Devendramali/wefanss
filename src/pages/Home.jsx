@@ -15,7 +15,7 @@ const Home = () => {
       <Categories/>
       <TrendingCelebrities/>
       <RecentlyAddedProfiles/>
-      {/* <SyncSlider/> */}
+      <SyncSlider/>
       <ContinuousSlider/>
       <CtaSection/>
       <PopularPeople/>
