@@ -280,49 +280,49 @@ export default function AkshayProfile() {
   const grid = [
     {
       id: 1,
-      img: "/public/actor/ak1.png",
+      img: "/actor/ak1.png",
       disk: "Description",
       name:"Akshay Kumar"
     },
     {
       id: 2,
-      img: "/public/actor/ak2.png",
+      img: "/actor/ak2.png",
       disk: "Description",
       name:"Akshay Kumar"
     },
     {
       id: 3,
-      img: "/public/actor/ak3.png",
+      img: "/actor/ak3.png",
       disk: "Description",
       name:"Akshay Kumar"
     },
     {
       id: 4,
-      img: "/public/actor/ak4.png",
+      img: "/actor/ak4.png",
       disk: "Description",
       name:"Akshay Kumar"
     },
     {
       id: 5,
-      img: "/public/actor/ak5.png",
+      img: "/actor/ak5.png",
       disk: "Description",
       name:"Akshay Kumar"
     },
     {
       id: 6,
-      img: "/public/actor/ak6.png",
+      img: "/actor/ak6.png",
       disk: "Description",
       name:"Akshay Kumar"
     },
     {
       id: 7,
-      img: "/public/actor/ak7.png",
+      img: "/actor/ak7.png",
       disk: "Description",
       name:"Akshay Kumar"
     },
     {
       id: 8,
-      img: "/public/actor/ak8.png",
+      img: "/actor/ak8.png",
       disk: "Description",
       name:"Akshay Kumar"
     },
@@ -330,56 +330,56 @@ export default function AkshayProfile() {
   const media = [
   {
       id: 1,
-      img: "/public/actor/ak1.png",
+      img: "/actor/ak1.png",
       disk: "Description",
       name:"Akshay Kumar",
       type:"img"
     },
     {
       id: 2,
-      img: "/public/actor/ak2.png",
+      img: "/actor/ak2.png",
       disk: "Description",
       name:"Akshay Kumar",
       type:"img"
     },
     {
       id: 3,
-      img: "/public/actor/ak3.png",
+      img: "/actor/ak3.png",
       disk: "Description",
       name:"Akshay Kumar",
       type:"video"
     },
     {
       id: 4,
-      img: "/public/actor/ak4.png",
+      img: "/actor/ak4.png",
       disk: "Description",
       name:"Akshay Kumar",
       type:"img"
     },
     {
       id: 5,
-      img: "/public/actor/ak5.png",
+      img: "/actor/ak5.png",
       disk: "Description",
       name:"Akshay Kumar",
       type:"img"
     },
     {
       id: 6,
-      img: "/public/actor/ak6.png",
+      img: "/actor/ak6.png",
       disk: "Description",
       name:"Akshay Kumar",
       type:"video"
     },
     {
       id: 7,
-      img: "/public/actor/ak7.png",
+      img: "/actor/ak7.png",
       disk: "Description",
       name:"Akshay Kumar",
       type:"img"
     },
     {
       id: 8,
-      img: "/public/actor/ak8.png",
+      img: "/actor/ak8.png",
       disk: "Description",
       name:"Akshay Kumar",
       type:"img"
