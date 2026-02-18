@@ -5,21 +5,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import ImageContent from "./ImageContent";
-import FilmSongContent from "./FilmSongContent";
-import ProfileContent from "./ProfileContent";
-import Subheading from "../Subheading";
-import MediaContent from "./MediaContent";
-import NewsContent from "./NewsContent";
-import Podcast from "./Podcast";
-import ActorTabs from "./ActorTabs";
+import ImageContent from "../component/profile/ImageContent";
+import FilmSongContent from "../component/profile/FilmSongContent";
+import ProfileContent from "../component/profile/ProfileContent";
+import Subheading from "../component/Subheading";
+import MediaContent from "../component/profile/MediaContent";
+import NewsContent from "../component/profile/NewsContent";
+import Podcast from "../component/profile/Podcast";
+import ActorTabs from "../component/profile/ActorTabs";
 // import { ChevronDown } from "lucide-react";
 
 export const sidebarData = [
   {
     id: 1,
     type: "profile",
-    title: "Akshay Kumar",
+    title: "Jaya Bachchan",
     sections: [
       "Biography",
       "Timeline",
@@ -41,21 +41,21 @@ export const sidebarData = [
     items: [
       {
         id: 1,
-        name: "Sooryavanshi",
+        name: "Kabhi Khushi Kabhie Gham",
         subtitle: "2021",
-        image: "/movies/Sooryavanshi.png"
+        image: "/movies/Kabhi Khushi Kabhie Gham.png"
       },
       {
         id: 2,
-        name: "Rowdy Rathore",
+        name: "Chupke Chupke",
         subtitle: "2012",
-        image: "/movies/Rowdy Rathore.png"
+        image: "/movies/Chupke Chupke.png"
       },
       {
         id: 3,
-        name: "Singh is King",
+        name: "Baghban",
         subtitle: "2008",
-        image: "/movies/Singh is Kinng.png"
+        image: "/movies/Baghban.png"
       }
     ]
   },
@@ -86,37 +86,102 @@ export const sidebarData = [
     ]
   },
   {
-    id: 4,
-    type: "images",
-    title: "Images",
+     id: 4,
+  title: "Initiatives",
+  type: "Initiatives",
+  items: [
+    {
+      id: 1,
+      title:
+        "Jaya Bachchan Advocates for Gender Equality in Local Governance",
+      dis: "Enhancing Women's Representation through Grassroots Initiatives"
+    },
+    {
+      id: 2,
+      title:
+        "Jaya Bachchan's Campaign for Cultural Preservation in Rural Areas",
+      dis: "Jaya Bachchan's Push for Sustainable Development in the Arts"
+    },
+  ],
+  },
+    {
+     id: 5,
+  title: "Development Work",
+  type: "Initiatives",
+  items: [
+    {
+      id: 1,
+      title:
+        "Jaya Bachchan Advocates for Enhanced Healthcare Services in Thane with New Hospital Initiative.",
+    },
+    {
+      id: 2,
+      title:
+        "Ravi Kumar Launches Eco-Friendly Initiative to Reduce Plastic Waste in Mumbai.",
+    },
+       {
+      id: 3,
+      title:
+        "Sita Verma Proposes Innovative Education Programs for Underprivileged Children in Pune.",
+    },
+  ],
+  },
+  {
+     id: 6,
+      title: "Social Work",
+      type: "Initiatives",
+      items: [
+        {
+          id: 1,
+          title:
+            "Eknath Shinde Initiates Skill Development Programs for Youth Empowerment",
+        },
+        {
+          id: 2,
+          title:
+            "Eknath Shinde Reveals Strategy for Enhancing Digital Connectivity in Rural Areas.",
+        },
+          
+      ],
+      },
+        {
+    id: 7,
+    type: "profile",
+    title: "References",
+    sections: [
+      "Biography",
+      "Timeline",
+      "Films",
+      "Career Entry",
+      "Family",
+      "FilmFare Awards",
+      "Trivia",
+      "Songs",
+      "Wife",
+      "Brands"
+    ]
+  },
+  {
+    id: 2,
+    type: "topFilms",
+    title: "Related Personalities",
     items: [
       {
         id: 1,
-
-        image: "/actor/1.png"
+        name: "Kabhi Khushi Kabhie Gham",
+        subtitle: "Chief Minister of Maharashtra",
+        image: "/actor/cm.png"
       },
       {
         id: 2,
-
-        image: "/actor/2.png"
+        name: "Nitesh Rane",
+        subtitle: "Cabinet minister in Government of Maharashtra",
+        image: "/actor/nitesh.png"
       },
-      {
-        id: 3,
-
-        image: "/actor/3.png"
-      },
-      {
-        id: 4,
-
-        image: "/actor/4.png"
-      },
-      {
-        id: 5,
-
-        image: "/actor/1.png"
-      }
+    
     ]
-  }
+  },
+ 
 
 ];
 
@@ -128,7 +193,7 @@ const profileData = [
     items: [
       { label: "Born", value: "9 September 1967 (age 58), Delhi, India" },
       { label: "Died", value: "9 September 1967 (age 58), Delhi, India" },
-      { label: "Occupations", value: "Actor, Producer" },
+      { label: "Occupations", value: "Actress, Politician" },
       { label: "Citizenship", value: "Indian (until 2011), Canadian (2011–2023)" },
       { label: "subtitles Active", value: "1991 – Present" },
       { label: "Spouse", value: "Twinkle Khanna (m. 2001)" },
@@ -146,8 +211,8 @@ const ActorData = {
   id: 1,
   title: "Personal Details",
   type: "personalDetails",
-  Name: "Akshay Kumar",
-  Roles: ["Producer", " Writer", " Actor"],
+  Name: "Jaya Bachchan",
+  Roles: ["Actress", " Politician"],
   Rank: "22",
   Languages: ["English", "Marathi"],
   BirthDate: "9 September 1967",
@@ -155,7 +220,6 @@ const ActorData = {
 
 
 };
-
 const watchData = {
   id: 1,
   title: "Watch",
@@ -200,6 +264,73 @@ const readData = {
   ],
 };
 
+const MediaInterviewsPress = {
+  id: 1,
+  title: "Media Interviews & Press",
+  type: "watch",
+  items: [
+    {
+      id: 1,
+      image: "/jay1.png",
+      title:
+        "Jaya Bachchan Launches Initiative to Support Local Artisans in Mumbai",
+        source: "Source • 02-01-2026",
+      isVideo: true,
+    },
+    {
+      id: 2,
+      image: "/jay2.png",
+      title:
+        "Jaya Bachchan Says Success Changed His Career Track: 'Now I Can Choose Quality'",
+        source: "Source • 02-01-2026",
+      isVideo: true,
+    },
+  ],
+  seeMore: true,
+};
+const Speeches = {
+  id: 3,
+  title: "Speeches ",
+  type: "read",
+  items: [
+    {
+      id: 1,
+      image: "/jay3.png",
+      source: "Source • 02-01-2026",
+      title:
+        "Jaya Bachchan Says Success Changed His Career Track: 'Now I Can Choose Quality'",
+    },
+    {
+      id: 2,
+      image: "/jay4.png",
+      source: "Source • 02-01-2026",
+      title:
+        "Jaya Bachchan Says Success Changed His Career Track: 'Now I Can Choose Quality'",
+    },
+  ],
+};
+const controversiesData = {
+  id: 3,
+  title: "Read",
+  type: "read",
+  items: [
+    {
+      id: 1,
+      source: "Source • 02-01-2026",
+      title:
+        "Eknath Shinde Faces Criticism Over Land Allocation Policies",
+      dis: "Shinde's Land Policy Sparks Debate: Transparency and Fairness Questioned"
+    },
+    {
+      id: 2,
+      image: "/read2.png",
+      source: "Source • 02-01-2026",
+      title:
+        "Eknath Shinde Faces Criticism Over Land Allocation Policies",
+      dis: "Shinde's Land Policy Sparks Debate: Transparency and Fairness Questioned"
+    },
+  ],
+};
 const PublicCampaignsData = {
   id: 3,
   title: "Read",
@@ -248,49 +379,49 @@ const grid = [
     id: 1,
     img: "/actor/ak1.png",
     disk: "Description",
-    name: "Akshay Kumar"
+    name: "Jaya Bachchan"
   },
   {
     id: 2,
     img: "/actor/ak2.png",
     disk: "Description",
-    name: "Akshay Kumar"
+    name: "Jaya Bachchan"
   },
   {
     id: 3,
     img: "/actor/ak3.png",
     disk: "Description",
-    name: "Akshay Kumar"
+    name: "Jaya Bachchan"
   },
   {
     id: 4,
     img: "/actor/ak4.png",
     disk: "Description",
-    name: "Akshay Kumar"
+    name: "Jaya Bachchan"
   },
   {
     id: 5,
     img: "/actor/ak5.png",
     disk: "Description",
-    name: "Akshay Kumar"
+    name: "Jaya Bachchan"
   },
   {
     id: 6,
     img: "/actor/ak6.png",
     disk: "Description",
-    name: "Akshay Kumar"
+    name: "Jaya Bachchan"
   },
   {
     id: 7,
     img: "/actor/ak7.png",
     disk: "Description",
-    name: "Akshay Kumar"
+    name: "Jaya Bachchan"
   },
   {
     id: 8,
     img: "/actor/ak8.png",
     disk: "Description",
-    name: "Akshay Kumar"
+    name: "Jaya Bachchan"
   },
 ]
 const media = [
@@ -298,63 +429,63 @@ const media = [
     id: 1,
     img: "/actor/ak1.png",
     disk: "Description",
-    name: "Akshay Kumar",
+    name: "Jaya Bachchan",
     type: "img"
   },
   {
     id: 2,
     img: "/actor/ak2.png",
     disk: "Description",
-    name: "Akshay Kumar",
+    name: "Jaya Bachchan",
     type: "img"
   },
   {
     id: 3,
     img: "/actor/ak3.png",
     disk: "Description",
-    name: "Akshay Kumar",
+    name: "Jaya Bachchan",
     type: "video"
   },
   {
     id: 4,
     img: "/actor/ak4.png",
     disk: "Description",
-    name: "Akshay Kumar",
+    name: "Jaya Bachchan",
     type: "img"
   },
   {
     id: 5,
     img: "/actor/ak5.png",
     disk: "Description",
-    name: "Akshay Kumar",
+    name: "Jaya Bachchan",
     type: "img"
   },
   {
     id: 6,
     img: "/actor/ak6.png",
     disk: "Description",
-    name: "Akshay Kumar",
+    name: "Jaya Bachchan",
     type: "video"
   },
   {
     id: 7,
     img: "/actor/ak7.png",
     disk: "Description",
-    name: "Akshay Kumar",
+    name: "Jaya Bachchan",
     type: "img"
   },
   {
     id: 8,
     img: "/actor/ak8.png",
     disk: "Description",
-    name: "Akshay Kumar",
+    name: "Jaya Bachchan",
     type: "img"
   },
 ];
 
 
 
-export default function AkshayProfile() {
+export default function JayaBachhan() {
   const [openIndexes, setOpenIndexes] = useState(
     sidebarData.map((_, index) => index) // all open by default
   );
@@ -386,7 +517,7 @@ export default function AkshayProfile() {
         <div className="col-span-12 p-4 md:hidden block">
           <div className="flex  gap-6 relative  rounded-2xl ">
             <img
-              src="/actor/profile.png"
+              src="/actor/Jaya Bachchan.png"
               className="w-[124px] h-[186px] rounded-[8px] object-cover"
               alt=""
             />
@@ -443,7 +574,7 @@ export default function AkshayProfile() {
             </Link> */}
           </div>
           <div className="mt-3">
-            <p className="line-clamp-4 text-[16px] primary-font text-[#fff]">Akshay Kumar (born September 9, 1967, Amritsar, Punjab, India) is an Indian actor and producer, chiefly known for his work in Bollywood comedies and action films. Kumar, whose career spans more than three decades, has starred in more than 100 films more    and is one of the most popular Bollywood actors in India. He was awarded the Padma Shri, one of the highest Indian civilian honors, in 2009.</p>
+            <p className="line-clamp-4 text-[16px] primary-font text-[#fff]">Jaya Bachchan (born September 9, 1967, Amritsar, Punjab, India) is an Indian actor and producer, chiefly known for his work in Bollywood comedies and action films. Kumar, whose career spans more than three decades, has starred in more than 100 films more    and is one of the most popular Bollywood actors in India. He was awarded the Padma Shri, one of the highest Indian civilian honors, in 2009.</p>
           </div>
         </div>
 
@@ -499,6 +630,13 @@ export default function AkshayProfile() {
                     {section.type === "images" && (
                       <ImageContent items={section.items} />
                     )}
+                    {
+                      section.type === "Initiatives" && (
+                       
+                          <NewsContent item={section.items}/>
+                       
+                      )
+                    }
 
 
 
@@ -535,7 +673,7 @@ export default function AkshayProfile() {
 
           <div className="md:flex hidden  gap-6 relative  rounded-2xl ">
             <img
-              src="/actor/profile.png"
+              src="/actor/Jaya Bachchan.png"
               className="w-[209px] h-[314px] rounded-[8px] object-cover"
               alt=""
             />
@@ -581,7 +719,7 @@ export default function AkshayProfile() {
                 {/* <Bookmark /> */}
               </div>
               <div>
-                <p className="line-clamp-4 text-[16px] primary-font text-[#fff]">Akshay Kumar (born September 9, 1967, Amritsar, Punjab, India) is an Indian actor and producer, chiefly known for his work in Bollywood comedies and action films. Kumar, whose career spans more than three decades, has starred in more than 100 films more    and is one of the most popular Bollywood actors in India. He was awarded the Padma Shri, one of the highest Indian civilian honors, in 2009.</p>
+                <p className="line-clamp-4 text-[16px] primary-font text-[#fff]">Jaya Bachchan (born September 9, 1967, Amritsar, Punjab, India) is an Indian actor and producer, chiefly known for his work in Bollywood comedies and action films. Kumar, whose career spans more than three decades, has starred in more than 100 films more    and is one of the most popular Bollywood actors in India. He was awarded the Padma Shri, one of the highest Indian civilian honors, in 2009.</p>
               </div>
 
             </div>
@@ -612,7 +750,7 @@ export default function AkshayProfile() {
             <div className="filter">
               <div className=" mt-4  Biography">
                 <h3 className="berlin text-[20px] font-[400] text-[#1E1E1E]">Early Life</h3>
-                <p className="text-[14px] font-[400] primary-font mt-3 leading-relaxed">Rajiv Hari "Akshay Kumar" Om Bhatia was born on September 09, 1967, in Amritsar, Punjab to Aruna Bhatia and Hari Om Bhatia. He is an Indian actor, film producer, former model, and television personality. He went to Bangkok to learn how to use a sword and also worked as a waiter in a restaurant. He studied martial arts in Hong Kong. It was a student who that he should try modeling. Because of his success as model, he was offered films. Along with his good looks and excellent martial art skills, he was always</p>
+                <p className="text-[14px] font-[400] primary-font mt-3 leading-relaxed">Rajiv Hari "Jaya Bachchan" Om Bhatia was born on September 09, 1967, in Amritsar, Punjab to Aruna Bhatia and Hari Om Bhatia. He is an Indian actor, film producer, former model, and television personality. He went to Bangkok to learn how to use a sword and also worked as a waiter in a restaurant. He studied martial arts in Hong Kong. It was a student who that he should try modeling. Because of his success as model, he was offered films. Along with his good looks and excellent martial art skills, he was always</p>
                 <hr className="my-4 text-[#4285F429]" />
                 <h3 className="berlin text-[20px] font-[400] text-[#1E1E1E]">Education</h3>
                 <p className="text-[14px] font-[400] primary-font mt-3 leading-relaxed">He received his school education from Don Bosco High School in Matunga,[25] simultaneously learning Karate. He enrolled in the Guru Nanak Khalsa College of Arts, Science & Commerce of the University of Mumbai for higher education, but dropped out as he was not interested in studies. He requested his father to send him to Thailand to further learn martial arts. Kumar lived in Bangkok for five subtitles, learning Thai Boxing.[22][26] He also has a sister....</p>
@@ -625,7 +763,7 @@ export default function AkshayProfile() {
               </div>
               <div className=" mt-4  Timeline">
                 <h3 className="berlin text-[20px] font-[400] text-[#1E1E1E]">Early Life</h3>
-                <p className="text-[14px] font-[400] primary-font mt-3 leading-relaxed">Rajiv Hari "Akshay Kumar" Om Bhatia was born on September 09, 1967, in Amritsar, Punjab to Aruna Bhatia and Hari Om Bhatia. He is an Indian actor, film producer, former model, and television personality. He went to Bangkok to learn how to use a sword and also worked as a waiter in a restaurant. He studied martial arts in Hong Kong. It was a student who that he should try modeling. Because of his success as model, he was offered films. Along with his good looks and excellent martial art skills, he was always</p>
+                <p className="text-[14px] font-[400] primary-font mt-3 leading-relaxed">Rajiv Hari "Jaya Bachchan" Om Bhatia was born on September 09, 1967, in Amritsar, Punjab to Aruna Bhatia and Hari Om Bhatia. He is an Indian actor, film producer, former model, and television personality. He went to Bangkok to learn how to use a sword and also worked as a waiter in a restaurant. He studied martial arts in Hong Kong. It was a student who that he should try modeling. Because of his success as model, he was offered films. Along with his good looks and excellent martial art skills, he was always</p>
                 <hr className="my-4 text-[#4285F429]" />
                 <h3 className="berlin text-[20px] font-[400] text-[#1E1E1E]">Education</h3>
                 <p className="text-[14px] font-[400] primary-font mt-3 leading-relaxed">He received his school education from Don Bosco High School in Matunga,[25] simultaneously learning Karate. He enrolled in the Guru Nanak Khalsa College of Arts, Science & Commerce of the University of Mumbai for higher education, but dropped out as he was not interested in studies. He requested his father to send him to Thailand to further learn martial arts. Kumar lived in Bangkok for five subtitles, learning Thai Boxing.[22][26] He also has a sister....</p>
@@ -638,7 +776,7 @@ export default function AkshayProfile() {
               </div>
               <div className=" mt-4  Trivia">
                 <h3 className="berlin text-[20px] font-[400] text-[#1E1E1E]">Early Life</h3>
-                <p className="text-[14px] font-[400] primary-font mt-3 leading-relaxed">Rajiv Hari "Akshay Kumar" Om Bhatia was born on September 09, 1967, in Amritsar, Punjab to Aruna Bhatia and Hari Om Bhatia. He is an Indian actor, film producer, former model, and television personality. He went to Bangkok to learn how to use a sword and also worked as a waiter in a restaurant. He studied martial arts in Hong Kong. It was a student who that he should try modeling. Because of his success as model, he was offered films. Along with his good looks and excellent martial art skills, he was always</p>
+                <p className="text-[14px] font-[400] primary-font mt-3 leading-relaxed">Rajiv Hari "Jaya Bachchan" Om Bhatia was born on September 09, 1967, in Amritsar, Punjab to Aruna Bhatia and Hari Om Bhatia. He is an Indian actor, film producer, former model, and television personality. He went to Bangkok to learn how to use a sword and also worked as a waiter in a restaurant. He studied martial arts in Hong Kong. It was a student who that he should try modeling. Because of his success as model, he was offered films. Along with his good looks and excellent martial art skills, he was always</p>
                 <hr className="my-4 text-[#4285F429]" />
                 <h3 className="berlin text-[20px] font-[400] text-[#1E1E1E]">Education</h3>
                 <p className="text-[14px] font-[400] primary-font mt-3 leading-relaxed">He received his school education from Don Bosco High School in Matunga,[25] simultaneously learning Karate. He enrolled in the Guru Nanak Khalsa College of Arts, Science & Commerce of the University of Mumbai for higher education, but dropped out as he was not interested in studies. He requested his father to send him to Thailand to further learn martial arts. Kumar lived in Bangkok for five subtitles, learning Thai Boxing.[22][26] He also has a sister....</p>
@@ -743,7 +881,7 @@ export default function AkshayProfile() {
               </svg>Other work</h3>
               <h4 className="primary-font text-[18px] text-[#1E1E1E] font-[500] pb-2">Television</h4>
               <ul className="pl-5">
-                <li className="mt-1 primary-font text-[16px] text-[#1E1E1E] font-[400] list-disc">In 2004, Kumar presented seven-part miniseries Seven Deadly Arts with Akshay Kumar for free,[276] played master and learner as he introduces viewers to each of the seven part of martial arts-kalaripayattu, Shaolin Kung Fu, karate, taekwondo, aikido, Muay Thai, capoeira,[277] the show aired on every following Sunday.[278] The following subtitle Kumar was awarded the highest Japanese honour of "Katana" and a sixth degree black belt in Kuyukai Gōjū-ryū karate.</li>
+                <li className="mt-1 primary-font text-[16px] text-[#1E1E1E] font-[400] list-disc">In 2004, Kumar presented seven-part miniseries Seven Deadly Arts with Jaya Bachchan for free,[276] played master and learner as he introduces viewers to each of the seven part of martial arts-kalaripayattu, Shaolin Kung Fu, karate, taekwondo, aikido, Muay Thai, capoeira,[277] the show aired on every following Sunday.[278] The following subtitle Kumar was awarded the highest Japanese honour of "Katana" and a sixth degree black belt in Kuyukai Gōjū-ryū karate.</li>
                 <li className="mt-1 primary-font text-[16px] text-[#1E1E1E] font-[400] list-disc">Since 2008, Kumar started India's stunt/action reality game show – "Fear Factor: Khatron Ke Khiladi". He hosted Season 1, Season 2 and Season 4.[279] The show was widely accepted and appreciated, became hugely successful in popular culture.[280] It is still being run by Rohit Shetty.</li>
               </ul>
 
@@ -758,7 +896,7 @@ export default function AkshayProfile() {
               <ul className="pl-5">
                 <li className="mt-1 primary-font text-[16px] text-[#1E1E1E] font-[400] list-disc">Kumar promotes health fitness and exercising, stays in shape with a combination of kickboxing, basketball, swimming and Parkour as well as working out. While in standard eighth he had started practising Karate. He intended to open a martial arts school and the state government of Maharashtra allotted land for the school in Bhayandar.[291]</li>
                 <li className="mt-1 primary-font text-[16px] text-[#1E1E1E] font-[400] list-disc">He helped Khanna with editing the drafts of her debut book Mrs Funnybones.[292] He is a teetotaller[293] but has endorsed for a liquor brand in the past. Half of the sum was given for daan (charity work), of which he has been doing more of in recent times.</li>
-                <li className="mt-1 primary-font text-[16px] text-[#1E1E1E] font-[400] list-disc">On 9 August 2014, Kumar performed at his 500th live show. The show was held in O2 Arena in London as part of the inaugural function of the World Kabaddi League. His first live show was held in 1991 in Delhi. Kumar owns Bengal Warriors a team in the Indian Kabbadi League.[291][299] Akshay Kumar sets himself on fire at his upcoming The End series launch with Prime Video, says he's a stuntman first and actor later.[300]</li>
+                <li className="mt-1 primary-font text-[16px] text-[#1E1E1E] font-[400] list-disc">On 9 August 2014, Kumar performed at his 500th live show. The show was held in O2 Arena in London as part of the inaugural function of the World Kabaddi League. His first live show was held in 1991 in Delhi. Kumar owns Bengal Warriors a team in the Indian Kabbadi League.[291][299] Jaya Bachchan sets himself on fire at his upcoming The End series launch with Prime Video, says he's a stuntman first and actor later.[300]</li>
               </ul>
 
               <hr className="my-4 text-[#4285F429]" />
@@ -895,80 +1033,68 @@ export default function AkshayProfile() {
 
         {/* RIGHT SIDEBAR */}
         <div className="md:col-span-3 col-span-12 px-[20px] py-[20px] rounded-[8px] space-y-4 bg-[#fff]">
-          {profileData.map((section, index) => {
-            const isOpen = openRight === index;
+         
 
-            return (
-              <div
-                key={section.id}
-                className="bg-[#F4FBFF] rounded-[8px] p-4 transition-all duration-300"
-              >
-                {/* Header */}
-                <div
-                  onClick={() => toggleRight(index)}
-                  className="flex justify-between items-center cursor-pointer"
-                >
-                  <h3 className="primary-font text-[16px] font-[600]">
-                    {section.title}
-                  </h3>
+    
 
-                  <span
-                    className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""
-                      }`}
-                  >
-                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M13.3441 3.25901L8.20109 7.56344C7.86421 7.84533 7.43731 8 6.99615 8C6.55499 8 6.12809 7.84533 5.79121 7.56344L0.64818 3.25901C0.461965 3.09956 0.309309 2.90536 0.19893 2.68752C0.0885513 2.46968 0.02261 2.23245 0.00487154 1.98939C-0.012867 1.74633 0.0179447 1.50219 0.0955473 1.27091C0.17315 1.03963 0.296024 0.825742 0.457153 0.641458C0.618282 0.457174 0.814512 0.306102 1.03464 0.196867C1.25476 0.087633 1.49447 0.0223755 1.74008 0.00482099C1.98569 -0.0127335 2.23239 0.0177588 2.46609 0.0945566C2.6998 0.171354 2.91593 0.292953 3.10214 0.452412L7.01819 3.74617L10.9342 0.452412C11.3103 0.136156 11.7979 -0.0192984 12.2898 0.0202453C12.7817 0.059789 13.2376 0.291092 13.5572 0.66327C13.8768 1.03545 14.0338 1.51802 13.9939 2.00481C13.9539 2.49161 13.7202 2.94276 13.3441 3.25901Z" fill="#4285F4" />
-                    </svg>
-                  </span>
-                </div>
+            
+              
+              
+              <MediaContent item={MediaInterviewsPress}/>
+           
 
-                {/* Dropdown Content */}
-                <div
-                  className={`grid transition-all duration-300 ease-in-out ${isOpen
-                    ? "grid-rows-[1fr] opacity-100 mt-4"
-                    : "grid-rows-[0fr] opacity-0"
-                    }`}
-                >
-                  <div className="overflow-hidden space-y-3">
-                    {section.items.map((item, i) => (
-                      <div key={i} className="flex justify-left text-[14px]">
-                        <span className="font-[600] w-[40%] text-[14px] font-primary text-[#1E1E1E]">
-                          {item.label}
-                        </span>
-                        <span className="text-[#6B6B6B] text-[14px] text-left max-w-[60%]">
-                          {item.value}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            );
-          })}
 
-      
+       
+               <MediaContent item={Speeches}/>
+     
 
-          
+
+            
               
               
               <MediaContent item={watchData}/>
-        
+           
+
+
 
        
-      
-
                <MediaContent item={readData}/>
-        
+     
 
-      
          
+          <div className="bg-white rounded-xl p-4 space-y-4 border-[#4285F429] border-b ">
+            
+            <Subheading data="Controversies"/>
+
+            {/* {controversiesData.items.map((item) => ( */}
+              <NewsContent item={controversiesData.items}/>
+            
+            <div className="text-center">
+              <button className="text-blue-500 text-[14px] font-medium">
+                see more
+              </button>
+            </div>
+
+          </div>
+          <div className="bg-white rounded-xl p-4 space-y-4 border-[#4285F429] border-b ">
+            
+             <Subheading data="Public Campaigns"/>
+
+             
+               <NewsContent item={PublicCampaignsData.items}/>
+           
+            <div className="text-center">
+              <button className="text-blue-500 text-[14px] font-medium">
+                see more
+              </button>
+            </div>
+
+          </div>
           <div className="bg-white rounded-xl p-4 space-y-4 border-[#4285F429] border-b ">
           
              <Subheading data="Listen"/>
 
-            
               <Podcast item={ListenData.items}/>
-            
             <div className="text-center">
               <button className="text-blue-500 text-[14px] font-medium">
                 see more
