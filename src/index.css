@@ -199,3 +199,33 @@ background: #00000066;
   left: 80px !important;
   right: auto !important;
 }
+.swiper-slide-active .catodarey img{
+  width: 100%;
+}
+.swiper-slide-active .catodarey .disl{
+  opacity: 1;
+}
+.swiper-slide-next .catodarey img{
+  width: 300px;
+}
+.swiper-slide-next .catodarey .disl{
+  opacity: 0;
+}
+.catcont .swiper-pagination{
+  align-items: end;
+  text-align: end;
+  padding-right: 230px;
+  top: 0;
+
+}
+.catcont .swiper-pagination .swiper-pagination-bullet{
+  background-color: #FFFFFF;
+  opacity: 1;
+  height: 14px;
+  width: 14px;
+}
+.catcont .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
+  background-color: #4285F4;
+  height: 16px;
+  width: 16px;
+}

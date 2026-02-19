@@ -6,6 +6,7 @@ import Layout from './Layout'
 import Profile from './pages/Profile'
 import JayaBachhan from './pages/JayaBachhan'
 import EknathShinde from './pages/EknathShinde'
+import Categories from './pages/Categories'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/profiles" element={<Profile />} />
           <Route path="/jaya-bachhan" element={<JayaBachhan />} />
           <Route path="/eknath-shinde" element={<EknathShinde />} />
+          <Route path="/categories" element={<Categories />} />
         </Route>
       </Routes>
     </BrowserRouter>

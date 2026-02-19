@@ -223,7 +223,7 @@ const PublicCampaignsData = {
 };
 const ListenData = {
   id: 3,
-  title: "Read",
+  title: "Listen",
   type: "read",
   items: [
     {
@@ -962,20 +962,20 @@ export default function AkshayProfile() {
 
       
          
-          <div className="bg-white rounded-xl p-4 space-y-4 border-[#4285F429] border-b ">
+          {/* <div className="bg-white rounded-xl p-4 space-y-4 border-[#4285F429] border-b "> */}
           
-             <Subheading data="Listen"/>
+             {/* <Subheading data="Listen"/> */}
 
             
-              <Podcast item={ListenData.items}/>
+              <Podcast item={ListenData}/>
             
-            <div className="text-center">
+            {/* <div className="text-center">
               <button className="text-blue-500 text-[14px] font-medium">
                 see more
               </button>
-            </div>
+            </div> */}
 
-          </div>
+          {/* </div> */}
 
 
         </div>

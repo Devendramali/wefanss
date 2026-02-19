@@ -1,20 +1,22 @@
 import React from 'react'
+import Subheading from '../Subheading'
 
 const Podcast = ({item}) => {
   return (
-    <>
-    {item.map((item) => (
-        <div key={item.id} className="space-y-2 mb-6">
+    <div className="bg-white rounded-xl p-4 space-y-4 border-[#4285F429] border-b ">
+          <Subheading data={item?.title} />
+    {item?.items?.map((mediaItem) => (
+        <div key={mediaItem.id} className="space-y-2 mb-6">
 
 
                 <p className="text-[12px] text-gray-500">
-                  {item.source}
+                  {mediaItem.source}
                 </p>
                 <div className="flex items-center gap-2">
 
 
                   <p className="text-[14px] text-[#1E1E1E] leading-snug font-medium">
-                    {item.title}
+                    {mediaItem.title}
                   </p>
                   <div><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="40" height="40" rx="20" fill="#4285F4" />
@@ -32,7 +34,7 @@ const Podcast = ({item}) => {
 
               </div>
         ))}
-    </>
+   </div>
   )
 }
 
