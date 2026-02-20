@@ -7,6 +7,15 @@ import Profile from './pages/Profile'
 import JayaBachhan from './pages/JayaBachhan'
 import EknathShinde from './pages/EknathShinde'
 import Categories from './pages/Categories'
+import Login from './auth/Login'
+import Singup from './auth/Singup'
+import Otp from './auth/Otp'
+import ForgetPassword from './auth/ForgetPassword'
+import ResetPassword from './auth/ResetPassword'
+import Error from './auth/error'
+import ThankYou from './auth/ThankYou'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsConditions from './pages/TermsConditions'
 
 
 function App() {
@@ -22,6 +31,16 @@ function App() {
           <Route path="/jaya-bachhan" element={<JayaBachhan />} />
           <Route path="/eknath-shinde" element={<EknathShinde />} />
           <Route path="/categories" element={<Categories />} />
+          
+          <Route  path="/login" element={<Login />} />
+          <Route path="/register" element={<Singup />} />
+          <Route path="/otp" element={<Otp />} />
+          <Route path="/forget-password" element={<ForgetPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/*" element={<Error />} />
+          <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
         </Route>
       </Routes>
     </BrowserRouter>

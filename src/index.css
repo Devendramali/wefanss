@@ -229,3 +229,13 @@ background: #00000066;
   height: 16px;
   width: 16px;
 }
+
+.dm-sans {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.poppins {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
