@@ -16,14 +16,14 @@ const data = [
         language: ["Marathi", "Hindi", "English", "More"],
         rating: [
             {
-                img: "/public/rating/1.png",
+                img: "/rating/1.png",
                 per: 7.2,
                 site: "IMDb"
 
             },
             {
 
-                img: "/public/rating/2.png",
+                img: "/rating/2.png",
                 per: 7,
                 site: "Wefanss"
             }
