@@ -1,0 +1,353 @@
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Link } from "react-router-dom";
+import MoviesSlider from "../component/movies/MoviesSlider";
+
+const data = [
+    {
+        id: 1,
+        name: "Mission Impossible",
+        img: "/md.png",
+        year: "2019",
+        category: "Thriller",
+        language: ["Marathi", "Hindi", "English", "More"],
+        rating: [
+            {
+                img: "/public/rating/1.png",
+                per: 7.2,
+                site: "IMDb"
+
+            },
+            {
+
+                img: "/public/rating/2.png",
+                per: 7,
+                site: "Wefanss"
+            }
+        ],
+        dis: '"Mission Impossible" follows Ethan Hunt, a secret agent framed for the murder of his team. To clear his name, he must undertake a series of high-stakes missions, using cutting-edge technology and his exceptional skills to outsmart his enemies and uncover the truth.',
+        cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
+    },
+    {
+        id: 2,
+        name: "Mission Impossible",
+        img: "/md.png",
+        year: "2019",
+        category: "Thriller",
+        language: ["Marathi", "Hindi", "English", "More"],
+        rating: [
+            {
+                img: "/rating/1.png",
+                per: 7.2,
+                site: "IMDb"
+
+            },
+            {
+
+                img: "/rating/2.png",
+                per: 7,
+                site: "Wefanss"
+            }
+        ],
+        dis: '"Mission Impossible" follows Ethan Hunt, a secret agent framed for the murder of his team. To clear his name, he must undertake a series of high-stakes missions, using cutting-edge technology and his exceptional skills to outsmart his enemies and uncover the truth.',
+        cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
+    },
+]
+
+const thriller = {
+    title: "Thriller",
+    mainclass: "",
+    movies: [
+        {
+            id: 1,
+            title: "Star Wars Rogue One",
+            img: "/md.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+        {
+            id: 2,
+            title: "Star Wars Rogue One",
+            img: "/md.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+        {
+            id: 3,
+            title: "Star Wars Rogue One",
+            img: "/md.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+        {
+            id: 4,
+            title: "Star Wars Rogue One",
+            img: "/md.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+    ]
+}
+
+const Adventure = {
+    title: "Adventure",
+    mainclass: "bg-[#fff]",
+    movies: [
+        {
+            id: 1,
+            title: "Star Wars Rogue One",
+            img: "/md.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+        {
+            id: 2,
+            title: "Star Wars Rogue One",
+            img: "/md.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+        {
+            id: 3,
+            title: "Star Wars Rogue One",
+            img: "/md.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+        {
+            id: 4,
+            title: "Star Wars Rogue One",
+            img: "/md.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+    ]
+}
+const Documentaries = {
+    title: "Documentaries",
+    mainclass: "bg-[#fff]",
+    movies: [
+        {
+            id: 1,
+            title: "Star Wars Rogue One",
+            img: "/doc.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+        {
+            id: 2,
+            title: "Star Wars Rogue One",
+            img: "/doc.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+        {
+            id: 3,
+            title: "Star Wars Rogue One",
+            img: "/doc.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+        {
+            id: 4,
+            title: "Star Wars Rogue One",
+            img: "/doc.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+    ]
+}
+const Comedy = {
+    title: "Comedy",
+    mainclass: "bg-[#F4FBFF]",
+    movies: [
+        {
+            id: 1,
+            title: "Star Wars Rogue One",
+            img: "/comedy.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+        {
+            id: 2,
+            title: "Star Wars Rogue One",
+            img: "/comedy.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+        {
+            id: 3,
+            title: "Star Wars Rogue One",
+            img: "/comedy.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+        {
+            id: 4,
+            title: "Star Wars Rogue One",
+            img: "/comedy.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+    ]
+}
+const Action = {
+    title: "Action",
+    mainclass: "bg-[#F4FBFF]",
+    movies: [
+        {
+            id: 1,
+            title: "Star Wars Rogue One",
+            img: "/action.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+        {
+            id: 2,
+            title: "Star Wars Rogue One",
+            img: "/action.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+        {
+            id: 3,
+            title: "Star Wars Rogue One",
+            img: "/action.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+        {
+            id: 4,
+            title: "Star Wars Rogue One",
+            img: "/action.png",
+            desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+        },
+    ]
+}
+
+const MoviesDetails = () => {
+    return (
+        <>
+            <div className="relative">
+                <div className="absolute inset-0 h-fit top-[30px] z-30">
+                    <div className="flex gap-1 m-auto w-fit bg-[#fff] rounded-[50px] p-1">
+                        <button className=" flex bg-[#4285F4] justify-center items-center primary-font text-[14px] text-[#fff] gap-2 rounded-[50px] px-[20px] py-[10px] active">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.8752 3.52065C5.87591 4.03787 5.72314 4.54368 5.43623 4.97404C5.14932 5.40439 4.74117 5.73994 4.26345 5.93821C3.78573 6.13647 3.25992 6.18853 2.7526 6.0878C2.24527 5.98707 1.77924 5.73807 1.41351 5.37234C1.04777 5.0066 0.798778 4.54057 0.698047 4.03325C0.597315 3.52593 0.649377 3.00012 0.84764 2.5224C1.0459 2.04468 1.38145 1.63653 1.81181 1.34962C2.24216 1.06271 2.74797 0.909935 3.2652 0.910647C3.60795 0.910647 3.94734 0.978157 4.264 1.10932C4.58066 1.24049 4.86839 1.43274 5.11075 1.6751C5.35311 1.91746 5.54536 2.20518 5.67653 2.52184C5.80769 2.8385 5.8752 3.1779 5.8752 3.52065ZM9.1404 0.910647C8.62333 0.910647 8.11787 1.06402 7.68799 1.35137C7.25811 1.63871 6.92312 2.04712 6.72541 2.5249C6.5277 3.00268 6.47615 3.52837 6.57729 4.03546C6.67842 4.54255 6.9277 5.00824 7.29358 5.37361C7.65946 5.73899 8.1255 5.98763 8.63272 6.08807C9.13995 6.1885 9.66557 6.13623 10.1431 5.93786C10.6206 5.73949 11.0285 5.40394 11.3153 4.97366C11.602 4.54339 11.7547 4.03772 11.754 3.52065C11.753 2.8281 11.4773 2.16425 10.9872 1.67488C10.4972 1.18551 9.83295 0.910646 9.1404 0.910647ZM12.4056 10.051V13.9678C12.4056 14.6604 12.1307 15.3246 11.6414 15.8147C11.152 16.3047 10.4881 16.5805 9.7956 16.5814H2.5956C1.90555 16.5767 1.24539 16.2992 0.759131 15.8096C0.272872 15.32 -1.63648e-05 14.6579 7.36057e-10 13.9678L7.36057e-10 10.051C-3.25593e-07 9.70799 0.0676284 9.36831 0.199018 9.05141C0.330408 8.73452 0.522981 8.44663 0.765724 8.20422C1.00847 7.96182 1.29662 7.76964 1.61369 7.63869C1.93077 7.50773 2.27055 7.44057 2.6136 7.44105H9.8136C10.5027 7.4458 11.1619 7.72288 11.6475 8.21183C12.1331 8.70079 12.4056 9.36194 12.4056 10.051ZM14.8068 8.67225L13.7268 9.16905V14.2306L14.8068 14.731C15.984 15.271 18 14.8894 18 14.1262V9.27345C18 8.51385 15.984 8.13225 14.8068 8.66865V8.67225Z" fill="white" />
+                            </svg> Movies
+                        </button>
+                        <button className=" flex justify-center items-center primary-font text-[14px] text-[#fff] gap-2 rounded-[50px] px-[20px] py-[10px] ">
+                            <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.0469 4.05572C13.9547 3.38851 13.6025 2.78478 13.067 2.37613C12.5316 1.96748 11.8564 1.78703 11.1885 1.87412C11.0928 1.88592 10.9979 1.90274 10.9041 1.92452C10.4994 1.50631 9.94843 1.26116 9.36685 1.24052C9.09727 0.71257 8.63227 0.310679 8.07084 0.120397C7.50941 -0.0698843 6.89588 -0.0335289 6.36085 0.221725C6.13639 0.32173 5.93064 0.459305 5.75245 0.628525C5.2747 0.551866 4.78497 0.633051 4.35751 0.859775C3.93005 1.0865 3.58816 1.4464 3.38365 1.88492C2.84723 1.9703 2.35276 2.2267 1.9739 2.61594C1.59505 3.00517 1.3521 3.5064 1.28125 4.04492C-0.101146 4.69652 -0.741946 7.36052 1.32445 7.46492H3.18565C3.59749 7.46334 4.00369 7.56059 4.37015 7.74851C4.7366 7.93644 5.05262 8.20956 5.29165 8.54492C5.84202 7.92937 6.6101 7.55182 7.43365 7.49204C8.2572 7.43225 9.07175 7.69491 9.70525 8.22452C9.82431 8.322 9.93509 8.42916 10.0365 8.54492C10.2755 8.20956 10.5915 7.93644 10.958 7.74851C11.3244 7.56059 11.7306 7.46334 12.1425 7.46492H14.0037C16.0701 7.36052 15.4293 4.69652 14.0469 4.05572ZM5.74525 4.34732C5.66222 4.3459 5.57972 4.3609 5.5025 4.39147C5.42529 4.42204 5.35488 4.46757 5.29533 4.52545C5.23577 4.58333 5.18825 4.65242 5.15549 4.72873C5.12274 4.80505 5.10539 4.88708 5.10445 4.97012C5.10445 5.14008 5.03694 5.30307 4.91677 5.42324C4.79659 5.54341 4.6336 5.61092 4.46365 5.61092C4.2937 5.61092 4.13071 5.54341 4.01054 5.42324C3.89037 5.30307 3.82285 5.14008 3.82285 4.97012C3.82614 4.72097 3.87848 4.47491 3.97687 4.24599C4.07526 4.01707 4.21779 3.80977 4.3963 3.63593C4.57482 3.4621 4.78583 3.32513 5.01728 3.23285C5.24874 3.14057 5.4961 3.09479 5.74525 3.09812C5.83126 3.09159 5.9177 3.10289 5.99914 3.13132C6.08058 3.15974 6.15527 3.20468 6.21853 3.26332C6.28179 3.32196 6.33226 3.39303 6.36678 3.47208C6.40129 3.55114 6.41911 3.63647 6.41911 3.72272C6.41911 3.80898 6.40129 3.89431 6.36678 3.97336C6.33226 4.05242 6.28179 4.12349 6.21853 4.18213C6.15527 4.24077 6.08058 4.28571 5.99914 4.31413C5.9177 4.34256 5.83126 4.35386 5.74525 4.34732ZM10.8645 6.21572C10.7814 6.21715 10.6989 6.20215 10.6217 6.17158C10.5445 6.14101 10.4741 6.09548 10.4145 6.03759C10.355 5.97971 10.3075 5.91063 10.2747 5.83432C10.2419 5.758 10.2246 5.67597 10.2237 5.59292C10.2227 5.50988 10.2054 5.42785 10.1726 5.35153C10.1399 5.27522 10.0923 5.20613 10.0328 5.14825C9.97323 5.09037 9.90282 5.04484 9.8256 5.01427C9.74839 4.9837 9.66589 4.9687 9.58285 4.97012C9.49684 4.97666 9.41041 4.96536 9.32897 4.93693C9.24753 4.90851 9.17284 4.86357 9.10958 4.80493C9.04631 4.74629 8.99584 4.67522 8.96133 4.59616C8.92682 4.51711 8.909 4.43178 8.909 4.34552C8.909 4.25927 8.92682 4.17394 8.96133 4.09488C8.99584 4.01583 9.04631 3.94476 9.10958 3.88612C9.17284 3.82748 9.24753 3.78254 9.32897 3.75412C9.41041 3.72569 9.49684 3.71439 9.58285 3.72093C9.832 3.71759 10.0794 3.76337 10.3108 3.85565C10.5423 3.94793 10.7533 4.0849 10.9318 4.25873C11.1103 4.43257 11.2528 4.63987 11.3512 4.86879C11.4496 5.09771 11.502 5.34377 11.5053 5.59292C11.5043 5.67597 11.487 5.758 11.4542 5.83432C11.4215 5.91063 11.3739 5.97971 11.3144 6.03759C11.2548 6.09548 11.1844 6.14101 11.1072 6.17158C11.03 6.20215 10.9475 6.21715 10.8645 6.21572ZM9.52165 10.9965L9.01045 17.6133H6.32125L5.80645 10.9965C5.80645 9.50612 6.64165 8.30372 7.66405 8.30372C8.68645 8.30372 9.51805 9.52052 9.52165 10.9965ZM4.48165 10.1865L5.04685 17.6133C3.66805 17.6133 2.48365 16.2021 2.21365 14.2401L1.37845 8.32892H3.17845C3.89125 8.32892 4.46365 9.16052 4.46365 10.1865H4.48165ZM12.1605 8.32892H13.9605L13.1325 14.2437C12.8625 16.2021 11.6925 17.6133 10.2993 17.6133L10.8645 10.1865C10.8645 9.16052 11.4369 8.32892 12.1425 8.32892H12.1605Z" fill="#2C2C2C" />
+                            </svg>
+
+
+                        </button>
+                        <button className=" flex  justify-center items-center primary-font text-[14px] text-[#fff] gap-2 rounded-[50px] px-[20px] py-[10px] ">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.08 7.9425V13.7025H3.6V7.9425H10.08ZM17.3016 7.9425V13.7025C17.3016 14.1753 17.2085 14.6434 17.0276 15.0802C16.8466 15.5169 16.5815 15.9138 16.2472 16.2481C15.9129 16.5824 15.516 16.8476 15.0793 17.0285C14.6425 17.2094 14.1744 17.3025 13.7016 17.3025H3.6C2.64522 17.3025 1.72955 16.9232 1.05442 16.2481C0.379285 15.573 0 14.6573 0 13.7025V7.9425C0 6.98772 0.379285 6.07205 1.05442 5.39692C1.72955 4.72179 2.64522 4.3425 3.6 4.3425H7.1136L4.4748 1.1817C4.41429 1.1089 4.36871 1.02489 4.34066 0.934465C4.31261 0.844045 4.30265 0.748986 4.31135 0.654716C4.3289 0.464329 4.42136 0.288713 4.5684 0.166502C4.71544 0.0442897 4.905 -0.0145067 5.09539 0.00304669C5.28577 0.0206001 5.46139 0.113065 5.5836 0.260101L8.64 3.9249L11.6964 0.260101C11.8186 0.113065 11.9942 0.0206001 12.1846 0.00304669C12.375 -0.0145067 12.5646 0.0442897 12.7116 0.166502C12.8586 0.288713 12.9511 0.464329 12.9687 0.654716C12.9862 0.845103 12.9274 1.03467 12.8052 1.1817L10.1808 4.3317H13.68C14.1558 4.32837 14.6275 4.41938 15.0679 4.59949C15.5083 4.77959 15.9086 5.0452 16.2457 5.38097C16.5828 5.71674 16.85 6.116 17.0319 6.55567C17.2137 6.99535 17.3066 7.46671 17.3052 7.9425H17.3016ZM11.5416 7.9425C11.5416 7.56059 11.3899 7.19432 11.1198 6.92427C10.8498 6.65421 10.4835 6.5025 10.1016 6.5025H3.6C3.21809 6.5025 2.85182 6.65421 2.58177 6.92427C2.31171 7.19432 2.16 7.56059 2.16 7.9425V13.7025C2.16 14.0844 2.31171 14.4507 2.58177 14.7207C2.85182 14.9908 3.21809 15.1425 3.6 15.1425H10.08C10.4619 15.1425 10.8282 14.9908 11.0982 14.7207C11.3683 14.4507 11.52 14.0844 11.52 13.7025L11.5416 7.9425ZM15.5016 12.6225C15.5016 12.4089 15.4383 12.2001 15.3196 12.0225C15.2009 11.8449 15.0322 11.7065 14.8349 11.6247C14.6376 11.543 14.4204 11.5216 14.2109 11.5633C14.0014 11.6049 13.809 11.7078 13.6579 11.8588C13.5069 12.0099 13.404 12.2023 13.3624 12.4118C13.3207 12.6213 13.3421 12.8385 13.4238 13.0358C13.5056 13.2331 13.644 13.4018 13.8216 13.5205C13.9992 13.6392 14.208 13.7025 14.4216 13.7025C14.7055 13.7016 14.9777 13.5888 15.1792 13.3887C15.3806 13.1886 15.4952 12.9172 15.498 12.6333L15.5016 12.6225ZM15.5016 9.0225C15.5016 8.8089 15.4383 8.60009 15.3196 8.42249C15.2009 8.24488 15.0322 8.10645 14.8349 8.02471C14.6376 7.94297 14.4204 7.92158 14.2109 7.96325C14.0014 8.00493 13.809 8.10779 13.6579 8.25883C13.5069 8.40987 13.404 8.6023 13.3624 8.8118C13.3207 9.0213 13.3421 9.23846 13.4238 9.4358C13.5056 9.63314 13.644 9.80182 13.8216 9.92049C13.9992 10.0392 14.208 10.1025 14.4216 10.1025C14.7068 10.1016 14.98 9.98784 15.1817 9.78618C15.3833 9.58452 15.4971 9.31129 15.498 9.0261L15.5016 9.0225Z" fill="#2C2C2C" />
+                            </svg>
+
+                        </button>
+                        <button className=" flex  justify-center items-center primary-font text-[14px] text-[#fff] gap-2 rounded-[50px] px-[20px] py-[10px] ">
+                            <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.7784 11.916C1.92534 11.886 2.07484 11.8703 2.2248 11.8692H2.9664V0.072C2.12881 0.243663 1.37617 0.699238 0.835684 1.36173C0.295196 2.02422 4.92647e-06 2.853 0 3.708V12.6324C0.517821 12.2378 1.13192 11.9892 1.7784 11.9124V11.916ZM14.8392 13.356H2.2392C1.64915 13.356 1.08326 13.5904 0.666029 14.0076C0.248798 14.4249 0.0144 14.9907 0.0144 15.5808C0.0144 16.1709 0.248798 16.7367 0.666029 17.154C1.08326 17.5712 1.64915 17.8056 2.2392 17.8056H11.1168C12.1002 17.8056 13.0434 17.4149 13.7388 16.7196C14.4341 16.0242 14.8248 15.081 14.8248 14.0976L14.8392 13.356ZM14.8392 3.708V11.8692H4.4532V0H8.1612V7.6752C8.16018 7.77676 8.19124 7.87604 8.24996 7.95891C8.30867 8.04178 8.39204 8.10401 8.48819 8.13672C8.58434 8.16944 8.68836 8.17097 8.78543 8.14111C8.8825 8.11124 8.96767 8.0515 9.0288 7.9704L10.0152 6.678L11.0052 7.9704C11.0663 8.0515 11.1515 8.11124 11.2486 8.14111C11.3456 8.17097 11.4497 8.16944 11.5458 8.13672C11.642 8.10401 11.7253 8.04178 11.784 7.95891C11.8428 7.87604 11.8738 7.77676 11.8728 7.6752V0.072C12.7101 0.244289 13.4623 0.700037 14.0027 1.36239C14.5431 2.02474 14.8385 2.85318 14.8392 3.708Z" fill="#2C2C2C" />
+                            </svg>
+
+                        </button>
+                        <button className=" flex  justify-center items-center primary-font text-[14px] text-[#fff] gap-2 rounded-[50px] px-[20px] py-[10px] ">
+                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.304 1.86477C11.2491 1.64482 11.2447 1.41528 11.2912 1.19338C11.3376 0.97149 11.4337 0.763002 11.5723 0.583566C11.7109 0.40413 11.8883 0.258407 12.0912 0.157333C12.2941 0.0562583 12.5173 0.00245813 12.744 -3.04724e-05H13.4964C13.8212 -0.00100989 14.1375 0.103884 14.3973 0.298763C14.6571 0.493642 14.8464 0.76789 14.9364 1.07997C15.0912 1.55157 15.2784 2.23917 15.4512 2.99877H11.5884L11.304 1.86477ZM11.9196 4.49997C12.2112 6.22077 12.492 7.91997 12.5964 9.15477C12.2453 9.05359 11.8818 9.00149 11.5164 8.99997C10.6077 8.98341 9.71282 9.22429 8.9352 9.69477C8.72361 9.83207 8.55002 10.0205 8.43047 10.2426C8.31092 10.4647 8.24927 10.7133 8.2512 10.9656V16.0344C8.25081 16.2879 8.31466 16.5375 8.43679 16.7597C8.55891 16.9819 8.73534 17.1696 8.9496 17.3052C9.72722 17.7757 10.6221 18.0165 11.5308 18C12.6273 18.0414 13.7008 17.6789 14.5476 16.9812C15.1551 16.515 15.6473 15.9155 15.9862 15.2288C16.3252 14.5422 16.5018 13.7869 16.5024 13.0212C16.4376 10.162 16.1717 7.311 15.7068 4.48917L11.9196 4.49997ZM4.914 15.0012H1.0512C1.2168 15.7608 1.4112 16.4412 1.548 16.9308C1.63694 17.2435 1.82592 17.5184 2.086 17.7134C2.34607 17.9085 2.66291 18.0129 2.988 18.0108H3.7404C3.96709 18.0083 4.19028 17.9545 4.39321 17.8534C4.59614 17.7523 4.77354 17.6066 4.9121 17.4272C5.05066 17.2477 5.14678 17.0392 5.19325 16.8174C5.23972 16.5955 5.23532 16.3659 5.1804 16.146L4.896 15.0084L4.914 15.0012ZM4.5828 13.5C4.2912 11.7792 4.0104 10.08 3.906 8.84517C4.25677 8.94804 4.62046 9.00017 4.986 8.99997C5.89479 9.01712 6.78981 8.7762 7.5672 8.30517C7.77926 8.16836 7.95321 7.98006 8.07282 7.75784C8.19243 7.53562 8.2538 7.28672 8.2512 7.03437V1.96557C8.25267 1.71229 8.18926 1.46285 8.067 1.24103C7.94475 1.01921 7.76772 0.832384 7.5528 0.69837C6.77635 0.224789 5.88092 -0.0174889 4.9716 -3.04724e-05C3.87434 -0.0428365 2.79995 0.321276 1.9548 1.02237C1.34672 1.48797 0.854068 2.08739 0.515064 2.77414C0.176059 3.46089 -0.000185612 4.21651 1.46687e-07 4.98237C0.0653122 7.8367 0.331167 10.6829 0.7956 13.5H4.5828Z" fill="#2C2C2C" />
+                            </svg>
+
+
+                        </button>
+                    </div>
+
+                </div>
+                <Swiper
+                    slidesPerView={1}
+                    spaceBetween={10}
+                    loop={true}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    }}
+
+
+                    pagination={{ clickable: true }}
+                    modules={[Pagination, Autoplay]}
+                    className="movies-swiper "
+                >
+                    {data.map((item) => (
+                        <SwiperSlide key={item.id}>
+                            <div className="group min-h-[100vh] h-[100%]  flex justify-start items-end relative  overflow-hidden transition-all duration-500 " >
+
+                                {/* Image */}
+                                <img
+                                    src={item.img}
+                                    alt={item.name}
+                                    className=" h-[100%] w-[100%] object-cover absolute  transition-all duration-500"
+                                />
+
+                                {/* Overlay */}
+                                <div className=" hedeing max-w-[650px] z-20 md:mt-[300px] mt-[150px]  md:pl-[50px] md:pb-[40px] p-4 w-full ">
+                                    <div className="p-5 md:bg-[#00000080] md:backdrop-blur-[100px] rounded-[16px]">
+                                        <h2 className="berlin text-[64px] text-[#fff]">{item.name}</h2>
+                                        <div className="primary-font mt-4 text-[#fff] text-[16px] flex gap-4 items-center">
+                                            <span>{item.year}</span>
+                                            <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="2" cy="2" r="2" fill="#D9D9D9" />
+                                            </svg>
+
+                                            <span>{item.category}</span>
+                                            <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="2" cy="2" r="2" fill="#D9D9D9" />
+                                            </svg>
+
+                                            <span>
+                                                {item.language.map((lang, index) => (
+                                                    <span key={index}>
+                                                        {lang}
+                                                        {index !== item.language.length - 1 && " / "}
+                                                    </span>
+                                                ))}
+                                            </span>
+                                        </div>
+                                        <div className="flex gap-4 mt-2">
+                                            {item.rating.map((items, index) => (
+                                                <div className="flex gap-3 text-[#F3F3F3] items-center" key={index}> <img src={items.img} alt="" />
+                                                    <span >
+                                                        {items.site}
+                                                    </span>
+                                                    <span >{items.per}/10
+                                                    </span>
+                                                    {index !== item.rating.length - 1 && (<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="2" cy="2" r="2" fill="#D9D9D9" />
+                                                    </svg>)}
+                                                </div>
+                                            ))}
+                                        </div>
+                                        <p className="text-[#F5F5F5] text-[16px] mt-6">{item.dis}</p>
+                                        <div className="flex gap-4 mt-6">
+                                            <Link className="text-[#F3F3F3] primary-font font-[600] rounded-[4px] border flex items-center justify-center w-fit border-[#D9D9D9] h-[48px] px-[20px]">More Details</Link>
+                                            <Link className="text-[#F3F3F3] bg-[#4285F4] gap-2 primary-font font-[600] rounded-[50px] border flex items-center justify-end w-fit border-[#4285F4] h-[48px] px-[2px] pl-[20px]">Watch on <svg width="47" height="45" viewBox="0 0 47 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="46.4" height="44.8" rx="22.4" fill="white" fill-opacity="0.8" />
+                                                <g clip-path="url(#clip0_1130_1498)">
+                                                    <path d="M18.7682 14.7521C17.3282 13.9281 16.1602 14.6001 16.1602 16.2641V28.5361C16.1602 30.2001 17.3282 30.8721 18.7682 30.0481L29.4962 23.8961C30.9362 23.0961 30.9362 21.7281 29.4962 20.9041L18.7682 14.7521Z" fill="#4285F4" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1130_1498">
+                                                        <rect width="16" height="16" fill="white" transform="translate(15.1992 14.3999)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                            </Link>
+                                        </div>
+
+                                    </div>
+                                    <div className="p-5 md:bg-[#00000080] md:backdrop-blur-[100px] rounded-[16px] mt-5">
+                                        <h3 className="berlin text-[#F5F5F5] text-[24px]">Cast</h3>
+                                        <p className="text-[#F5F5F5] primary-font mt-3">{item.cast}</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+                <MoviesSlider data={thriller} />
+                <MoviesSlider data={Adventure} />
+                <MoviesSlider data={Comedy} />
+                <MoviesSlider data={Documentaries} />
+                <MoviesSlider data={Action} />
+            </div>
+        </>
+    )
+}
+
+export default MoviesDetails

@@ -239,3 +239,32 @@ background: #00000066;
   font-family: "Poppins", sans-serif;
   font-style: normal;
 }
+.movies-swiper .swiper-pagination{
+    bottom: 100px !important;
+    display: flex;
+    justify-content: end;
+    right: 36px;
+    align-items: center;
+    left: auto !important;
+}
+.movies-swiper .swiper-pagination .swiper-pagination-bullet{
+  background-color: #D9D9D9;
+  height: 10px;
+  width: 10px;
+  opacity: 1;
+}
+.movies-swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
+  background-color: #4285F4;
+  height: 14px;
+  width: 14px;
+}
+.movieslide2 .swiper-slide .activ {
+  display: none;
+}
+.movieslide2 .swiper-slide.swiper-slide-active .activ {
+  display: block !important;
+}
+.swiper-slide.swiper-slide-active .sldieimh {
+  height: 330px !important;
+  display: block;
+}
