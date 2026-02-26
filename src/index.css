@@ -268,3 +268,24 @@ background: #00000066;
   height: 330px !important;
   display: block;
 }
+.viewedcelebritiesslider .swiper-button-prev{
+  right: auto !important;
+  left: 0 !important;
+  background-color: #fff;
+  border-color: #4285F4;
+  top: 45% !important;
+  transform: translateY(50%);
+}
+
+.viewedcelebritiesslider .swiper-button-next{
+  left: auto !important;
+  right: 0 !important;
+  background-color: #fff;
+  border-color: #4285F4;
+  top: 45% !important;
+  transform: translateY(50%);
+}
+.viewedcelebritiesslider .swiper-button-next svg,
+.viewedcelebritiesslider .swiper-button-prev svg{
+  color: #000;
+}

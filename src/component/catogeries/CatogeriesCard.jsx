@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CatogeriesCard = ({ data }) => {
   return (
-    <div className="md:w-[275px] w-[100%] bg-[#F4FBFF]   rounded-[8px] p-3 space-y-3">
+    <div className={`w-[100%] bg-[#F4FBFF]   rounded-[8px] p-3 space-y-3 ${data.cardcalss}`}>
 
       {/* Image */}
       <div className="w-full h-[340px] overflow-hidden rounded-lg">
@@ -24,8 +24,8 @@ const CatogeriesCard = ({ data }) => {
         </h2>
 
         {/* Movies & Awards */}
-        <p className="text-[#757575] text-[16px] primary-font">
-          {data.totalMovies}+ Movies &nbsp;&nbsp; {data.totalAwards}+ Awards
+        <p className="text-[#757575] text-[16px] primary-font flex justify-between">
+         <span>{data.totalMovies}+ Movies</span>  <span>{data.totalAwards}+ Awards</span> 
         </p>
 
         {/* Buttons */}

@@ -17,6 +17,7 @@ import ThankYou from './auth/ThankYou'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsConditions from './pages/TermsConditions'
 import MoviesDetails from './pages/MoviesDetails'
+import UserDashboard from './pages/UserDashboard'
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
           <Route path="/mission-impossible" element={<MoviesDetails />} />
+          <Route path="/user-dashboard" element={<UserDashboard />} />
         </Route>
       </Routes>
     </BrowserRouter>
