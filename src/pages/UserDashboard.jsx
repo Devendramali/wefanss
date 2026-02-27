@@ -183,7 +183,7 @@ const UserDashboard = () => {
  const items= [
     {
       id: 1,
- image: "/read2.png",
+      image: "/read2.png",
       source: "Source • 02-01-2026",
       title:
         "Akshay Kumar Says Success Changed His Career Track: 'Now I Can Choose Quality'",
@@ -192,7 +192,7 @@ const UserDashboard = () => {
     },
     {
       id: 2,
-  image: "/read2.png",
+      image: "/read2.png",
       source: "Source • 02-01-2026",
       title:
         "Akshay Kumar Says Success Changed His Career Track: 'Now I Can Choose Quality'",
@@ -202,7 +202,6 @@ const UserDashboard = () => {
      {
       id: 4,
       image: "/watch1.png",
- image: "/read2.png",
       source: "Source • 02-01-2026",
       title:
         "Akshay Kumar Says Success Changed His Career Track: 'Now I Can Choose Quality'",
