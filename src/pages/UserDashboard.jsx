@@ -245,6 +245,7 @@ const UserDashboard = () => {
         "Akshay Kumar Says Success Changed His Career Track: 'Now I Can Choose Quality'",
       isVideo: false,
       cardclass:"md:w-[23%] w-[100%]"
+      
     },
     {
       id: 3,
