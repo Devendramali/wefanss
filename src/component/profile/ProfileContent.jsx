@@ -4,7 +4,7 @@ const ProfileContent = ({ sections }) => {
   return (
     <div className="flex flex-wrap text-[16px] font-[500] text-gray-700 leading-7">
       {sections.map((item, i) => (
-        <span
+        <a href=""
           key={i}
           className="flex items-center primary-font text-[14px]"
         >
@@ -12,7 +12,7 @@ const ProfileContent = ({ sections }) => {
           {i !== sections.length - 1 && (
             <span className="mx-2 text-[#D9D9D9]">|</span>
           )}
-        </span>
+        </a>
       ))}
     </div>
   );

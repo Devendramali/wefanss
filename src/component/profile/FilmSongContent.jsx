@@ -4,7 +4,7 @@ const FilmSongContent = ({ items }) => {
   return (
     <div>
       {items?.map((item) => (
-        <div key={item.id} className="flex gap-3 py-3 items-center">
+        <a href="#!" key={item.id} className="flex gap-3 py-3 items-center">
           <img
             src={item.image}
             alt=""
@@ -18,7 +18,7 @@ const FilmSongContent = ({ items }) => {
               {item.year || item.subtitle}
             </p>
           </div>
-        </div>
+        </a>
       ))}
     </div>
   );
