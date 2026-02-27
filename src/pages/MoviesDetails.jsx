@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 import MoviesSlider from "../component/movies/MoviesSlider";
-import BannerSlider from "../component/slider/B-annerSlider";
+import BannerSlider from "../component/slider/BannerSlider";
 
 
 
