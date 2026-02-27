@@ -20,6 +20,9 @@ import MoviesDetails from './pages/MoviesDetails'
 import UserDashboard from './pages/UserDashboard'
 import Missionimpossible from './pages/Missionimpossible'
 import Webseries from './pages/Webseries'
+import Watch from './pages/Watch'
+import Read from './pages/Read'
+import Listen from './pages/Listen'
 
 
 function App() {
@@ -45,9 +48,12 @@ function App() {
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
-          <Route path="/mission-impossible" element={<Missionimpossible />} />
+          <Route path="/movies" element={<Missionimpossible />} />
           <Route path="/Webseries" element={<Webseries />} />
           <Route path="/user-dashboard" element={<UserDashboard />} />
+          <Route path="/watch" element={<Watch />} />
+          <Route path="/read" element={<Read />} />
+          <Route path="/listen" element={<Listen />} />
         </Route>
       </Routes>
     </BrowserRouter>

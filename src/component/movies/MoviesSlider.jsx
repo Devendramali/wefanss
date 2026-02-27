@@ -37,7 +37,7 @@ const MoviesSlider = ({data}) => {
 
           return (
             <SwiperSlide key={movie.id}>
-              <div
+              <a href="#!"
                 className={`transition-all duration-500`}
               >
                 <div className="relative sldieimh rounded-xl overflow-hidden">
@@ -80,7 +80,7 @@ const MoviesSlider = ({data}) => {
                     {movie.desc}
                   </p>
                 )}
-              </div>
+              </a>
             </SwiperSlide>
           );
         })}
