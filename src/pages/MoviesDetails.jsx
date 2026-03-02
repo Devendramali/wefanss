@@ -6,11 +6,14 @@ import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 import MoviesSlider from "../component/movies/MoviesSlider";
 import BannerSlider from "../component/slider/BannerSlider";
+<<<<<<< HEAD
 import Card3 from "../component/card/Card3";
 import Card2 from "../component/card/Card2";
 import Book from "../component/card/Book";
 import News2 from "../component/card/News2";
 import ListenCard from "../component/card/ListenCard";
+=======
+>>>>>>> 22b3ad01b61a2eba805179269158d14f979ed061
 
 
 
