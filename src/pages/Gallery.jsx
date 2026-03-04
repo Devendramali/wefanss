@@ -4,53 +4,53 @@ const Gallery = () => {
     const gallery=[
         {
             id:1,
-            img:"/public/gallery/1.png"
+            img:"/gallery/1.png"
         },
         {
             id:2,
-            img:"/public/gallery/2.png"
+            img:"/gallery/2.png"
         },
         {
             id:3,
-            img:"/public/gallery/3.png"
+            img:"/gallery/3.png"
         },
         {
             id:4,
-            img:"/public/gallery/4.png"
+            img:"/gallery/4.png"
         },
         {
             id:5,
-            img:"/public/gallery/5.png"
+            img:"/gallery/5.png"
         },
         {
             id:6,
-            img:"/public/gallery/6.png"
+            img:"/gallery/6.png"
         },
         {
             id:7,
-            img:"/public/gallery/7.png"
+            img:"/gallery/7.png"
         },
         {
             id:9,
-            img:"/public/gallery/4.png"
+            img:"/gallery/4.png"
         },
         
         {
             id:8,
-            img:"/public/gallery/8.png"
+            img:"/gallery/8.png"
         },
         
         {
             id:10,
-            img:"/public/gallery/1.png"
+            img:"/gallery/1.png"
         },
           {
             id:6,
-            img:"/public/gallery/6.png"
+            img:"/gallery/6.png"
         },
         {
             id:9,
-            img:"/public/gallery/9.png"
+            img:"/gallery/9.png"
         },
     ]
   return (
