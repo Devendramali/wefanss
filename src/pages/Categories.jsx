@@ -5,7 +5,7 @@ import FilterCatogeries from '../component/catogeries/FilterCatogeries'
 const Categories = () => {
   return (
     <>
-        {/* <CelebritySlider/> */}
+        <CelebritySlider/>
         <FilterCatogeries/>
     </>
   )
