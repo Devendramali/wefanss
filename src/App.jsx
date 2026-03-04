@@ -23,6 +23,10 @@ import Webseries from './pages/Webseries'
 import Watch from './pages/Watch'
 import Read from './pages/Read'
 import Listen from './pages/Listen'
+import ClaimProfile from './pages/ClaimProfile'
+import About from './pages/About'
+import SearchResult from './pages/SearchResult'
+import Gallery from './pages/Gallery'
 
 
 function App() {
@@ -54,6 +58,10 @@ function App() {
           <Route path="/watch" element={<Watch />} />
           <Route path="/read" element={<Read />} />
           <Route path="/listen" element={<Listen />} />
+          <Route path="/claim-profile" element={<ClaimProfile />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/search-result" element={<SearchResult />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Route>
       </Routes>
     </BrowserRouter>

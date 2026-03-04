@@ -79,6 +79,7 @@ const FilterCatogeries = () => {
     totalAwards: 28,
      img: "/catogary/cat6.jpg",
   },
+
 ];
     const [gender, setGender] = useState("All");
   const [languages, setLanguages] = useState([]);
@@ -192,7 +193,7 @@ return genderMatch && languageMatch && ageMatch && searchMatch;
                     type="text"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    className="w-[154px] hover:w-[250px] transition-all duration-500 placeholder-white h-[56px] placeholder:text-[16px] primary-font p-4 text-[#fff]"
+                    className="w-[154px] hover:w-[250px] outline-none transition-all duration-500 placeholder-white h-[56px] placeholder:text-[16px] primary-font p-4 text-[#fff]"
                     placeholder="Search"
                     />
                     <span  className='absolute top-0 right-0 -translate-x-3 translate-y-4'>
