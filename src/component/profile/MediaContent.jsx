@@ -10,7 +10,7 @@ const MediaContent = ({ item }) => {
 
       {/* Media Items */}
       {item?.items?.map((mediaItem) => (
-        <div key={mediaItem.id} className="space-y-2">
+        <a href="#!" key={mediaItem.id} className="space-y-2 block">
 
           <div className="relative">
             <img
@@ -55,7 +55,7 @@ const MediaContent = ({ item }) => {
             {mediaItem.title}
           </p>
 
-        </div>
+        </a>
       ))}
     </div>
   );

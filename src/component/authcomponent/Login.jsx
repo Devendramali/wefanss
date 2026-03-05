@@ -32,6 +32,7 @@ const Loginform = () => {
                     <img src="/google.svg" alt="" />
  
                     </Link>
+                    
                 </div>
 
             </form>

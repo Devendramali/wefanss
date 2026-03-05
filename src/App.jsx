@@ -27,6 +27,8 @@ import ClaimProfile from './pages/ClaimProfile'
 import About from './pages/About'
 import SearchResult from './pages/SearchResult'
 import Gallery from './pages/Gallery'
+import NoSearcfound from './component/NoSearcfound'
+import Contact from './pages/Contact'
 
 
 function App() {
@@ -62,6 +64,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/search-result" element={<SearchResult />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/no-search-found" element={<NoSearcfound/>} />
+          <Route path="/contact" element={<Contact/>} />
         </Route>
       </Routes>
     </BrowserRouter>

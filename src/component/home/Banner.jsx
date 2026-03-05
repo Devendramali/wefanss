@@ -47,7 +47,7 @@ const Banner = () => {
     : filteredActors.slice(0, 4)
 
   return (
-    <div className='banner px-5 relative w-full overflow-hidden pb-[90px] min-h-[100vh]'>
+    <div className='banner px-5 flex justify-center items-center relative w-full overflow-hidden  min-h-[100vh]'>
 
       {/* Background Image */}
       <img
@@ -56,7 +56,7 @@ const Banner = () => {
         alt=""
       />
 
-      <div className='relative pt-[150px] z-20'>
+      <div className='relative  z-20'>
         <h1 className='berlin text-[#FFFFFF] md:text-[96px] text-[60px] leading-relaxed text-center'>
           Discover Icons of Fame
         </h1>

@@ -71,7 +71,7 @@ export default function TrendingCelebrities() {
       >
         {data.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="group md:w-[194px] relative rounded-2xl overflow-hidden transition-all duration-500">
+            <a href="#!" className="group md:w-[194px] block relative rounded-2xl overflow-hidden transition-all duration-500">
 
               {/* Image */}
               <img
@@ -87,7 +87,7 @@ export default function TrendingCelebrities() {
                 </h3>
               </div>
 
-            </div>
+            </a>
           </SwiperSlide>
         ))}
       </Swiper>

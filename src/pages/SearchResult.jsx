@@ -1,6 +1,7 @@
 import { ArrowUpDown, Search, SlidersHorizontal } from 'lucide-react'
 import React, { useState } from "react";
 import CatogeriesCard from '../component/catogeries/CatogeriesCard';
+import NoSearcfound from '../component/NoSearcfound';
 
 
 const SearchResult = () => {
@@ -232,11 +233,7 @@ const SearchResult = () => {
                                 <CatogeriesCard key={item.id} data={item} />
                             ))
                         ) : (
-                           <div className='h-[60vh] flex justify-center items-center w-full text-center'>
-                                 <h3 className="text-gray-500 text-lg font-medium">
-                                No Result Found
-                            </h3>
-                           </div>
+                          <NoSearcfound/>
                         )}
                     </div>
 

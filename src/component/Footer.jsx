@@ -39,7 +39,8 @@ const Footer = () => {
 
         </div>
         <div className="copyright bg-[#000000] py-5">
-          <p className='text-[#fff] text-center text-[16px] primary-font'>Copyright {year}, All rights reserved with DiigiiHost</p>
+          {/* <p className='text-[#fff] text-center text-[16px] primary-font'>Copyright {year}, All rights reserved with DiigiiHost</p> */}
+          <p className='text-[#fff] text-center text-[16px] primary-font'>Copyright © {year} WeFanss. All Rights Reserved. Powered By : <a target='_blank' href="https://www.digihost.in/">DIIGIIHOST</a></p>
         </div>
       </div>
     </>

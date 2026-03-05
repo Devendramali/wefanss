@@ -447,7 +447,7 @@ export default function EknathShinde() {
   const [openIndexes, setOpenIndexes] = useState(
     sidebarData.map((_, index) => index) // all open by default
   );
-  const [openRight, setOpenRight] = useState(null);
+  const [openRight, setOpenRight] = useState(0);
 
 
   const toggleRight = (id) => {
@@ -471,9 +471,9 @@ export default function EknathShinde() {
       style={{ backgroundImage: 'url("/profilebg.png")' }}
     >
 
-      <div className="grid grid-cols-12 gap-4" >
-        <div className="col-span-12 p-4 md:hidden block">
-          <div className="flex  gap-6 relative  rounded-2xl ">
+      <div className="grid grid-cols-12 px-2 gap-4" >
+        <div className="col-span-12 p-2 md:hidden block">
+          <div className="flex  gap-2 relative  rounded-2xl ">
             <img
               src="/actor/eknath.png"
               className="w-[124px] h-[186px] rounded-[8px] object-cover"
@@ -510,7 +510,7 @@ export default function EknathShinde() {
                   ))
                 }
 
-                <div className="mt-6 flex justify-start items-center gap-[10px]">
+               <div className="mt-6 flex flex-wrap justify-start items-center gap-[5px]">
                   <Link className="px-5 py-2 flex w-fit rounded-[24px] primary-font text-[16px] text-[#fff] items-center gap-2 bg-[#4285F4]">follow <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 1V15M1 8H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                   </svg></Link>
@@ -535,9 +535,61 @@ export default function EknathShinde() {
             <p className="line-clamp-4 text-[16px] primary-font text-[#fff]">Eknath Shinde (born September 9, 1967, Amritsar, Punjab, India) is an Indian actor and producer, chiefly known for his work in Bollywood comedies and action films. Kumar, whose career spans more than three decades, has starred in more than 100 films more    and is one of the most popular Bollywood actors in India. He was awarded the Padma Shri, one of the highest Indian civilian honors, in 2009.</p>
           </div>
         </div>
+        <div className="col-span-12  md:hidden block">
+           {profileData.map((section, index) => {
+            const isOpen = openRight === index;
+
+            return (
+              <div
+                key={section.id}
+                className="bg-[#F4FBFF] rounded-[8px] p-4 transition-all duration-300"
+              >
+                {/* Header */}
+                <div
+                  onClick={() => toggleRight(index)}
+                  className="flex justify-between items-center cursor-pointer"
+                >
+                  <h3 className="primary-font text-[16px] font-[600]">
+                    {section.title}
+                  </h3>
+
+                  <span
+                    className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+                      }`}
+                  >
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13.3441 3.25901L8.20109 7.56344C7.86421 7.84533 7.43731 8 6.99615 8C6.55499 8 6.12809 7.84533 5.79121 7.56344L0.64818 3.25901C0.461965 3.09956 0.309309 2.90536 0.19893 2.68752C0.0885513 2.46968 0.02261 2.23245 0.00487154 1.98939C-0.012867 1.74633 0.0179447 1.50219 0.0955473 1.27091C0.17315 1.03963 0.296024 0.825742 0.457153 0.641458C0.618282 0.457174 0.814512 0.306102 1.03464 0.196867C1.25476 0.087633 1.49447 0.0223755 1.74008 0.00482099C1.98569 -0.0127335 2.23239 0.0177588 2.46609 0.0945566C2.6998 0.171354 2.91593 0.292953 3.10214 0.452412L7.01819 3.74617L10.9342 0.452412C11.3103 0.136156 11.7979 -0.0192984 12.2898 0.0202453C12.7817 0.059789 13.2376 0.291092 13.5572 0.66327C13.8768 1.03545 14.0338 1.51802 13.9939 2.00481C13.9539 2.49161 13.7202 2.94276 13.3441 3.25901Z" fill="#4285F4" />
+                    </svg>
+                  </span>
+                </div>
+
+                {/* Dropdown Content */}
+                <div
+                  className={`grid transition-all duration-300 ease-in-out ${isOpen
+                    ? "grid-rows-[1fr] opacity-100 mt-4"
+                    : "grid-rows-[0fr] opacity-0"
+                    }`}
+                >
+                  <div className="overflow-hidden space-y-3">
+                    {section.items.map((item, i) => (
+                      <div key={i} className="flex justify-left text-[14px]">
+                        <span className="font-[600] w-[40%] text-[14px] font-primary text-[#1E1E1E]">
+                          {item.label}
+                        </span>
+                        <span className="text-[#6B6B6B] text-[14px] text-left max-w-[60%]">
+                          {item.value}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
 
         {/* LEFT SIDEBAR */}
-        <div className="md:col-span-3 col-span-12 px-[20px] py-[20px] h-fit rounded-[8px] space-y-4 bg-[#fff]">
+        <div className="md:col-span-3 col-span-12 md:px-[20px] px-2 py-[20px] h-fit rounded-[8px] space-y-4 bg-[#fff]">
 
           {sidebarData.map((section, index) => {
             const isOpen = openIndexes.includes(index);
@@ -799,7 +851,8 @@ export default function EknathShinde() {
               <h3 className="flex gap-2 mb-3 items-center berlin text-[#1E1E1E] text-[24px] text-[400]"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.5 6.06226L0 12.1244V7.82013e-05L10.5 6.06226Z" fill="#4285F4" />
               </svg>Statistics</h3>
-              <table className="max-w-[900px] border border-[#1E1E1E] rounded-[8px] overflow-hidden border-collapse">
+              <div className="w-full overflow-x-auto">
+              <table className="max-w-[900px] w-[100%] border border-[#1E1E1E] rounded-[8px] border-collapse">
                 <thead className="bg-[#F4FBFF] text-left">
                   <tr>
                     <th className="p-3 px-8">Team</th>
@@ -848,6 +901,7 @@ export default function EknathShinde() {
                   </tr>
                 </tbody>
               </table>
+              </div>
               <hr className="my-4 text-[#4285F429]" />
 
 
@@ -1011,7 +1065,7 @@ export default function EknathShinde() {
         </div>
 
         {/* RIGHT SIDEBAR */}
-        <div className="md:col-span-3 col-span-12 px-[20px] py-[20px] rounded-[8px] space-y-4 bg-[#fff]">
+        <div className="md:col-span-3 col-span-12 md:px-[20px] py-[20px] rounded-[8px] space-y-4 bg-[#fff]">
          
 
           {/* <div className="bg-white rounded-xl rounded-b-none border-[#4285F429] p-4 space-y-4 border-b"> */}

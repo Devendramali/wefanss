@@ -98,11 +98,11 @@ const MoviesDetails = ({context}) => {
                 )}
               {context.Contenttype === "Watch" && (
                     <>
-                        <div className="flex py-[90px] px-8  pt-[120px] bg-[#fff] flex-wrap gap-6 justify-center">
+                        <div className="grid grid-cols-4 py-[90px] px-8  pt-[120px] bg-[#fff] flex-wrap gap-6 justify-center">
                         {context.Adventure?.movies?.map((movie) => (
                             <Link
                             key={movie.id}
-                            className="transition-all duration-500 w-[320px]"
+                            className="transition-all duration-500 lg:col-span-1 md:col-span-2 col-span-4"
                             >
                             <div className="relative sldieimh rounded-[8px] overflow-hidden">
                                 <img
@@ -143,12 +143,12 @@ const MoviesDetails = ({context}) => {
                 )}
                  {context.Contenttype === "Read" && (
                     <>
-                        <div className="flex py-[60px] px-8  pt-[120px] bg-[#fff] flex-wrap gap-6 justify-center">
+                        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 py-[60px] px-8  pt-[120px] bg-[#fff] flex-wrap gap-6 justify-center">
                         {context.Adventure?.book?.map((book) => (
                            <Book book={book}/>
                         ))}
                         </div>
-                         <div className="flex py-[60px] px-8   bg-[#F4FBFF] flex-wrap gap-6 justify-center">
+                         <div className="grid md:grid-cols-2 grid-cols-1 py-[60px] px-8   bg-[#F4FBFF] flex-wrap gap-6 justify-center">
                         {context.Adventure?.news?.map((news) => (
                            <News2 news={news}/>
                         ))}

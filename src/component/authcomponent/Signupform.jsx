@@ -32,6 +32,11 @@ const Signupform = () => {
                         <Link className='primary-font text-[#6B7280] text-[14px] font-[400] flex justify-center gap-1'>Already have an account?</Link>
                         <Link className='primary-font text-[#0F4F72] text-[14px] font-[500]'>Login</Link>
                     </div>
+                      <Link className={`h-[72px] mt-8 flex gap-2 justify-center berlin items-center bg-[#F9FAFB] text-[#ADAEBC] text-[24px] rounded-[8px] `}>
+                                        Login with Google
+                                        <img src="/google.svg" alt="" />
+                     
+                                        </Link>
                    
                 </div>
 

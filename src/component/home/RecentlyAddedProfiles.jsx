@@ -61,7 +61,7 @@ const RecentlyAddedProfiles = () => {
       >
         {data.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="group catogaryhover relative rounded-2xl overflow-hidden transition-all duration-500">
+            <a href="#!" className="group block catogaryhover relative rounded-2xl overflow-hidden transition-all duration-500">
 
               {/* Image */}
               <img
@@ -77,7 +77,7 @@ const RecentlyAddedProfiles = () => {
                 </h3>
               </div>
 
-            </div>
+            </a>
           </SwiperSlide>
         ))}
       </Swiper>

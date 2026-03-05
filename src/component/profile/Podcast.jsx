@@ -6,7 +6,7 @@ const Podcast = ({item}) => {
     <div className="bg-white rounded-xl p-4 space-y-4 border-[#4285F429] border-b ">
           <Subheading data={item?.title} />
     {item?.items?.map((mediaItem) => (
-        <div key={mediaItem.id} className="space-y-2 mb-6">
+        <a href='#!' key={mediaItem.id} className="space-y-2 mb-6 block">
 
 
                 <p className="text-[12px] text-gray-500">
@@ -32,7 +32,7 @@ const Podcast = ({item}) => {
                   </div>
                 </div>
 
-              </div>
+              </a>
         ))}
    </div>
   )

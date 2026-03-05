@@ -41,34 +41,34 @@ const Categories = () => {
 
           <div className='grid gap-[20px] px-5 grid-cols-7 max-w-[1130px] m-auto mt-[50px]'>
             <div className="md:col-span-4 col-span-7">
-              <div className='catogaryhover relative rounded-[24px] overflow-hidden'>
+              <a href="/categories" className='catogaryhover block relative rounded-[24px] overflow-hidden'>
                 <img src="/catogary/1.jpg" className='h-[405px] w-[100%] object-cover object-center' alt="" />
                 <h3 className='berlin text-[#fff] absolute bottom-[10px] text-[40px] font-[700] left-[20px] z-30'>Actors</h3>
-              </div>
+              </a>
             </div>
              <div className="md:col-span-3 col-span-7">
-              <div className='catogaryhover relative rounded-[24px] overflow-hidden'>
+              <a href="/categories" className='catogaryhover block relative rounded-[24px] overflow-hidden'>
                 <img src="/catogary/2.jpg" className='h-[405px] w-[100%] object-cover object-center' alt="" />
                 <h3 className='berlin text-[#fff] absolute bottom-[10px] text-[40px] font-[700] left-[20px] z-30'>Politicians</h3>
-              </div>
+              </a>
             </div>
              <div className="md:col-span-2 col-span-7">
-              <div className='catogaryhover relative rounded-[24px] overflow-hidden'>
+              <a href="/categories" className='catogaryhover block relative rounded-[24px] overflow-hidden'>
                 <img src="/catogary/3.jpg" className='h-[405px] w-[100%] object-cover object-center' alt="" />
                 <h3 className='berlin text-[#fff] absolute bottom-[10px] text-[40px] font-[700] left-[20px] z-30'>Singers</h3>
-              </div>
+              </a>
             </div>
              <div className="md:col-span-3 col-span-7">
-              <div className='catogaryhover relative rounded-[24px] overflow-hidden'>
+              <a href="/categories" className='catogaryhover block relative rounded-[24px] overflow-hidden'>
                 <img src="/catogary/4.jpg" className='h-[405px] w-[100%] object-cover object-center' alt="" />
                 <h3 className='berlin text-[#fff] absolute bottom-[10px] text-[40px] font-[700] left-[20px] z-30'>Sportsperson</h3>
-              </div>
+              </a>
             </div>
              <div className="md:col-span-2 col-span-7">
-              <div className='catogaryhover relative rounded-[24px] overflow-hidden'>
+              <a href="/categories" className='catogaryhover block relative rounded-[24px] overflow-hidden'>
                 <img src="/catogary/5.jpg" className='h-[405px] w-[100%] object-cover object-center' alt="" />
                 <h3 className='berlin text-[#fff] absolute top-[50%] text-[40px] font-[700] text-center left-[50%] translate-x-[-50%] translate-y-[-50%]'>View All Categories</h3>
-              </div>
+              </a>
             </div>
             
 

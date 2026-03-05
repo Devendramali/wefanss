@@ -5,7 +5,7 @@ const Book = ({book}) => {
   return (
     <>
                     <Link  key={book.id}
-                            className="transition-all flex gap-3 duration-500 md:max-w-[400px] w-[100%]"
+                            className="transition-all flex gap-3 duration-500  w-[100%]"
                             >
                             <div className="relative w-[214px]  sldieimh rounded-[8px] overflow-hidden">
                                 <img
