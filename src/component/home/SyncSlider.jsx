@@ -52,7 +52,7 @@ export default function SyncSlider() {
 
           <Swiper
             modules={[Autoplay]}
-            slidesPerView={3}
+            slidesPerView={1}
             spaceBetween={20}
             loop
             speed={800}
@@ -61,6 +61,20 @@ export default function SyncSlider() {
                  disableOnInteraction: false,
               reverseDirection: true,
             }}
+             breakpoints={{
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 30
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 0
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+  }}
             onSlideChange={(swiper) => {
 
               const real = swiper.realIndex
