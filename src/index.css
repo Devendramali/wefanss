@@ -50,7 +50,7 @@ h1,h2,h3,h4,h5{
 }
 
 .celebrity-swiper .swiper-slide.swiper-slide-active{
-  /* width: 428px !important; */
+  width: 428px !important;
   /* scale: 2; */
   transform: translateX(-100px) !important;
   margin-right: -100px !important;

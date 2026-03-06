@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay  } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -18,8 +18,16 @@ const data = [
 ];
 
 export default function TrendingCelebrities() {
+
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filteredData =
+    activeCategory === "All"
+      ? data
+      : data.filter((item) => item.category === activeCategory);
+
   return (
-    <div className=" py-16 px-6">
+    <div className="py-16 px-6">
 
       {/* Top Header */}
       <div className="flex md:flex-row flex-col md:gap-0 gap-[20px] justify-between items-center mb-10">
@@ -28,13 +36,36 @@ export default function TrendingCelebrities() {
         </h2>
 
         <div className="flex gap-3">
-          <button className="px-4 py-1 rounded-full primary-font bg-blue-500 text-white text-sm">
+          <button
+            onClick={() => setActiveCategory("All")}
+            className={`px-4 py-1 rounded-full primary-font text-sm ${
+              activeCategory === "All"
+                ? "bg-blue-500 text-white"
+                : "bg-[#fff] border border-[#D9D9D9] text-gray-600"
+            }`}
+          >
             All
           </button>
-          <button className="px-4 py-1 rounded-full primary-font bg-[#fff] border border-[#D9D9D9] text-gray-600 text-sm">
+
+          <button
+            onClick={() => setActiveCategory("Actors")}
+            className={`px-4 py-1 rounded-full primary-font text-sm ${
+              activeCategory === "Actors"
+                ? "bg-blue-500 text-white"
+                : "bg-[#fff] border border-[#D9D9D9] text-gray-600"
+            }`}
+          >
             Actors
           </button>
-          <button className="px-4 py-1 rounded-full primary-font bg-[#fff] border border-[#D9D9D9] text-gray-600 text-sm">
+
+          <button
+            onClick={() => setActiveCategory("Politicians")}
+            className={`px-4 py-1 rounded-full primary-font text-sm ${
+              activeCategory === "Politicians"
+                ? "bg-blue-500 text-white"
+                : "bg-[#fff] border border-[#D9D9D9] text-gray-600"
+            }`}
+          >
             Politicians
           </button>
         </div>
@@ -42,48 +73,50 @@ export default function TrendingCelebrities() {
 
       {/* Swiper */}
       <Swiper
-          slidesPerView={2} // default (mobile)
-
-  centeredSlides={true}
-  spaceBetween={0}
-  loop={true}
-  autoplay={{
-    delay: 3000,
-    disableOnInteraction: false,
-  }}
-  pagination={{ clickable: true }}
-  modules={[Pagination, Autoplay]}
-    breakpoints={{
-    640: {
-      slidesPerView: 2,
-      spaceBetween:0
-    },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 0
-    },
-    1024: {
-      slidesPerView: 7,
-      spaceBetween: 30
-    },
-  }}
-  className="celebrity-swiper"
+        slidesPerView={2}
+        centeredSlides={true}
+        spaceBetween={0}
+        loop={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        pagination={{ clickable: true }}
+        modules={[Pagination, Autoplay]}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+          },
+          1024: {
+            slidesPerView: 6,
+            spaceBetween: 30,
+          },
+        }}
+        className="celebrity-swiper"
       >
-        {data.map((item) => (
+        {filteredData.map((item) => (
           <SwiperSlide key={item.id}>
-            <a href="#!" className="group md:w-[194px] block relative rounded-2xl overflow-hidden transition-all duration-500">
+            <a
+              href="#!"
+              className="group md:w-[194px] block relative rounded-2xl overflow-hidden transition-all duration-500"
+            >
 
               {/* Image */}
               <img
                 src={item.img}
                 alt={item.name}
-                className=" h-[480px] object-cover rounded-2xl transition-all duration-500 md:group-hover:scale-105"
+                className="h-[480px] object-cover rounded-2xl transition-all duration-500 md:group-hover:scale-105"
               />
 
               {/* Overlay */}
-              <div className="absolute hedeing  bottom-0 left-0 w-full ">
+              <div className="absolute hedeing bottom-0 left-0 w-full">
                 <h3 className="text-[#000000] bluriffect relative p-6 z-30 text-[64px] font-semibold leading-tight">
-                 <span className="relative z-30"> {item.name}</span>
+                  <span className="relative z-30">{item.name}</span>
                 </h3>
               </div>
 
@@ -91,9 +124,6 @@ export default function TrendingCelebrities() {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      {/* Blur Side Slides Effect */}
-
 
     </div>
   );

@@ -864,7 +864,7 @@ export default function JayaBachhan() {
           <ActorTabs/>
           <div className="px-[20px] py-[20px] rounded-[8px] space-y-4 bg-[#fff]">
             <div>
-              <h3 className="flex gap-2 items-center berlin text-[#1E1E1E] text-[24px] text-[400]"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <h3 className="flex gap-2 items-center berlin text-[#1E1E1E] md:text-[24px] text-[20px] text-[400]"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.5 6.06226L0 12.1244V7.82013e-05L10.5 6.06226Z" fill="#4285F4" />
               </svg>Relationships and family</h3>
               <img src="/fam.png" alt="" className="py-4" />
@@ -879,7 +879,7 @@ export default function JayaBachhan() {
             <div>
 
 
-              <h3 className="flex gap-2 mb-3 items-center berlin text-[#1E1E1E] text-[24px] text-[400]"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <h3 className="flex gap-2 mb-3 items-center berlin text-[#1E1E1E] md:text-[24px] text-[20px] text-[400]"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.5 6.06226L0 12.1244V7.82013e-05L10.5 6.06226Z" fill="#4285F4" />
               </svg>Religion</h3>
               <p className="mt-1 primary-font text-[16px] text-[#1E1E1E] font-[400]">Kumar was initially religious, till 2017 being a practising Shaiva Hindu who regularly visited shrines and temples across the country, including the famed Vaishno Devi Mandir,[311][312][313][294] while in 2018 he said "there is only one God" and was against bringing religion into politics,[314] but in March 2020 he stated, "I don't believe in any religion. I only believe in being Indian".[315]</p>
@@ -888,7 +888,7 @@ export default function JayaBachhan() {
             <div>
 
 
-              <h3 className="flex gap-2 mb-3 items-center berlin text-[#1E1E1E] text-[24px] text-[400]"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <h3 className="flex gap-2 mb-3 items-center berlin text-[#1E1E1E] md:md:text-[24px]  text-[20px] text-[400]"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.5 6.06226L0 12.1244V7.82013e-05L10.5 6.06226Z" fill="#4285F4" />
               </svg>Statistics</h3>
                  <div className="w-full overflow-x-auto">
@@ -949,7 +949,7 @@ export default function JayaBachhan() {
             <div>
 
 
-              <h3 className="flex gap-2 mb-3 items-center berlin text-[#1E1E1E] text-[24px] text-[400]"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <h3 className="flex gap-2 mb-3 items-center berlin text-[#1E1E1E] md:text-[24px] text-[20px] text-[400]"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.5 6.06226L0 12.1244V7.82013e-05L10.5 6.06226Z" fill="#4285F4" />
               </svg>Other work</h3>
               <h4 className="primary-font text-[18px] text-[#1E1E1E] font-[500] pb-2">Television</h4>
@@ -963,7 +963,7 @@ export default function JayaBachhan() {
             <div>
 
 
-              <h3 className="flex gap-2 mb-3 items-center berlin text-[#1E1E1E] text-[24px] text-[400]"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <h3 className="flex gap-2 mb-3 items-center berlin text-[#1E1E1E] md:text-[24px] text-[20px] text-[400]"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.5 6.06226L0 12.1244V7.82013e-05L10.5 6.06226Z" fill="#4285F4" />
               </svg>Fitness work and stage performances</h3>
               <ul className="pl-5">
@@ -977,7 +977,7 @@ export default function JayaBachhan() {
             <div>
 
 
-              <h3 className="flex gap-2 mb-3 items-center berlin text-[#1E1E1E] text-[24px] text-[400]"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <h3 className="flex gap-2 mb-3 items-center berlin text-[#1E1E1E] md:text-[24px] text-[20px] text-[400]"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.5 6.06226L0 12.1244V7.82013e-05L10.5 6.06226Z" fill="#4285F4" />
               </svg>Grid</h3>
               <div className="grid gap-[20px] grid-cols-4">
@@ -1002,7 +1002,7 @@ export default function JayaBachhan() {
             <div>
 
 
-              <h3 className="flex gap-2 mb-3 items-center berlin text-[#1E1E1E] text-[24px] text-[400]"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <h3 className="flex gap-2 mb-3 items-center berlin text-[#1E1E1E] md:text-[24px] text-[20px] text-[400]"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.5 6.06226L0 12.1244V7.82013e-05L10.5 6.06226Z" fill="#4285F4" />
               </svg>Listing</h3>
               <div className="grid gap-[20px] grid-cols-4 mt-4">
@@ -1032,7 +1032,7 @@ export default function JayaBachhan() {
             <div>
 
 
-              <h3 className="flex gap-2 mb-3 items-center berlin text-[#1E1E1E] text-[24px] text-[400]"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <h3 className="flex gap-2 mb-3 items-center berlin text-[#1E1E1E] md:text-[24px] text-[20px] text-[400]"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.5 6.06226L0 12.1244V7.82013e-05L10.5 6.06226Z" fill="#4285F4" />
               </svg>Media</h3>
               <div className=" mt-4">
@@ -1105,7 +1105,7 @@ export default function JayaBachhan() {
         </div>
 
         {/* RIGHT SIDEBAR */}
-        <div className="md:col-span-3 col-span-12 px-[20px] py-[20px] rounded-[8px] space-y-4 bg-[#fff]">
+        <div className="md:col-span-3 col-span-12 md:px-[20px] py-[20px] rounded-[8px] space-y-4 bg-[#fff]">
          
 
     

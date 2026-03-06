@@ -178,10 +178,10 @@ const [open, setOpen] = useState(false);
         <div className="fixed h-[100%] overflow-scroll inset-0 flex items-center justify-center z-50">
 
           {/* Overlay */}
-          <div
+          {/* <div
             className="absolute inset-0 bg-black/50"
             onClick={() => setOpen(false)}
-          ></div>
+          ></div> */}
 
           {/* Popup Content */}
           <div className="relative h-full rounded-[12px] py-5 w-[95%] max-w-[95%] h-full shadow-xl">

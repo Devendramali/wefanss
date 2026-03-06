@@ -1,106 +1,112 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Thumbs,
-  Autoplay,
-  EffectFade,
-  Pagination,
-  Navigation,
-} from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
 import "swiper/css";
-import "swiper/css/effect-fade";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/thumbs";
+
 import { Link } from "react-router-dom";
 
 export default function SyncSlider() {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-  const slides = [
-    { 
+  const thumbRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+    const slides = [
+    {
       id: 1,
-      img: "/celebrities/1.jpg",
-      title:"Trivia",
-      dis:"Jennifer Lopez's iconic green Versace dress from the 2000 Grammy Awards was so popular that it led to the creation of Google Images because people couldn't find photos of it online",
-      link:""
-     },
-    { id: 2, img: "/celebrities/2.jpg" ,
-        title:"abc",
-      dis:"Jennifer Lopez's iconic green Versace dress from the 2000 Grammy Awards was so popular that it led to the creation of Google Images because people couldn't find photos of it online",
-      link:""
+      img: "/celebrities/modi.jpg",
+      title: "Modi ji",
+      dis: "Jennifer Lopez's iconic green Versace dress from the 2000 Grammy Awards was so popular that it led to the creation of Google Images because people couldn't find photos of it online",
+      link: "",
     },
-    { id: 3, img: "/celebrities/3.jpg",
-        title:"def",
-      dis:"Jennifer Lopez's iconic green Versace dress from the 2000 Grammy Awards was so popular that it led to the creation of Google Images because people couldn't find photos of it online",
-      link:""
-     },
-    { id: 4, img: "/celebrities/1.jpg",  title:"xyz",
-      dis:"Jennifer Lopez's iconic green Versace dress from the 2000 Grammy Awards was so popular that it led to the creation of Google Images because people couldn't find photos of it online",
-      link:"" },
+    {
+      id: 2,
+      img: "/celebrities/akshay.jpg",
+      title: "Akshay",
+      dis: "Jennifer Lopez's iconic green Versace dress from the 2000 Grammy Awards was so popular that it led to the creation of Google Images because people couldn't find photos of it online",
+      link: "",
+    },
+    {
+      id: 3,
+      img: "/celebrities/salman.jpg",
+      title: "Salman",
+      dis: "Jennifer Lopez's iconic green Versace dress from the 2000 Grammy Awards was so popular that it led to the creation of Google Images because people couldn't find photos of it online",
+      link: "",
+    },
+    {
+      id: 4,
+      img: "/celebrities/1.png",
+      title: "Crids",
+      dis: "Jennifer Lopez's iconic green Versace dress from the 2000 Grammy Awards was so popular that it led to the creation of Google Images because people couldn't find photos of it online",
+      link: "",
+    },
   ];
 
   return (
-    <div className="w-full   px-5 flex items-center justify-center bg-blue-500 py-16">
-      <div className=" grid grid-cols-12 gap-8">
-      {/* THUMB SLIDER (LEFT TO RIGHT LOOP) */}
+    <div className="w-full px-5 flex items-center justify-center bg-blue-500 py-16">
+      <div className="grid grid-cols-12 gap-8">
+
+        {/* IMAGE SLIDER */}
         <div className="col-span-12 md:col-span-6">
+
           <Swiper
-  modules={[Thumbs, Autoplay]}
-  onSwiper={setThumbsSwiper}
-  slidesPerView={3}
-  spaceBetween={20}
-  loop={true}
-  speed={800}
-  autoplay={{
-    delay: 2500,
-    disableOnInteraction: false,
-    reverseDirection: true,   // 🔥 IMPORTANT LINE
-  }}
-  className="mt-6 slider1"
->
+            modules={[Autoplay]}
+            slidesPerView={3}
+            spaceBetween={20}
+            loop
+            speed={800}
+            autoplay={{
+              delay: 3000,
+                 disableOnInteraction: false,
+              reverseDirection: true,
+            }}
+            onSlideChange={(swiper) => {
+
+              const real = swiper.realIndex
+              setActiveIndex(real)
+
+              if (thumbRef.current) {
+                thumbRef.current.slideToLoop(real)
+              }
+
+            }}
+          >
 
             {slides.map((slide) => (
               <SwiperSlide key={slide.id}>
-                <div className="rounded-xl h-[550px] flex items-end overflow-hidden cursor-pointer">
+                <div className="rounded-xl h-[550px] overflow-hidden">
                   <img
-                    src={`${slide.img}?auto=format&fit=crop&w=300&q=80`}
-                    className="w-full h-full object-cover img12"
+                    src={slide.img}
+                    className="w-full h-full object-cover"
                     alt=""
                   />
                 </div>
               </SwiperSlide>
             ))}
+
           </Swiper>
+
         </div>
 
-        {/* MAIN SLIDER */}
+        {/* TEXT */}
         <div className="col-span-12 md:col-span-5">
-          <Swiper
-            modules={[Thumbs, Autoplay, EffectFade, Pagination, Navigation]}
-            effect="fade"
-            fadeEffect={{ crossFade: true }}
-            loop={true}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            navigation
-            // pagination={{ clickable: true }}
-            thumbs={{ swiper: thumbsSwiper }}
-            className=""
+
+          <h2 className="text-[48px] text-white mb-[40px]">
+            {slides[activeIndex].title}
+          </h2>
+
+          <p className="text-[24px] text-white">
+            {slides[activeIndex].dis}
+          </p>
+
+          <Link
+            to="#"
+            className="mt-[70px] block py-[10px] rounded-[100px] bg-[#FFFFFF33] text-[16px] text-white border border-white w-fit px-[20px]"
           >
-            {slides.map((slide) => (
-              <SwiperSlide key={slide.id}>
-                <div className="textim">
-                  <h2 className="berlin text-[48px] text-[#fff] mb-[60px]">{slide.title}</h2>
-                  <p className="primary-font text-[24px] text-[#fff]">{slide.dis}</p>
-                  <Link className="mt-[70px] block py-[10px] rounded-[100px] bg-[#FFFFFF33] text-[16px] text-[#fff] border-[1px] border border-[#fff] w-fit px-[20px]">Know More</Link>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+            Know More
+          </Link>
+
         </div>
 
       </div>

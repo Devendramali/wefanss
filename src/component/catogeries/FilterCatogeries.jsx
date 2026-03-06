@@ -20,7 +20,7 @@ const FilterCatogeries = () => {
     language: ["English"],
     age: 42,
     totalMovies: 38,
-    cardcalss:"md:w-[280px]",
+    cardcalss:"lg:col-span-1 md:col-span-2 col-span-4",
     totalAwards: 15,
     img: "/catogary/cat1.jpg",
   },
@@ -28,7 +28,7 @@ const FilterCatogeries = () => {
     id: 2,
     name: "Florence Pugh",
     gender: "Female",
-     cardcalss:"md:w-[280px]",
+     cardcalss:"lg:col-span-1 md:col-span-2 col-span-4",
     language: ["Hindi", "English"],
     age: 38,
     totalMovies: 30,
@@ -39,7 +39,7 @@ const FilterCatogeries = () => {
     id: 3,
     name: "Tom Hiddleston",
     gender: "Male",
-     cardcalss:"md:w-[280px]",
+     cardcalss:"lg:col-span-1 md:col-span-2 col-span-4",
     language: ["Hindi"],
     age: 58,
     totalMovies: 45,
@@ -50,7 +50,7 @@ const FilterCatogeries = () => {
     id: 4,
     name: "Priyanka Chopra",
     gender: "Female",
-     cardcalss:"md:w-[280px]",
+     cardcalss:"lg:col-span-1 md:col-span-2 col-span-4",
     language: ["Hindi", "English"],
     age: 41,
     totalMovies: 35,
@@ -64,7 +64,7 @@ const FilterCatogeries = () => {
     language: ["Hindi", "English"],
     age: 41,
     totalMovies: 35,
-     cardcalss:"md:w-[280px]",
+     cardcalss:"lg:col-span-1 md:col-span-2 col-span-4",
     totalAwards: 28,
      img: "/catogary/cat3.jpg",
   },
@@ -72,7 +72,7 @@ const FilterCatogeries = () => {
     id: 6,
     name: "Chris Hemsworth",
     gender: "Male",
-     cardcalss:"md:w-[280px]",
+     cardcalss:"lg:col-span-1 md:col-span-2 col-span-4",
     language: ["Hindi", "English"],
     age: 41,
     totalMovies: 35,
@@ -171,7 +171,7 @@ return genderMatch && languageMatch && ageMatch && searchMatch;
   return (
     <>
         <div className="px-6 py-5 bg-[#fff] ">
-            <div className={`flex md:justify-start justify-between gap-3`}>
+            <div className={` flex md:justify-start  justify-between gap-3`}>
                 <div className={`flex gap-3 transition-all duration-500 ${
                         showFilters ? "md:min-w-[250px] md:w-[250px]    opacity-100" : " "
                     }`}>
@@ -203,10 +203,13 @@ return genderMatch && languageMatch && ageMatch && searchMatch;
                 </div>
             </div>
             <div className="flex md:gap-3 mt-5">
-                <div   className={`flex flex-col gap-4 py-4 transition-all duration-500 overflow-hidden ${
-                        showFilters ? "min-w-[250px] w-[250px]  opacity-100" : "min-w-0 w-0 opacity-0"
+                <div   className={`flex flex-col bg-[#fff] gap-4 py-4 transition-all duration-500 overflow-hidden ${
+                        showFilters ? "md:min-w-[250px] min-w-[100%] md:w-[250px] w-[100%] md:relative fixed top-0 left-0 z-40 md:p-0 p-3 opacity-100" : "min-w-0 w-0 opacity-0"
                     }`}>
                     {/* Gender */}
+                    <button className='absolute md:hidden block top-3 right-3 z-50' onClick={() => setShowFilters(!showFilters)}>
+                      X
+                    </button>
                     <div>
                         <h3 className="text-[#757575] font-[400] text-[16px] primary-font mb-3">Gender</h3>
                         <div className="flex gap-3">
@@ -311,7 +314,7 @@ return genderMatch && languageMatch && ageMatch && searchMatch;
                         </div>
                     </div>
                 </div>
-                <div className={`flex gap-3  flex-wrap  ${
+                <div className={`grid grid-cols-4 gap-3  flex-wrap  ${
                         showFilters ? "" : "justify-center"
                     }`}>
                 {filteredActors.length > 0 ? (

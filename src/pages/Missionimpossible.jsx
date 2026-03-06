@@ -43,25 +43,98 @@ const MoviesCotext = {
                 id: 1,
                 title: "Star Wars Rogue One",
                 img: "/md.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
+            
             },
             {
                 id: 2,
                 title: "Star Wars Rogue One",
                 img: "/md.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
             },
             {
                 id: 3,
                 title: "Star Wars Rogue One",
                 img: "/md.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
             },
             {
                 id: 4,
                 title: "Star Wars Rogue One",
                 img: "/md.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
             },
         ]
     },
@@ -75,25 +148,97 @@ const MoviesCotext = {
                 id: 1,
                 title: "Star Wars Rogue One",
                 img: "/md.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
             },
             {
                 id: 2,
                 title: "Star Wars Rogue One",
                 img: "/md.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
             },
             {
                 id: 3,
                 title: "Star Wars Rogue One",
                 img: "/md.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
             },
             {
                 id: 4,
                 title: "Star Wars Rogue One",
                 img: "/md.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
             },
         ]
     },
@@ -106,25 +251,97 @@ const MoviesCotext = {
                 id: 1,
                 title: "Star Wars Rogue One",
                 img: "/doc.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
             },
             {
                 id: 2,
                 title: "Star Wars Rogue One",
                 img: "/doc.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
             },
             {
                 id: 3,
                 title: "Star Wars Rogue One",
                 img: "/doc.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
             },
             {
                 id: 4,
                 title: "Star Wars Rogue One",
                 img: "/doc.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
             },
         ]
     },
@@ -137,25 +354,97 @@ const MoviesCotext = {
                 id: 1,
                 title: "Star Wars Rogue One",
                 img: "/comedy.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
             },
             {
                 id: 2,
                 title: "Star Wars Rogue One",
                 img: "/comedy.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
             },
             {
                 id: 3,
                 title: "Star Wars Rogue One",
                 img: "/comedy.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
             },
             {
                 id: 4,
                 title: "Star Wars Rogue One",
                 img: "/comedy.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
             },
         ]
     },
@@ -168,25 +457,97 @@ const MoviesCotext = {
                 id: 1,
                 title: "Star Wars Rogue One",
                 img: "/action.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
             },
             {
                 id: 2,
                 title: "Star Wars Rogue One",
                 img: "/action.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
             },
             {
                 id: 3,
                 title: "Star Wars Rogue One",
                 img: "/action.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
             },
             {
                 id: 4,
                 title: "Star Wars Rogue One",
                 img: "/action.png",
-                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans."
+                desc: "Rogue One: A Star Wars Story is a thrilling film set in the Star Wars universe, focusing on a group of rebels who band together to steal the plans.",
+                year: "2019",
+                category: "Thriller",
+                language: ["Marathi", "Hindi", "English", "More"],
+                rating: [
+                    {
+                        img: "/rating/1.png",
+                        per: 7.2,
+                        site: "IMDb"
+
+                    },
+                    {
+
+                        img: "/rating/2.png",
+                        per: 7,
+                        site: "Wefanss"
+                    }
+                ],
+                cast: "Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed ,Alex Carter, Mia Chen, Jordan Lee, Sofia Martinez, Liam O'Connor, Zoe Kim, Marcus Reed"
             },
         ]
     },

@@ -19,10 +19,10 @@ const Footer = () => {
           </div>
           <div className='md:max-w-[440px] md:flex-row flex-col flex justify-between gap-[50px] md:mr-[60px] relative z-20'>
             <ul className='gap-3 flex flex-col text-center'>
+              <li className='text-[#FFFFFF] primary-font text-[16px]'><Link>Actors</Link></li>
+              <li className='text-[#FFFFFF] primary-font text-[16px]'><Link>Politicians </Link></li>
               <li className='text-[#FFFFFF] primary-font text-[16px]'><Link>About</Link></li>
               <li className='text-[#FFFFFF] primary-font text-[16px]'><Link>Contact</Link></li>
-              <li className='text-[#FFFFFF] primary-font text-[16px]'><Link>Category</Link></li>
-              <li className='text-[#FFFFFF] primary-font text-[16px]'><Link>Celebrity</Link></li>
             </ul>
             <ul className='gap-3 flex flex-col text-center'>
               <li className='text-[#FFFFFF] primary-font text-[16px]'><Link>Privacy Policy</Link></li>

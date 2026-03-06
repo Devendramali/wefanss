@@ -32,7 +32,7 @@ export default function CelebritySlider() {
       <div className="w-full h-full relative overflow-hidden ">
 
         <Swiper
-          slidesPerView={1.15}
+          slidesPerView={1}
           loop={true}
           autoplay={{
             delay: 4000,
@@ -40,6 +40,17 @@ export default function CelebritySlider() {
           }}
           pagination={{ clickable: true }}
           modules={[Pagination, Autoplay]}
+           breakpoints={{
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 1,
+          },
+          1024: {
+            slidesPerView: 1.15,
+          },
+        }}
           className="h-full"
         >
           {slides.map((item, index) => (
@@ -66,7 +77,7 @@ export default function CelebritySlider() {
                 {/* Content */}
                 <div className="absolute bottom-20 left-10 text-white disl">
                   <div className="flex items-center gap-4 mb-6">
-                    <button className="bg-[#4285F4] flex gap-2 justify-center items-center hover:bg-[#4285F4] w-[240px] transition px-6 py-2 rounded-full text-[16px]">
+                    <button className="bg-[#4285F4] flex gap-2 justify-center items-center hover:bg-[#4285F4] md:w-[240px] w-[140px] transition px-6 py-2 rounded-full text-[16px]">
                       Follow <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 1V15M1 8H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
@@ -79,10 +90,10 @@ export default function CelebritySlider() {
                     
                   </div>
 
-                  <h1 className="text-6xl md:text-[200px] font-bold berlin !leading-[160px]">
+                  <h1 className="text-6xl md:text-[200px] font-bold berlin md:!leading-[160px]">
                     {item.name.split(" ")[0]}
                   </h1>
-                  <h1 className="text-6xl md:text-[200px] font-bold berlin !leading-[160px]">
+                  <h1 className="text-6xl md:text-[200px] font-bold berlin md:!leading-[160px]">
                     {item.name.split(" ")[1]}
                   </h1>
                 </div>

@@ -22,7 +22,7 @@ const SearchResult = () => {
             language: ["English"],
             age: 42,
             totalMovies: 38,
-            cardcalss: "md:w-[325px]",
+            cardcalss: "lg:col-span-1 md:col-span-2 col-span-4  ",
             totalAwards: 15,
             img: "/catogary/cat1.jpg",
         },
@@ -30,7 +30,7 @@ const SearchResult = () => {
             id: 2,
             name: "Florence Pugh",
             gender: "Actor",
-            cardcalss: "md:w-[325px]",
+            cardcalss: "lg:col-span-1 md:col-span-2 col-span-4  ",
             language: ["Hindi", "English"],
             age: 38,
             totalMovies: 30,
@@ -41,7 +41,7 @@ const SearchResult = () => {
             id: 3,
             name: "Tom Hiddleston",
             gender: "Politician",
-            cardcalss: "md:w-[325px]",
+            cardcalss: "lg:col-span-1 md:col-span-2 col-span-4  ",
             language: ["Hindi"],
             age: 58,
             totalMovies: 45,
@@ -52,7 +52,7 @@ const SearchResult = () => {
             id: 4,
             name: "Priyanka Chopra",
             gender: "Actor",
-            cardcalss: "md:w-[325px]",
+            cardcalss: "lg:col-span-1 md:col-span-2 col-span-4  ",
             language: ["Hindi", "English"],
             age: 41,
             totalMovies: 35,
@@ -66,7 +66,7 @@ const SearchResult = () => {
             language: ["Hindi", "English"],
             age: 41,
             totalMovies: 35,
-            cardcalss: "md:w-[325px]",
+            cardcalss: "lg:col-span-1 md:col-span-2 col-span-4  ",
             totalAwards: 28,
             img: "/catogary/cat3.jpg",
         },
@@ -74,7 +74,7 @@ const SearchResult = () => {
             id: 6,
             name: "Chris Hemsworth",
             gender: "Politician",
-            cardcalss: "md:w-[325px]",
+            cardcalss: "lg:col-span-1 md:col-span-2 col-span-4  ",
             language: ["Hindi", "English"],
             age: 41,
             totalMovies: 35,
@@ -177,7 +177,7 @@ const SearchResult = () => {
                         </span>
                     </div>
 
-                    <div className={`flex flex-col justify-center items-center gap-4 py-4 transition-all duration-500 " 
+                    <div className={`flex md:flex-row  flex-col justify-center items-center gap-4 py-4 transition-all duration-500 " 
                     }`}>
                         {/* Gender */}
                       
@@ -226,7 +226,7 @@ const SearchResult = () => {
                 </div>
                 <div>
 
-                    <div className={`flex gap-3 flex-wrap justify-center
+                    <div className={`grid grid-cols-4 gap-3 flex-wrap justify-center
                     }`}>
                         {filteredActors.length > 0 ? (
                             filteredActors.map((item) => (
