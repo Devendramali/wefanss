@@ -67,8 +67,8 @@ const TermsConditions = () => {
 ];
   return (
     <>
-    <div className='md:py-[70px] py-[50px] max-w-[1400px] px-5 m-auto'>
-        <h2 className='berlin text-[36px] text-[#1E1E1E]'>Terms Conditions</h2>
+    <div className='md:py-[70px] py-[50px] max-w-[924px] px-5 m-auto'>
+        <h2 className='berlin text-[36px] text-[#1E1E1E] text-center'>Terms Conditions</h2>
 
         <div className="mt-4">
             {

@@ -289,3 +289,22 @@ background: #00000066;
 .viewedcelebritiesslider .swiper-button-prev svg{
   color: #000;
 }
+.syncslider{}
+.syncslider .swiper-slide > div{
+  height: 300px;
+  transition: all .3s linear;
+}
+.syncslider .swiper-slide{    display: flex;
+    align-items: flex-end;}
+.syncslider .swiper-slide ,
+.syncslider .swiper-slide.swiper-slide-active > div{
+  height: 500px;
+}
+
+@media (max-width:480px) {
+  .syncslider .swiper-slide ,
+.syncslider .swiper-slide.swiper-slide-active > div{
+  height: 400px;
+  width: 100%;
+}
+}
