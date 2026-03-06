@@ -46,7 +46,7 @@ const [open, setOpen] = useState(false);
 
                                 {/* Overlay */}
                                 <div className=" hedeing max-w-[770px] z-20 md:mt-[300px] mt-[150px]  md:pl-[50px] md:pb-[40px] p-4 w-full ">
-                                    <div className="p-5 md:bg-[#00000080] md:backdrop-blur-[100px] rounded-[16px]">
+                                    <div className="md:p-5 md:bg-[#00000080] md:backdrop-blur-[100px] rounded-[16px]">
                                         <h2 className="berlin text-[64px] text-[#fff]">{item.name}</h2>
                                         <div className="primary-font mt-4 text-[#fff] text-[16px] flex gap-4 flex-wrap  items-center">
                                             <span>{item.year}</span>
@@ -205,7 +205,7 @@ const [open, setOpen] = useState(false);
 
                                 {/* Overlay */}
                                 <div className=" hedeing max-w-[770px] z-20 md:mt-[300px] mt-[150px]  md:pl-[50px] md:pb-[40px] p-4 w-full ">
-                                    <div className="p-5 md:bg-[#00000080] md:backdrop-blur-[100px] rounded-[16px]">
+                                    <div className="md:p-5 md:bg-[#00000080] md:backdrop-blur-[100px] rounded-[16px]">
                                         <h2 className="berlin text-[64px] text-[#fff]">{selectedItem.name}</h2>
                                         <div className="primary-font mt-4 text-[#fff] text-[16px] flex gap-4 flex-wrap  items-center">
                                             <span>{selectedItem.year}</span>
