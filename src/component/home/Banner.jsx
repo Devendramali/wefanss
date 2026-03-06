@@ -57,7 +57,7 @@ const Banner = () => {
       />
 
       <div className='relative  z-20'>
-        <h1 className='berlin text-[#FFFFFF] md:text-[96px] text-[50px] md:leading-relaxed !leading-[50px] text-center'>
+        <h1 className='berlin text-[#FFFFFF] md:text-[96px] text-[50px] md:!leading-relaxed !leading-[50px] text-center'>
           Discover Icons of Fame
         </h1>
 
