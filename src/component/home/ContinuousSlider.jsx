@@ -9,7 +9,7 @@ export default function MarqueeSlider() {
 
   return (
     <>
-    <div className="relative px-5 py-[30px]">
+    <div className="relative px-5 py-[30px] md:block hidden">
         <img
             src="/banner/banner.png"
             className='absolute top-0 h-full object-cover inset-0 w-full z-1'
