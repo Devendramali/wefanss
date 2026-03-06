@@ -96,7 +96,7 @@ export default function PopularPeople() {
         </h2>
 
         {/* Names List */}
-        <div className="flex flex-wrap gap-1 text-[#6E6E6E] text-[20px]">
+        <div className="flex flex-wrap gap-1 text-[#6E6E6E] md:text-[20px] text-[18px]">
           {items.map((name, index) => (
             <span key={index} className="mr-5 group cursor-pointer">
               <span className="group-hover:text-blue-600 primary-font  transition">

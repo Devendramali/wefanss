@@ -12,7 +12,7 @@ export default function CtaSection() {
             Lorem ipsum dolor sit phasellus id molestie ultrices at.
             Molestie at
           </h1>
-          <h1 className="berlin md:hidden block text-[#4285F4] md:text-[48px] text-[24px] font-[400] mb-18">
+          <h1 className="berlin md:hidden block text-[#4285F4] md:text-[48px] text-[24px] font-[400] mb-10">
             amet consectetur. Morbi ultrices at. Molestie at Molestie at
           </h1>
 
