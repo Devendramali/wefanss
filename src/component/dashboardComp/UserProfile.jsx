@@ -9,9 +9,9 @@ const UserProfile = () => {
                 <img src="/dash-pro.png" className='rounded-full w-full overflow-hidden border border-[#34C759] border-[4px] p-1' alt="" />
                 <h3 className='p-2 text-[#34C759] primary-font text-[14px] font-[500] px-3 m-auto absolute bottom-0 left-[38%] bg-[#F3FFF6] w-fit rounded-[8px]'>80%</h3>
             </div>
-            <div className='mt-6 flex justify-center'>
+            <div className='mt-6  md:flex hidden justify-center'>
 
-                <Button btntext="Complete Profile"/>
+                <Button btntext="Complete Profile" btnclass="!  px-2"/>
             </div>
         </div>
         <div className="md:col-span-2 col-span-2 pt-[40px]">
@@ -27,6 +27,12 @@ const UserProfile = () => {
                     <h2 className='berlin text-[40px] text-[#4285F4] mt-3'>21</h2>
                 </div>
                
+            </div>
+        </div>
+         <div className="md:col-span-2 md:hidden col-span-4 ">
+       <div className=' flex justify-center'>
+
+                <Button btntext="Complete Profile" btnclass="!px-2 w-full"/>
             </div>
         </div>
          <div className='md:hidden col-span-4  w-full mt-7'>

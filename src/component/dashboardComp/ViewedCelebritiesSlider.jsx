@@ -20,7 +20,7 @@ const ViewedCelebritiesSlider = ({data}) => {
           }
       </div>
              <Swiper
-          slidesPerView={1}
+          slidesPerView={1.3}
           loop={true}
           spaceBetween={10}
           autoplay={{
@@ -28,12 +28,13 @@ const ViewedCelebritiesSlider = ({data}) => {
             disableOnInteraction: false,
           }}
           pagination={{ clickable: true }}
-          navigation={true}   // 👈 Add this
+          navigation={window.innerWidth > 1024}   // 👈 Add this
           modules={[Autoplay, Navigation]}   // 👈 Add Navigation here
            breakpoints={{
     640: {
       slidesPerView: 2,
-      spaceBetween:0
+      spaceBetween:0,
+      
     },
     768: {
       slidesPerView: 3,
