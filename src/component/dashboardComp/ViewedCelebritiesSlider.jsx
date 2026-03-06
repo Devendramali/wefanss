@@ -10,7 +10,7 @@ import Button from "../Button";
 
 const ViewedCelebritiesSlider = ({data}) => {
   return (
-    <div className={` max-w-[1352px] m-auto px-[40px] ${data.cardClass} `}>
+    <div className={` max-w-[1352px] m-auto md:px-[40px] px-5 ${data.cardClass} `}>
       <div className="flex justify-between">
          <h3 className="flex gap-2 items-center berlin mb-8 text-[#1E1E1E] md:text-[36px] text-[24px] text-[400]">{data.title}</h3>
           {
@@ -20,7 +20,7 @@ const ViewedCelebritiesSlider = ({data}) => {
           }
       </div>
              <Swiper
-          slidesPerView={1.3}
+          slidesPerView={1.1}
           loop={true}
           spaceBetween={10}
           autoplay={{
