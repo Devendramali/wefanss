@@ -129,12 +129,12 @@ const Banner = () => {
                   {/* See More / See Less */}
                   {filteredActors.length > 4 && (
                     <div className="text-center mt-3">
-                      <button
+                      <a href='#!'
                         onClick={() => setShowAll(!showAll)}
                         className="text-[#4285F4] text-[12px] font-[500]"
                       >
                         {showAll ? "See Less" : "See More"}
-                      </button>
+                      </a>
                     </div>
                   )}
                 </>

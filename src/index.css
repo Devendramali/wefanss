@@ -49,10 +49,14 @@ h1,h2,h3,h4,h5{
   margin-right: 100px !important;
 }
 
+.celebrity-swiper .swiper-slide.swiper-slide-next{
+  /* transform:  !important; */
+      transform: scale(0.85) translateX(20px) !important;
+}
 .celebrity-swiper .swiper-slide.swiper-slide-active{
   width: 428px !important;
   /* scale: 2; */
-  transform: translateX(-100px) !important;
+  transform: translateX(-119px) !important;
   margin-right: -100px !important;
   /* : 100px !important; */
 }
@@ -150,7 +154,8 @@ background: linear-gradient(266.11deg, rgba(0, 0, 0, 0.9) 45.25%, rgba(0, 0, 0, 
 
 @media (max-width:430px) {
   .celebrity-swiper .swiper-slide.swiper-slide-active{
-      width: auto;
+     width: 318px !important;
+      transform: translateX(-83px) !important;
     }
     .celebrity-swiper .swiper-slide-active{
      
@@ -165,6 +170,10 @@ background: linear-gradient(266.11deg, rgba(0, 0, 0, 0.9) 45.25%, rgba(0, 0, 0, 
 background: #00000066;
 
 
+}
+.celebrity-swiper .swiper-slide.swiper-slide-prev{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
 }
 .marquee-swiper .swiper-wrapper {

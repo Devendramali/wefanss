@@ -94,7 +94,7 @@ export default function TrendingCelebrities() {
           },
           1024: {
             slidesPerView: 6,
-            spaceBetween: 30,
+            spaceBetween: 0,
           },
         }}
         className="celebrity-swiper"
