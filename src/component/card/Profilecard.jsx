@@ -176,7 +176,7 @@ const Profilecard = ({ ActorData }) => {
                         </li>
                         <li className="group">
                             <Link className="flex flex-col transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                            <img src="/share/Twitter.png" alt="" />
+                            <img src="/share/Twitter.png" className='h-[24px]' alt="" />
                             <h3 className="flex text-[8px] mt-[6px] gap-2 primary-font font-[500] items-center">
                                 <span>X</span></h3>
                             </Link>
