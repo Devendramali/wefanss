@@ -49,7 +49,7 @@ const Otpform = () => {
           </div>
 
           {/* Button */}
-          <Authbtn btntext="Verify" className="w-full" />
+          <Authbtn href="/" btntext="Verify" className="w-full" />
 
           {/* Resend Section */}
           <div className="flex justify-center items-center gap-2 mt-6">

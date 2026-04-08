@@ -19,13 +19,13 @@ const Loginform = () => {
                 </div>
                 <div className='flex justify-between items-center mt-3'>
                     <span className='poppins text-[14px] font-[400] flex justify-center gap-1'><input type="checkbox" name="" id="" />Remember me </span>
-                    <Link className='primary-font text-[#0F4F72] text-[14px] font-[500]'>Forgot password?</Link>
+                    <Link to="/forget-password" className='primary-font text-[#0F4F72] text-[14px] font-[500]'>Forgot password?</Link>
                 </div>
                 <div>
-                    <Authbtn btntext="Log In" className='mt-8'/>
+                    <Authbtn href="/" btntext="Log In" className='mt-8'/>
                      <div className='flex justify-center items-center gap-3 mt-8'>
                         <span className='primary-font text-[#6B7280] text-[14px] font-[400] flex justify-center gap-1'>Don't have an account?</span>
-                        <Link className='primary-font text-[#0F4F72] text-[14px] font-[500]'>Register</Link>
+                        <Link to="/register" className='primary-font text-[#0F4F72] text-[14px] font-[500]'>Register</Link>
                     </div>
                     <Link className={`h-[72px] mt-8 flex gap-2 justify-center berlin items-center bg-[#F9FAFB] text-[#ADAEBC] text-[24px] rounded-[8px] `}>
                     Login with Google

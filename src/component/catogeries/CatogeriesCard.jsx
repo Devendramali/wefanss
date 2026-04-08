@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CatogeriesCard = ({ data }) => {
   return (
-    <a href="#!" className={`w-[100%] bg-[#F4FBFF]  block rounded-[8px] p-3 space-y-3 ${data.cardcalss}`}>
+    <Link to={data.link} className={`w-[100%] bg-[#F4FBFF]  block rounded-[8px] p-3 space-y-3 ${data.cardcalss}`}>
 
       {/* Image */}
       <div className="w-full h-[340px] overflow-hidden rounded-lg">
@@ -38,7 +38,7 @@ const CatogeriesCard = ({ data }) => {
                 </div>
 
       </div>
-    </a>
+    </Link>
   );
 };
 

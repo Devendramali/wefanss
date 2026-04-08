@@ -23,6 +23,7 @@ const FilterCatogeries = () => {
     cardcalss:"lg:col-span-1 md:col-span-2 col-span-4",
     totalAwards: 15,
     img: "/catogary/cat1.jpg",
+    link:"/profiles"
   },
   {
     id: 2,
@@ -34,6 +35,7 @@ const FilterCatogeries = () => {
     totalMovies: 30,
     totalAwards: 25,
      img: "/catogary/cat2.jpg",
+      link:"/profiles"
   },
   {
     id: 3,
@@ -45,6 +47,7 @@ const FilterCatogeries = () => {
     totalMovies: 45,
     totalAwards: 40,
       img: "/catogary/cat5.png",
+       link:"/profiles"
   },
   {
     id: 4,
@@ -56,6 +59,7 @@ const FilterCatogeries = () => {
     totalMovies: 35,
     totalAwards: 28,
      img: "/catogary/cat4.jpg",
+      link:"/profiles"
   },
   {
     id: 5,
@@ -67,6 +71,7 @@ const FilterCatogeries = () => {
      cardcalss:"lg:col-span-1 md:col-span-2 col-span-4",
     totalAwards: 28,
      img: "/catogary/cat3.jpg",
+      link:"/profiles"
   },
   {
     id: 6,
@@ -78,6 +83,7 @@ const FilterCatogeries = () => {
     totalMovies: 35,
     totalAwards: 28,
      img: "/catogary/cat6.jpg",
+      link:"/profiles"
   },
 
 ];

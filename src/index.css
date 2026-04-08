@@ -317,3 +317,13 @@ background: #00000066;
   width: 100%;
 }
 }
+.detaillist li a{
+  color: #4285F4;
+}
+.detaillist{
+  list-style:decimal;
+  display: flex;
+  gap: 16px 0;
+  flex-direction: column;
+  padding-left: 20px;
+}

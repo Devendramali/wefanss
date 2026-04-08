@@ -10,7 +10,7 @@ const ProfileContent = ({ sections }) => {
         >
           {item}
           {i !== sections.length - 1 && (
-            <span className="mx-2 text-[#D9D9D9]">|</span>
+            <span className="mx-1 text-[#D9D9D9]">|</span>
           )}
         </a>
       ))}

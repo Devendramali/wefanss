@@ -13,6 +13,7 @@ import MediaContent from "./MediaContent";
 import NewsContent from "./NewsContent";
 import Podcast from "./Podcast";
 import ActorTabs from "./ActorTabs";
+import Profilecard from "../card/Profilecard";
 // import { ChevronDown } from "lucide-react";
 
 export const sidebarData = [
@@ -38,6 +39,7 @@ export const sidebarData = [
     id: 2,
     type: "topFilms",
     title: "Top Films",
+    link:"/movies",
     items: [
       {
         id: 1,
@@ -89,6 +91,7 @@ export const sidebarData = [
     id: 4,
     type: "images",
     title: "Images",
+    link:"/gallery",
     items: [
       {
         id: 1,
@@ -116,7 +119,32 @@ export const sidebarData = [
         image: "/actor/1.png"
       }
     ]
-  }
+  },
+    {
+    id: 5,
+    type: "hitSongs",
+    title: "Related Personalities",
+    items: [
+      {
+        id: 1,
+        name: "Twinkle Khanna",
+        subtitle: "Actress",
+        image: "/celebrities/tk.png"
+      },
+      {
+        id: 2,
+        name: "Jhon Abraham",
+        subtitle: "Actor",
+        image: "/celebrities/ji.png"
+      },
+      {
+        id: 3,
+        name: "Katrina Kaif",
+        subtitle: "Actress",
+        image: "/celebrities/kk.png"
+      }
+    ]
+  },
 
 ];
 
@@ -151,7 +179,8 @@ const ActorData = {
   Rank: "22",
   Languages: ["English", "Marathi"],
   BirthDate: "9 September 1967",
-  BirthPlace: "Amritsar, Punjab, India"
+  BirthPlace: "Amritsar, Punjab, India",
+  profileimg:"/actor/profile.png"
 
 
 };
@@ -359,6 +388,8 @@ export default function AkshayProfile() {
     sidebarData.map((_, index) => index) // all open by default
   );
   const [openRight, setOpenRight] = useState(0);
+  const [openShare, setOpenShare] = useState(false);
+  const [follow, setfollow] = useState(false);
 
 
   const toggleRight = (id) => {
@@ -558,9 +589,9 @@ export default function AkshayProfile() {
 
 
                     {section.type !== "profile" && (
-                      <p className="text-[#4285F4] text-[14px] text-center font-primary font-[700] mt-2 cursor-pointer hover:underline">
+                      <Link to={section.link} className="text-[#4285F4] w-full block text-[14px] text-center font-primary font-[700] mt-2 cursor-pointer hover:underline">
                         see more
-                      </p>
+                      </Link>
                     )}
 
                   </div>
@@ -585,7 +616,7 @@ export default function AkshayProfile() {
         <div className="md:col-span-6 col-span-12 md:px-2 px-0 space-y-6">
           {/*bg-white/10 backdrop-blur-lg shadow-xl*/}
 
-          <div className="md:flex hidden  gap-6 relative  rounded-2xl ">
+          {/* <div className="md:flex hidden  gap-6 relative  rounded-2xl ">
             <img
               src="/actor/profile.png"
               className="w-[209px] h-[314px] rounded-[8px] object-cover"
@@ -623,28 +654,111 @@ export default function AkshayProfile() {
                 }
 
                 <div className="mt-6 flex justify-start items-center gap-[10px]">
-                  <Link className="px-5 py-2 flex w-fit rounded-[24px] primary-font text-[16px] text-[#fff] items-center gap-2 bg-[#4285F4]">follow <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <Link  onClick={() => setfollow(!follow)} className={`px-5 py-2  transition-all duration-300 ease-in-out flex w-fit rounded-[24px] primary-font text-[16px]  items-center gap-2  
+                  ${follow 
+                    ? "bg-[#4285F4] text-[#fff]" 
+                    : "bg-[#fff] text-[#4285F4]"
+                  }`
+              }>{follow 
+                    ? "Follow" 
+                    : "Following"
+                  } <svg className={` ${follow 
+                    ? "block" 
+                    : "hidden invisible"
+                  }`
+              }   width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 1V15M1 8H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                   </svg></Link>
-                  <Link className="px-4 h-[42px] py-2 flex w-fit rounded-[24px] primary-font text-[16px] text-[#fff] items-center gap-2 bg-[#fff]"> <Bookmark color="#4285F4" /></Link>
+                  <Link  className="px-4 h-[42px] py-2 flex w-fit rounded-[24px] primary-font text-[16px] text-[#fff] items-center gap-2 bg-[#fff]"> <Bookmark color="#4285F4" /></Link>
                   <Link className="px-4 h-[42px] py-2 flex w-fit rounded-[24px] primary-font text-[16px] text-[#fff] items-center gap-2 bg-[#fff]"> <Share color="#4285F4" /></Link>
                 </div>
 
-                {/* <Bookmark /> */}
+             
               </div>
               <div>
                 <p className="line-clamp-4 text-[16px] primary-font text-[#fff]">Akshay Kumar (born September 9, 1967, Amritsar, Punjab, India) is an Indian actor and producer, chiefly known for his work in Bollywood comedies and action films. Kumar, whose career spans more than three decades, has starred in more than 100 films more    and is one of the most popular Bollywood actors in India. He was awarded the Padma Shri, one of the highest Indian civilian honors, in 2009.</p>
               </div>
 
             </div>
-            <Link className="absolute top-2 right-2 z-10">
-              <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0.5" y="0.5" width="41" height="41" rx="20.5" fill="white" fill-opacity="0.2" />
-                <rect x="0.5" y="0.5" width="41" height="41" rx="20.5" stroke="white" />
-                <path d="M19.0002 22C19.4297 22.5741 19.9776 23.0491 20.6067 23.3929C21.2359 23.7367 21.9317 23.9411 22.6468 23.9923C23.362 24.0435 24.0798 23.9403 24.7515 23.6897C25.4233 23.4392 26.0333 23.047 26.5402 22.54L29.5402 19.54C30.451 18.597 30.955 17.3339 30.9436 16.023C30.9322 14.712 30.4063 13.4579 29.4793 12.5309C28.5523 11.6038 27.2982 11.078 25.9872 11.0666C24.6762 11.0552 23.4132 11.5592 22.4702 12.47L20.7502 14.18M23.0002 20C22.5707 19.4258 22.0228 18.9508 21.3936 18.607C20.7645 18.2633 20.0687 18.0588 19.3535 18.0076C18.6384 17.9564 17.9206 18.0596 17.2489 18.3102C16.5771 18.5608 15.9671 18.9529 15.4602 19.46L12.4602 22.46C11.5494 23.403 11.0454 24.666 11.0568 25.977C11.0682 27.288 11.5941 28.542 12.5211 29.4691C13.4481 30.3961 14.7022 30.9219 16.0132 30.9333C17.3242 30.9447 18.5872 30.4408 19.5302 29.53L21.2402 27.82" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </Link>
-          </div>
+            <div className="relative">
+              <Link onClick={() => setOpenShare(!openShare)} className="absolute share top-2 right-2 z-10">
+                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="41" height="41" rx="20.5" fill="white" fill-opacity="0.2" />
+                  <rect x="0.5" y="0.5" width="41" height="41" rx="20.5" stroke="white" />
+                  <path d="M19.0002 22C19.4297 22.5741 19.9776 23.0491 20.6067 23.3929C21.2359 23.7367 21.9317 23.9411 22.6468 23.9923C23.362 24.0435 24.0798 23.9403 24.7515 23.6897C25.4233 23.4392 26.0333 23.047 26.5402 22.54L29.5402 19.54C30.451 18.597 30.955 17.3339 30.9436 16.023C30.9322 14.712 30.4063 13.4579 29.4793 12.5309C28.5523 11.6038 27.2982 11.078 25.9872 11.0666C24.6762 11.0552 23.4132 11.5592 22.4702 12.47L20.7502 14.18M23.0002 20C22.5707 19.4258 22.0228 18.9508 21.3936 18.607C20.7645 18.2633 20.0687 18.0588 19.3535 18.0076C18.6384 17.9564 17.9206 18.0596 17.2489 18.3102C16.5771 18.5608 15.9671 18.9529 15.4602 19.46L12.4602 22.46C11.5494 23.403 11.0454 24.666 11.0568 25.977C11.0682 27.288 11.5941 28.542 12.5211 29.4691C13.4481 30.3961 14.7022 30.9219 16.0132 30.9333C17.3242 30.9447 18.5872 30.4408 19.5302 29.53L21.2402 27.82" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </Link>
+           <div
+              className={`w-[290px] bg-[#fff] px-3 py-6 absolute left-[-150px] top-[70px] rounded-[16px]
+              transition-all duration-300 ease-in-out
+              ${openShare 
+                ? "opacity-100 translate-y-0 pointer-events-auto" 
+                : "opacity-0 -translate-y-5 pointer-events-none"
+              }`}
+            >
+                <h3 className="text-[#1E1E1E] primary-font text-[14px] font-[500] text-center">Quick links</h3>
+                <ul className="mt-5 flex flex-col gap-[10px]"> 
+                  <li className="group">
+                    <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
+                        <h3 className="flex gap-2 primary-font font-[600] item-center"><img src="/public/share/Instagram.png" alt="" />
+                        <span>Instagram</span></h3>
+                        <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                          <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round"/>
+                        </svg>
+                    </Link>
+                  </li>
+                  <li className="group">
+                    <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
+                        <h3 className="flex gap-2 primary-font font-[600] item-center"><img src="/public/share/Facebook.png" alt="" />
+                        <span>Facebook</span></h3>
+                        <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                          <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round"/>
+                        </svg>
+                    </Link>
+                  </li>
+                  <li className="group">
+                    <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
+                        <h3 className="flex gap-2 primary-font font-[600] item-center"><img className="object-contain" src="/public/share/Twitter.png" alt="" />
+                        <span>X</span></h3>
+                        <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                          <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round"/>
+                        </svg>
+                    </Link>
+                  </li>
+                  <li className="group">
+                    <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
+                        <h3 className="flex gap-2 primary-font font-[600] item-center"><img src="/public/share/Linkedin.png" alt="" />
+                        <span>Linkedin</span></h3>
+                        <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                          <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round"/>
+                        </svg>
+                    </Link>
+                  </li>
+                  <li className="group">
+                    <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
+                        <h3 className="flex gap-2 primary-font font-[600] item-center"><img src="/public/share/Threads.png" alt="" />
+                        <span>Threads</span></h3>
+                        <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                          <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round"/>
+                        </svg>
+                    </Link>
+                  </li>
+                  <li className="group">
+                    <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
+                        <h3 className="flex gap-2 primary-font font-[600] item-center"><img src="/public/share/globe.svg" alt="" />
+                        <span>Website1</span></h3>
+                        <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                          <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round"/>
+                        </svg>
+                    </Link>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div> */}
+
+          <Profilecard ActorData={ActorData}/>
 
 
           {/* <div className="bg-white rounded-[8px] p-6 shadow-xl">
@@ -941,6 +1055,23 @@ export default function AkshayProfile() {
 
 
               <hr className="my-4 text-[#4285F429]" />
+            </div>
+          </div>
+           <div className="px-[20px] py-[20px] mt-4 rounded-[8px] space-y-4 bg-[#fff]">
+            <div>
+              <h3 className="flex gap-2 items-center berlin text-[#1E1E1E] md:text-[24px] text-[20px] text-[400]">References</h3>
+                  <ol className="detaillist">
+                    <li className="mt-1 primary-font text-[16px] text-[#1E1E1E] font-[400]">Kala, Anusha (9 September 2022). " <a href="">Decoding Akshay Kumar: We break down the evolution of Khiladi Kumar on his birthday | Filmfare.com</a> ". Filmfare. Archived from the original on 9 September 2022. Retrieved 19 July 2024.</li>
+                    <li className="mt-1 primary-font text-[16px] text-[#1E1E1E] font-[400]">Akshay Kumar, a prominent figure in Bollywood, has captivated audiences with his versatile roles and charismatic screen presence. Known as ' <a href="">Khiladi Kumar</a> ', he has evolved from action hero to a celebrated actor in various genres, showcasing his talent on his birthday each year.</li>
+                    <li className="mt-1 primary-font text-[16px] text-[#1E1E1E] font-[400]">Celebrated as one of India's most bankable stars, <a href="#!">Akshay Kumar's journey in cinema</a> is marked by his dedication and diverse filmography. Each year, fans honor his contributions to the film industry, reflecting on his growth from a martial arts expert to a beloved actor.</li>
+                  </ol>
+             
+              <hr className="my-4 text-[#4285F429]" />
+
+            </div>
+            <div>
+
+
             </div>
           </div>
 

@@ -15,7 +15,7 @@ const ForgetPasswordForm = () => {
                 </div>
                
                 <div>
-                    <Authbtn btntext="Send OTP" className='mt-8'/>
+                    <Authbtn href="/otp" btntext="Send OTP" className='mt-8'/>
                     
                 </div>
 
