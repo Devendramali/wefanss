@@ -198,7 +198,7 @@ const Profilecard = ({ ActorData }) => {
                             <Link className="flex flex-col transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
                             <img src="/share/Whatsapp.png" alt="" />
                             <h3 className="flex text-[8px] mt-[6px] gap-2 primary-font font-[500] items-center">
-                                <span>Linkedin</span></h3>
+                                <span>Whatsapp</span></h3>
                             </Link>
                         </li>
                         <li className="group">
