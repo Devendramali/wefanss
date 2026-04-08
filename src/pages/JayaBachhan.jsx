@@ -1031,7 +1031,57 @@ export default function JayaBachhan() {
         <div className="md:col-span-3 h-fit col-span-12 md:px-[16px] py-[20px] rounded-[8px] space-y-4 bg-[#fff]">
          
 
-    
+
+      {profileData.map((section, index) => {
+            const isOpen = openRight === index;
+
+            return (
+              <div
+                key={section.id}
+                className="bg-[#fff] rounded-[8px] md:block hidden p-4 transition-all duration-300"
+              >
+                {/* Header */}
+                <div
+                  onClick={() => toggleRight(index)}
+                  className="flex justify-between items-center cursor-pointer"
+                >
+                  <h3 className="primary-font text-[16px] font-[600]">
+                    {section.title}
+                  </h3>
+
+                  <span
+                    className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+                      }`}
+                  >
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13.3441 3.25901L8.20109 7.56344C7.86421 7.84533 7.43731 8 6.99615 8C6.55499 8 6.12809 7.84533 5.79121 7.56344L0.64818 3.25901C0.461965 3.09956 0.309309 2.90536 0.19893 2.68752C0.0885513 2.46968 0.02261 2.23245 0.00487154 1.98939C-0.012867 1.74633 0.0179447 1.50219 0.0955473 1.27091C0.17315 1.03963 0.296024 0.825742 0.457153 0.641458C0.618282 0.457174 0.814512 0.306102 1.03464 0.196867C1.25476 0.087633 1.49447 0.0223755 1.74008 0.00482099C1.98569 -0.0127335 2.23239 0.0177588 2.46609 0.0945566C2.6998 0.171354 2.91593 0.292953 3.10214 0.452412L7.01819 3.74617L10.9342 0.452412C11.3103 0.136156 11.7979 -0.0192984 12.2898 0.0202453C12.7817 0.059789 13.2376 0.291092 13.5572 0.66327C13.8768 1.03545 14.0338 1.51802 13.9939 2.00481C13.9539 2.49161 13.7202 2.94276 13.3441 3.25901Z" fill="#4285F4" />
+                    </svg>
+                  </span>
+                </div>
+
+                {/* Dropdown Content */}
+                <div
+                  className={`grid transition-all duration-300 ease-in-out ${isOpen
+                    ? "grid-rows-[1fr] opacity-100 mt-4"
+                    : "grid-rows-[0fr] opacity-0"
+                    }`}
+                >
+                  <div className="overflow-hidden space-y-3">
+                    {section.items.map((item, i) => (
+                      <div key={i} className="flex justify-left text-[14px]">
+                        <span className="font-[600] w-[40%] text-[14px] primary-font text-[#1E1E1E]">
+                          {item.label}
+                        </span>
+                        <span className="text-[#1E1E1E] font-[400] primary-font text-[14px] text-left max-w-[60%]">
+                          {item.value}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
 
             
               
