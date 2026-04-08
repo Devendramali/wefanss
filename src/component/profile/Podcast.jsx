@@ -1,5 +1,6 @@
 import React from 'react'
 import Subheading from '../Subheading'
+import { Link } from 'react-router-dom'
 
 const Podcast = ({item}) => {
   return (
@@ -34,6 +35,11 @@ const Podcast = ({item}) => {
 
               </a>
         ))}
+         {item?.type !== "profile" && (
+          <Link to={item?.link} className="text-[#4285F4] w-full block text-[14px] text-center font-primary font-[700] mt-2 cursor-pointer hover:underline">
+            see more
+          </Link>
+        )}
    </div>
   )
 }

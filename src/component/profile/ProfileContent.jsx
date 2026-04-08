@@ -6,7 +6,7 @@ const ProfileContent = ({ sections }) => {
       {sections.map((item, i) => (
         <a href=""
           key={i}
-          className="flex items-center primary-font text-[14px]"
+          className="flex items-center primary-font font-[400] text-[14px]"
         >
           {item}
           {i !== sections.length - 1 && (

@@ -168,42 +168,42 @@ const Profilecard = ({ ActorData }) => {
                     <ul className="mt-5 flex flex-wrap gap-[10px]">
                         <li className="group">
                             <Link className="flex flex-col transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                            <img src="/public/share/Instagram.png" alt="" />
+                            <img src="public/share/Instagram.png" alt="" />
                             <h3 className="flex text-[8px] mt-[6px] gap-2 primary-font font-[500] items-center">
                                 <span>Instagram</span></h3>
                             </Link>
                         </li>
                         <li className="group">
                             <Link className="flex flex-col transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                            <img src="/public/share/Facebook.png" alt="" />
+                            <img src="public/share/Facebook.png" alt="" />
                             <h3 className="flex text-[8px] mt-[6px] gap-2 primary-font font-[500] items-center">
                                 <span>Facebook</span></h3>
                             </Link>
                         </li>
                         <li className="group">
                             <Link className="flex flex-col transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                            <img src="/public/share/Twitter.png" alt="" />
+                            <img src="public/share/Twitter.png" alt="" />
                             <h3 className="flex text-[8px] mt-[6px] gap-2 primary-font font-[500] items-center">
                                 <span>X</span></h3>
                             </Link>
                         </li>
                         <li className="group">
                             <Link className="flex flex-col transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                            <img src="/public/share/Linkedin.png" alt="" />
+                            <img src="public/share/Linkedin.png" alt="" />
                             <h3 className="flex text-[8px] mt-[6px] gap-2 primary-font font-[500] items-center">
                                 <span>Linkedin</span></h3>
                             </Link>
                         </li>
                         <li className="group">
                             <Link className="flex flex-col transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                            <img src="/public/share/Whatsapp.png" alt="" />
+                            <img src="public/share/Whatsapp.png" alt="" />
                             <h3 className="flex text-[8px] mt-[6px] gap-2 primary-font font-[500] items-center">
                                 <span>Linkedin</span></h3>
                             </Link>
                         </li>
                         <li className="group">
                             <Link className="flex flex-col transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                            <img src="/public/share/copy.svg" alt="" />
+                            <img src="public/share/copy.svg" alt="" />
                             <h3 className="flex text-[8px] mt-[6px] gap-2 primary-font font-[500] items-center">
                                 <span>Copy Link</span></h3>
                             </Link>
@@ -242,7 +242,7 @@ const Profilecard = ({ ActorData }) => {
                     <ul className="mt-5 flex flex-col gap-[10px]">
                         <li className="group">
                             <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="/public/share/Instagram.png" alt="" />
+                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="public/share/Instagram.png" alt="" />
                                     <span>Instagram</span></h3>
                                 <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
                                     <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round" />
@@ -251,7 +251,7 @@ const Profilecard = ({ ActorData }) => {
                         </li>
                         <li className="group">
                             <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="/public/share/Facebook.png" alt="" />
+                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="public/share/Facebook.png" alt="" />
                                     <span>Facebook</span></h3>
                                 <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
                                     <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round" />
@@ -260,7 +260,7 @@ const Profilecard = ({ ActorData }) => {
                         </li>
                         <li className="group">
                             <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img className="object-contain" src="/public/share/Twitter.png" alt="" />
+                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img className="object-contain" src="public/share/Twitter.png" alt="" />
                                     <span>X</span></h3>
                                 <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
                                     <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round" />
@@ -269,7 +269,7 @@ const Profilecard = ({ ActorData }) => {
                         </li>
                         <li className="group">
                             <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="/public/share/Linkedin.png" alt="" />
+                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="public/share/Linkedin.png" alt="" />
                                     <span>Linkedin</span></h3>
                                 <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
                                     <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round" />
@@ -278,7 +278,7 @@ const Profilecard = ({ ActorData }) => {
                         </li>
                         <li className="group">
                             <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="/public/share/Threads.png" alt="" />
+                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="public/share/Threads.png" alt="" />
                                     <span>Threads</span></h3>
                                 <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
                                     <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round" />
@@ -287,7 +287,7 @@ const Profilecard = ({ ActorData }) => {
                         </li>
                         <li className="group">
                             <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="/public/share/globe.svg" alt="" />
+                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="public/share/globe.svg" alt="" />
                                     <span>Website1</span></h3>
                                 <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
                                     <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round" />

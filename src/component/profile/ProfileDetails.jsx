@@ -27,18 +27,26 @@ export const sidebarData = [
       "Films",
       "Career Entry",
       "Family",
+      "Career Entry",
       "FilmFare Awards",
       "Trivia",
       "Songs",
       "Wife",
-      "Brands"
+      "Brands",
+      "Early Life",
+      "Education",
+      "Movies",
+      "Podcasts",
+      "Books",
+      "Related Personalities",
+      "Brands",
     ]
   },
 
   {
     id: 2,
     type: "topFilms",
-    title: "Top Films",
+    title: "Featured Movies",
     link:"/movies",
     items: [
       {
@@ -65,7 +73,7 @@ export const sidebarData = [
   {
     id: 3,
     type: "hitSongs",
-    title: "Hit Songs",
+    title: "Featured Web Series",
     items: [
       {
         id: 1,
@@ -90,7 +98,7 @@ export const sidebarData = [
   {
     id: 4,
     type: "images",
-    title: "Images",
+    title: "Gallery",
     link:"/gallery",
     items: [
       {
@@ -104,6 +112,46 @@ export const sidebarData = [
         image: "/actor/2.png"
       },
       {
+        id: 3,
+
+        image: "/actor/3.png"
+      },
+      {
+        id: 4,
+
+        image: "/actor/4.png"
+      },
+      {
+        id: 5,
+
+        image: "/actor/1.png"
+      },
+      {
+        id: 1,
+
+        image: "/actor/1.png"
+      },
+      {
+        id: 2,
+
+        image: "/actor/2.png"
+      },
+      {
+        id: 3,
+
+        image: "/actor/3.png"
+      },
+      {
+        id: 4,
+
+        image: "/actor/4.png"
+      },
+      {
+        id: 5,
+
+        image: "/actor/1.png"
+      },
+        {
         id: 3,
 
         image: "/actor/3.png"
@@ -189,6 +237,7 @@ const watchData = {
   id: 1,
   title: "Watch",
   type: "watch",
+  link:"/watch",
   items: [
     {
       id: 1,
@@ -211,6 +260,7 @@ const readData = {
   id: 3,
   title: "Read",
   type: "read",
+  link:"/read",
   items: [
     {
       id: 1,
@@ -254,6 +304,7 @@ const ListenData = {
   id: 3,
   title: "Listen",
   type: "read",
+  link:"/listen",
   items: [
     {
       id: 1,
@@ -531,7 +582,7 @@ export default function AkshayProfile() {
         </div>
 
         {/* LEFT SIDEBAR */}
-        <div className="md:col-span-3  col-span-12 md:px-[20px] px-[10px] py-[20px] h-fit  rounded-[8px] space-y-4 bg-[#fff]">
+        <div className="md:col-span-3  col-span-12 md:px-[16px] px-[10px] py-[20px] h-fit  rounded-[8px] space-y-4 bg-[#fff]">
 
           {sidebarData.map((section, index) => {
             const isOpen = openIndexes.includes(index);
@@ -614,212 +665,12 @@ export default function AkshayProfile() {
 
         {/* CENTER CONTENT */}
         <div className="md:col-span-6 col-span-12 md:px-2 px-0 space-y-6">
-          {/*bg-white/10 backdrop-blur-lg shadow-xl*/}
-
-          {/* <div className="md:flex hidden  gap-6 relative  rounded-2xl ">
-            <img
-              src="/actor/profile.png"
-              className="w-[209px] h-[314px] rounded-[8px] object-cover"
-              alt=""
-            />
-            <div className="flex flex-col justify-between h-auto">
-              <div>
-                {
-                  ActorData.Roles.map((item, index) => (
-                    <span
-                      key={index}
-                      className={`text-[12px] text-[#fff] primary-font relative inline-flex items-center ${index !== ActorData.Roles.length - 1
-                        ? "mr-2 after:content-[''] after:inline-block after:h-[4px] after:w-[4px] after:bg-white after:rounded-full after:ml-2"
-                        : ""
-                        }`}
-                    >
-                      {item}
-                    </span>
-                  ))
-                }
-                <h1 className="text-3xl mt-1 font-bold text-[#fff] berlin">{ActorData.Name}</h1>
-
-                {
-                  ActorData.Languages.map((item, index) => (
-                    <span
-                      key={index}
-                      className={`text-[12px] text-[#fff] primary-font relative inline-flex items-center ${index !== ActorData.Languages.length - 1
-                        ? "mr-2 after:content-[''] after:inline-block after:h-[4px] after:w-[4px] after:bg-white after:rounded-full after:ml-2"
-                        : ""
-                        }`}
-                    >
-                      {item}
-                    </span>
-                  ))
-                }
-
-                <div className="mt-6 flex justify-start items-center gap-[10px]">
-                  <Link  onClick={() => setfollow(!follow)} className={`px-5 py-2  transition-all duration-300 ease-in-out flex w-fit rounded-[24px] primary-font text-[16px]  items-center gap-2  
-                  ${follow 
-                    ? "bg-[#4285F4] text-[#fff]" 
-                    : "bg-[#fff] text-[#4285F4]"
-                  }`
-              }>{follow 
-                    ? "Follow" 
-                    : "Following"
-                  } <svg className={` ${follow 
-                    ? "block" 
-                    : "hidden invisible"
-                  }`
-              }   width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 1V15M1 8H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg></Link>
-                  <Link  className="px-4 h-[42px] py-2 flex w-fit rounded-[24px] primary-font text-[16px] text-[#fff] items-center gap-2 bg-[#fff]"> <Bookmark color="#4285F4" /></Link>
-                  <Link className="px-4 h-[42px] py-2 flex w-fit rounded-[24px] primary-font text-[16px] text-[#fff] items-center gap-2 bg-[#fff]"> <Share color="#4285F4" /></Link>
-                </div>
-
-             
-              </div>
-              <div>
-                <p className="line-clamp-4 text-[16px] primary-font text-[#fff]">Akshay Kumar (born September 9, 1967, Amritsar, Punjab, India) is an Indian actor and producer, chiefly known for his work in Bollywood comedies and action films. Kumar, whose career spans more than three decades, has starred in more than 100 films more    and is one of the most popular Bollywood actors in India. He was awarded the Padma Shri, one of the highest Indian civilian honors, in 2009.</p>
-              </div>
-
-            </div>
-            <div className="relative">
-              <Link onClick={() => setOpenShare(!openShare)} className="absolute share top-2 right-2 z-10">
-                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="0.5" y="0.5" width="41" height="41" rx="20.5" fill="white" fill-opacity="0.2" />
-                  <rect x="0.5" y="0.5" width="41" height="41" rx="20.5" stroke="white" />
-                  <path d="M19.0002 22C19.4297 22.5741 19.9776 23.0491 20.6067 23.3929C21.2359 23.7367 21.9317 23.9411 22.6468 23.9923C23.362 24.0435 24.0798 23.9403 24.7515 23.6897C25.4233 23.4392 26.0333 23.047 26.5402 22.54L29.5402 19.54C30.451 18.597 30.955 17.3339 30.9436 16.023C30.9322 14.712 30.4063 13.4579 29.4793 12.5309C28.5523 11.6038 27.2982 11.078 25.9872 11.0666C24.6762 11.0552 23.4132 11.5592 22.4702 12.47L20.7502 14.18M23.0002 20C22.5707 19.4258 22.0228 18.9508 21.3936 18.607C20.7645 18.2633 20.0687 18.0588 19.3535 18.0076C18.6384 17.9564 17.9206 18.0596 17.2489 18.3102C16.5771 18.5608 15.9671 18.9529 15.4602 19.46L12.4602 22.46C11.5494 23.403 11.0454 24.666 11.0568 25.977C11.0682 27.288 11.5941 28.542 12.5211 29.4691C13.4481 30.3961 14.7022 30.9219 16.0132 30.9333C17.3242 30.9447 18.5872 30.4408 19.5302 29.53L21.2402 27.82" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </Link>
-           <div
-              className={`w-[290px] bg-[#fff] px-3 py-6 absolute left-[-150px] top-[70px] rounded-[16px]
-              transition-all duration-300 ease-in-out
-              ${openShare 
-                ? "opacity-100 translate-y-0 pointer-events-auto" 
-                : "opacity-0 -translate-y-5 pointer-events-none"
-              }`}
-            >
-                <h3 className="text-[#1E1E1E] primary-font text-[14px] font-[500] text-center">Quick links</h3>
-                <ul className="mt-5 flex flex-col gap-[10px]"> 
-                  <li className="group">
-                    <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                        <h3 className="flex gap-2 primary-font font-[600] item-center"><img src="/public/share/Instagram.png" alt="" />
-                        <span>Instagram</span></h3>
-                        <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                          <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round"/>
-                        </svg>
-                    </Link>
-                  </li>
-                  <li className="group">
-                    <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                        <h3 className="flex gap-2 primary-font font-[600] item-center"><img src="/public/share/Facebook.png" alt="" />
-                        <span>Facebook</span></h3>
-                        <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                          <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round"/>
-                        </svg>
-                    </Link>
-                  </li>
-                  <li className="group">
-                    <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                        <h3 className="flex gap-2 primary-font font-[600] item-center"><img className="object-contain" src="/public/share/Twitter.png" alt="" />
-                        <span>X</span></h3>
-                        <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                          <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round"/>
-                        </svg>
-                    </Link>
-                  </li>
-                  <li className="group">
-                    <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                        <h3 className="flex gap-2 primary-font font-[600] item-center"><img src="/public/share/Linkedin.png" alt="" />
-                        <span>Linkedin</span></h3>
-                        <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                          <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round"/>
-                        </svg>
-                    </Link>
-                  </li>
-                  <li className="group">
-                    <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                        <h3 className="flex gap-2 primary-font font-[600] item-center"><img src="/public/share/Threads.png" alt="" />
-                        <span>Threads</span></h3>
-                        <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                          <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round"/>
-                        </svg>
-                    </Link>
-                  </li>
-                  <li className="group">
-                    <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                        <h3 className="flex gap-2 primary-font font-[600] item-center"><img src="/public/share/globe.svg" alt="" />
-                        <span>Website1</span></h3>
-                        <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                          <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round"/>
-                        </svg>
-                    </Link>
-                  </li>
-                </ul>
-
-              </div>
-            </div>
-          </div> */}
+          
 
           <Profilecard ActorData={ActorData}/>
 
-
-          {/* <div className="bg-white rounded-[8px] p-6 shadow-xl">
-
-            <div className="flex gap-4 mb-6 bg-[#F0F0F0] rounded-[100px]">
-              <button className="px-4 w-[25%] primary-font py-2 bg-[#4285F4] rounded-[100px] text-[#fff] text-[16px] font-[500]">
-                Biography
-              </button>
-              <button className="px-4 w-[25%] primary-font py-2 bg-white/10 rounded-lg text-[16px] font-[500]">
-                Timeline
-              </button>
-            
-              <button className="px-4 w-[25%] primary-font py-2 bg-white/10 rounded-lg text-[16px] font-[500]">
-                Trivia
-              </button>
-            </div>
-            <div className="filter">
-              <div className=" mt-4  Biography">
-                <h3 className="berlin text-[20px] font-[400] text-[#1E1E1E]">Early Life</h3>
-                <p className="text-[14px] font-[400] primary-font mt-3 leading-relaxed">Rajiv Hari "Akshay Kumar" Om Bhatia was born on September 09, 1967, in Amritsar, Punjab to Aruna Bhatia and Hari Om Bhatia. He is an Indian actor, film producer, former model, and television personality. He went to Bangkok to learn how to use a sword and also worked as a waiter in a restaurant. He studied martial arts in Hong Kong. It was a student who that he should try modeling. Because of his success as model, he was offered films. Along with his good looks and excellent martial art skills, he was always</p>
-                <hr className="my-4 text-[#4285F429]" />
-                <h3 className="berlin text-[20px] font-[400] text-[#1E1E1E]">Education</h3>
-                <p className="text-[14px] font-[400] primary-font mt-3 leading-relaxed">He received his school education from Don Bosco High School in Matunga,[25] simultaneously learning Karate. He enrolled in the Guru Nanak Khalsa College of Arts, Science & Commerce of the University of Mumbai for higher education, but dropped out as he was not interested in studies. He requested his father to send him to Thailand to further learn martial arts. Kumar lived in Bangkok for five subtitles, learning Thai Boxing.[22][26] He also has a sister....</p>
-                <hr className="my-4 text-[#4285F429]" />
-                <h3 className="berlin text-[20px] font-[400] text-[#1E1E1E]">Career Entry</h3>
-                <p className="text-[14px] font-[400] primary-font mt-3 leading-relaxed">Kumar made his first appearance as the lead actor opposite Raakhee and Shantipriya in Saugandh (1991). In the same subtitle, he acted in Kishore Vyas-directed Dancer, which received poor reviews.[36] The following subtitle he starred in Abbas Mustan-directed suspense thriller, Khiladi, widely considered his breakthrough role.[37][38] A review in The Indian Express called the film "an engrossing thriller" and described  in the lead part, noting his physical appearance, strong screen presence, and commending him for being "perfectly at ease".[39] His next release was the Raj Sippy-directed detective film Mr. Bond, based on James Bond.[40] His last release of 1992 was Deedar. It failed to perform well at the box office.</p>
-                <p className="text-[#4285F4] text-[14px] text-center font-primary font-[700] mt-8 cursor-pointer hover:underline">
-                  more...
-                </p>
-              </div>
-              <div className=" mt-4  Timeline">
-                <h3 className="berlin text-[20px] font-[400] text-[#1E1E1E]">Early Life</h3>
-                <p className="text-[14px] font-[400] primary-font mt-3 leading-relaxed">Rajiv Hari "Akshay Kumar" Om Bhatia was born on September 09, 1967, in Amritsar, Punjab to Aruna Bhatia and Hari Om Bhatia. He is an Indian actor, film producer, former model, and television personality. He went to Bangkok to learn how to use a sword and also worked as a waiter in a restaurant. He studied martial arts in Hong Kong. It was a student who that he should try modeling. Because of his success as model, he was offered films. Along with his good looks and excellent martial art skills, he was always</p>
-                <hr className="my-4 text-[#4285F429]" />
-                <h3 className="berlin text-[20px] font-[400] text-[#1E1E1E]">Education</h3>
-                <p className="text-[14px] font-[400] primary-font mt-3 leading-relaxed">He received his school education from Don Bosco High School in Matunga,[25] simultaneously learning Karate. He enrolled in the Guru Nanak Khalsa College of Arts, Science & Commerce of the University of Mumbai for higher education, but dropped out as he was not interested in studies. He requested his father to send him to Thailand to further learn martial arts. Kumar lived in Bangkok for five subtitles, learning Thai Boxing.[22][26] He also has a sister....</p>
-                <hr className="my-4 text-[#4285F429]" />
-                <h3 className="berlin text-[20px] font-[400] text-[#1E1E1E]">Career Entry</h3>
-                <p className="text-[14px] font-[400] primary-font mt-3 leading-relaxed">Kumar made his first appearance as the lead actor opposite Raakhee and Shantipriya in Saugandh (1991). In the same subtitle, he acted in Kishore Vyas-directed Dancer, which received poor reviews.[36] The following subtitle he starred in Abbas Mustan-directed suspense thriller, Khiladi, widely considered his breakthrough role.[37][38] A review in The Indian Express called the film "an engrossing thriller" and described  in the lead part, noting his physical appearance, strong screen presence, and commending him for being "perfectly at ease".[39] His next release was the Raj Sippy-directed detective film Mr. Bond, based on James Bond.[40] His last release of 1992 was Deedar. It failed to perform well at the box office.</p>
-                <p className="text-[#4285F4] text-[14px] text-center font-primary font-[700] mt-8 cursor-pointer hover:underline">
-                  more...
-                </p>
-              </div>
-              <div className=" mt-4  Trivia">
-                <h3 className="berlin text-[20px] font-[400] text-[#1E1E1E]">Early Life</h3>
-                <p className="text-[14px] font-[400] primary-font mt-3 leading-relaxed">Rajiv Hari "Akshay Kumar" Om Bhatia was born on September 09, 1967, in Amritsar, Punjab to Aruna Bhatia and Hari Om Bhatia. He is an Indian actor, film producer, former model, and television personality. He went to Bangkok to learn how to use a sword and also worked as a waiter in a restaurant. He studied martial arts in Hong Kong. It was a student who that he should try modeling. Because of his success as model, he was offered films. Along with his good looks and excellent martial art skills, he was always</p>
-                <hr className="my-4 text-[#4285F429]" />
-                <h3 className="berlin text-[20px] font-[400] text-[#1E1E1E]">Education</h3>
-                <p className="text-[14px] font-[400] primary-font mt-3 leading-relaxed">He received his school education from Don Bosco High School in Matunga,[25] simultaneously learning Karate. He enrolled in the Guru Nanak Khalsa College of Arts, Science & Commerce of the University of Mumbai for higher education, but dropped out as he was not interested in studies. He requested his father to send him to Thailand to further learn martial arts. Kumar lived in Bangkok for five subtitles, learning Thai Boxing.[22][26] He also has a sister....</p>
-                <hr className="my-4 text-[#4285F429]" />
-                <h3 className="berlin text-[20px] font-[400] text-[#1E1E1E]">Career Entry</h3>
-                <p className="text-[14px] font-[400] primary-font mt-3 leading-relaxed">Kumar made his first appearance as the lead actor opposite Raakhee and Shantipriya in Saugandh (1991). In the same subtitle, he acted in Kishore Vyas-directed Dancer, which received poor reviews.[36] The following subtitle he starred in Abbas Mustan-directed suspense thriller, Khiladi, widely considered his breakthrough role.[37][38] A review in The Indian Express called the film "an engrossing thriller" and described  in the lead part, noting his physical appearance, strong screen presence, and commending him for being "perfectly at ease".[39] His next release was the Raj Sippy-directed detective film Mr. Bond, based on James Bond.[40] His last release of 1992 was Deedar. It failed to perform well at the box office.</p>
-                <p className="text-[#4285F4] text-[14px] text-center font-primary font-[700] mt-8 cursor-pointer hover:underline">
-                  more...
-                </p>
-              </div>
-            </div>
-
-          </div> */}
           <ActorTabs/>
-          <div className="md:px-[20px] px-[10px] py-[20px] rounded-[8px] space-y-4 bg-[#fff]">
+          <div className="md:px-[16px] px-[10px] py-[20px] rounded-[8px] space-y-4 bg-[#fff]">
             <div>
               <h3 className="flex gap-2 items-center berlin text-[#1E1E1E] md:text-[24px] text-[20px] text-[400]"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.5 6.06226L0 12.1244V7.82013e-05L10.5 6.06226Z" fill="#4285F4" />
@@ -1065,6 +916,9 @@ export default function AkshayProfile() {
                     <li className="mt-1 primary-font text-[16px] text-[#1E1E1E] font-[400]">Akshay Kumar, a prominent figure in Bollywood, has captivated audiences with his versatile roles and charismatic screen presence. Known as ' <a href="">Khiladi Kumar</a> ', he has evolved from action hero to a celebrated actor in various genres, showcasing his talent on his birthday each year.</li>
                     <li className="mt-1 primary-font text-[16px] text-[#1E1E1E] font-[400]">Celebrated as one of India's most bankable stars, <a href="#!">Akshay Kumar's journey in cinema</a> is marked by his dedication and diverse filmography. Each year, fans honor his contributions to the film industry, reflecting on his growth from a martial arts expert to a beloved actor.</li>
                   </ol>
+                  <Link to="#!" className="text-[#4285F4] w-full block text-[14px] text-center font-primary font-[700] mt-2 cursor-pointer hover:underline">
+                              see more
+                            </Link>
              
               <hr className="my-4 text-[#4285F429]" />
 
@@ -1079,14 +933,14 @@ export default function AkshayProfile() {
         </div>
 
         {/* RIGHT SIDEBAR */}
-        <div className="md:col-span-3 col-span-12 md:px-[20px] py-[20px] rounded-[8px] space-y-4 bg-[#fff]">
+        <div className="md:col-span-3 h-fit col-span-12 md:px-[16px] py-[20px] rounded-[8px] space-y-4 bg-[#fff]">
           {profileData.map((section, index) => {
             const isOpen = openRight === index;
 
             return (
               <div
                 key={section.id}
-                className="bg-[#F4FBFF] rounded-[8px] md:block hidden p-4 transition-all duration-300"
+                className="bg-[#fff] rounded-[8px] md:block hidden p-4 transition-all duration-300"
               >
                 {/* Header */}
                 <div
@@ -1117,10 +971,10 @@ export default function AkshayProfile() {
                   <div className="overflow-hidden space-y-3">
                     {section.items.map((item, i) => (
                       <div key={i} className="flex justify-left text-[14px]">
-                        <span className="font-[600] w-[40%] text-[14px] font-primary text-[#1E1E1E]">
+                        <span className="font-[600] w-[40%] text-[14px] primary-font text-[#1E1E1E]">
                           {item.label}
                         </span>
-                        <span className="text-[#6B6B6B] text-[14px] text-left max-w-[60%]">
+                        <span className="text-[#1E1E1E] font-[400] primary-font text-[14px] text-left max-w-[60%]">
                           {item.value}
                         </span>
                       </div>

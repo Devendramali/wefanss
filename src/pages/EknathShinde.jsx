@@ -140,6 +140,31 @@ export const sidebarData = [
 
     ]
   },
+  {
+    id: 5,
+    type: "hitSongs",
+    title: "Related Personalities",
+    items: [
+      {
+        id: 1,
+        name: "Twinkle Khanna",
+        subtitle: "Actress",
+        image: "/celebrities/tk.png"
+      },
+      {
+        id: 2,
+        name: "Jhon Abraham",
+        subtitle: "Actor",
+        image: "/celebrities/ji.png"
+      },
+      {
+        id: 3,
+        name: "Katrina Kaif",
+        subtitle: "Actress",
+        image: "/celebrities/kk.png"
+      }
+    ]
+  },
 
 
 ];
@@ -206,6 +231,7 @@ const readData = {
   id: 3,
   title: "Read",
   type: "read",
+    link:"/read",
   items: [
     {
       id: 1,
@@ -228,6 +254,7 @@ const MediaInterviewsPress = {
   id: 1,
   title: "Watch",
   type: "watch",
+    link:"/watch",
   items: [
     {
       id: 1,
@@ -252,6 +279,7 @@ const Speeches = {
   id: 3,
   title: "Speeches ",
   type: "read",
+    link:"/read",
   items: [
     {
       id: 1,
@@ -273,6 +301,7 @@ const controversiesData = {
   id: 3,
   title: "Controversies",
   type: "read",
+    link:"/read",
   items: [
     {
       id: 1,
@@ -295,6 +324,7 @@ const PublicCampaignsData = {
   id: 3,
   title: "Public Campaigns",
   type: "read",
+    link:"/read",
   items: [
     {
       id: 1,
@@ -316,6 +346,7 @@ const ListenData = {
   id: 3,
   title: "Listen",
   type: "read",
+    link:"/listen",
   items: [
     {
       id: 1,
@@ -558,7 +589,7 @@ export default function EknathShinde() {
             return (
               <div
                 key={section.id}
-                className="bg-[#F4FBFF] rounded-[8px] p-4 transition-all duration-300"
+                className="bg-[#fff] rounded-[8px] p-4 transition-all duration-300"
               >
                 {/* Header */}
                 <div
@@ -605,7 +636,7 @@ export default function EknathShinde() {
         </div>
 
         {/* LEFT SIDEBAR */}
-        <div className="md:col-span-3 col-span-12 md:px-[20px] px-2 py-[20px] h-fit rounded-[8px] space-y-4 bg-[#fff]">
+        <div className="md:col-span-3  col-span-12 md:px-[16px] px-2 py-[20px] h-fit rounded-[8px] space-y-4 bg-[#fff]">
 
           {sidebarData.map((section, index) => {
             const isOpen = openIndexes.includes(index);
@@ -970,6 +1001,9 @@ export default function EknathShinde() {
                     <li className="mt-1 primary-font text-[16px] text-[#1E1E1E] font-[400]">Akshay Kumar, a prominent figure in Bollywood, has captivated audiences with his versatile roles and charismatic screen presence. Known as ' <a href="">Khiladi Kumar</a> ', he has evolved from action hero to a celebrated actor in various genres, showcasing his talent on his birthday each year.</li>
                     <li className="mt-1 primary-font text-[16px] text-[#1E1E1E] font-[400]">Celebrated as one of India's most bankable stars, <a href="#!">Akshay Kumar's journey in cinema</a> is marked by his dedication and diverse filmography. Each year, fans honor his contributions to the film industry, reflecting on his growth from a martial arts expert to a beloved actor.</li>
                   </ol>
+                  <Link to="#!" className="text-[#4285F4] w-full block text-[14px] text-center font-primary font-[700] mt-2 cursor-pointer hover:underline">
+                              see more
+                            </Link>
              
               <hr className="my-4 text-[#4285F429]" />
 
@@ -984,7 +1018,7 @@ export default function EknathShinde() {
         </div>
 
         {/* RIGHT SIDEBAR */}
-        <div className="md:col-span-3 col-span-12 md:px-[20px] py-[20px] rounded-[8px] space-y-4 bg-[#fff]">
+        <div className="md:col-span-3 h-fit col-span-12 md:px-[16px] py-[20px] rounded-[8px] space-y-4 bg-[#fff]">
 
 
           {/* <div className="bg-white rounded-xl rounded-b-none border-[#4285F429] p-4 space-y-4 border-b"> */}
