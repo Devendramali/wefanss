@@ -74,6 +74,7 @@ export const sidebarData = [
     id: 3,
     type: "hitSongs",
     title: "Featured Web Series",
+      link:"/webseries",
     items: [
       {
         id: 1,
