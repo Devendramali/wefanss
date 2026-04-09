@@ -10,7 +10,7 @@ const Podcast = ({item}) => {
         <a href='#!' key={mediaItem.id} className="space-y-2 mb-6 block">
 
 
-                <p className="text-[12px] text-gray-500">
+                <p className="text-[12px] font-[500] text-[#868484]">
                   {mediaItem.source}
                 </p>
                 <div className="flex items-center gap-2">

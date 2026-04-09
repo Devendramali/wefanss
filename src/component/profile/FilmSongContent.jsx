@@ -14,7 +14,7 @@ const FilmSongContent = ({ items }) => {
             <p className="text-[16px] font-[500] text-[#1E1E1E]">
               {item.name}
             </p>
-            <p className="text-[12px] text-[#1E1E1E] font-[400]">
+            <p className="text-[12px] primary-font text-[#1E1E1E] font-[400]">
               {item.year || item.subtitle}
             </p>
           </div>

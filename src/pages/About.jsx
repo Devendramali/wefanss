@@ -26,7 +26,7 @@ const About = () => {
         <div className=''>
             <ul className='flex gap-3 px-6 py-2 bg-[#4285F4]'>
                 <li className='text-[#fff] ptimary-font text-[12px]'><a href="#!">Home</a></li>
-                <li className='text-[#fff] ptimary-font text-[12px]'>-</li>
+                <li className='text-[#fff] ptimary-font text-[12px]'>/</li>
                 <li className='text-[#fff] ptimary-font text-[12px]'>About</li>
             </ul>
             <h1 className='berlin md:text-[128px] text-[48px] text-[#4285F4] m-auto text-center py-8'>About</h1>

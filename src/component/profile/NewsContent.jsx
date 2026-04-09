@@ -9,7 +9,7 @@ const NewsContent = ({item}) => {
         <a href="#!" key={mediaItem.id} className="space-y-2 block mb-6">
 
 
-                <p className="text-[12px] text-gray-500">
+                <p className="text-[12px] font-[500] text-[#868484]">
                   {mediaItem.source}
                 </p>
 

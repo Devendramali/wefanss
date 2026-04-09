@@ -7,7 +7,7 @@ const Contact = () => {
         <div className=''>
             <ul className='flex gap-3 px-6 py-2 bg-[#4285F4]'>
                 <li className='text-[#fff] ptimary-font text-[12px]'><a href="#!">Home</a></li>
-                <li className='text-[#fff] ptimary-font text-[12px]'>-</li>
+                <li className='text-[#fff] ptimary-font text-[12px]'>/</li>
                 <li className='text-[#fff] ptimary-font text-[12px]'>Contact</li>
             </ul>
             <h1 className='berlin md:text-[64px] text-[48px] text-[#1E1E1E] m-auto text-center py-8'>Contact</h1>

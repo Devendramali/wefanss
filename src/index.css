@@ -21,7 +21,9 @@ h1,h2,h3,h4,h5{
 .primary-font{
    font-family: "Inter", sans-serif;
 }
-
+a:hover{
+  text-decoration: none;
+}
 .berlin{
   font-family: 'Berlin';
   line-height: normal;
@@ -326,4 +328,11 @@ background: #00000066;
   gap: 16px 0;
   flex-direction: column;
   padding-left: 20px;
+}
+.banner{
+  background: url(/public/banner/banner.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: all .13s linear;
 }

@@ -6,7 +6,7 @@ const Button = (
 ) => {
   return (
     <>
-        <Link to={btnlink}  className={`bg-[#4285F4] px-[30px] font-[500] text-[#FFFFFF] rounded-[100px] justify-center items-center w-fit h-[43px] flex ${btnclass}`}>
+        <Link to={btnlink}  className={`bg-[#4285F4] px-[30px] py-[12px] primary-font font-semibold leading-[19px] text-[#FFFFFF] rounded-[100px] justify-center items-center w-fit  flex ${btnclass}`}>
             {btntext}
         </Link>
     </>

@@ -15,6 +15,7 @@ import Podcast from "../component/profile/Podcast";
 import ActorTabs from "../component/profile/ActorTabs";
 import Elections from "../component/profile/Elections";
 import Profilecard from "../component/card/Profilecard";
+import MobileProfileCard from "../component/card/MobileProfileCard";
 // import { ChevronDown } from "lucide-react";
 
 export const sidebarData = [
@@ -32,7 +33,19 @@ export const sidebarData = [
       "Trivia",
       "Songs",
       "Wife",
-      "Brands"
+      "Brands",
+      "FilmFare Awards",
+      "Trivia",
+      "Songs",
+      "Wife",
+      "Brands",
+      "Early Life",
+      "Education",
+      "Movies",
+      "Podcasts",
+      "Books",
+      "Related Personalities",
+      "References",
     ]
   },
 
@@ -84,62 +97,136 @@ export const sidebarData = [
       }
     ]
   },
-  {
+  
+
+  // {
+  //   id: 4,
+  //   title: "Social Work",
+  //   type: "Initiatives",
+  //   items: [
+  //     {
+  //       id: 1,
+  //       title:
+  //         "Eknath Shinde Initiates Skill Development Programs for Youth Empowerment",
+  //     },
+  //     {
+  //       id: 2,
+  //       title:
+  //         "Eknath Shinde Initiates Skill Development Programs for Youth Empowerment",
+  //     },
+  //   ],
+  // },
+ {
     id: 4,
-    title: "Social Work",
-    type: "Initiatives",
+    type: "images",
+    title: "Gallery",
+    link:"/gallery",
     items: [
       {
         id: 1,
-        title:
-          "Eknath Shinde Initiates Skill Development Programs for Youth Empowerment",
+
+        image: "/actor/1.png"
       },
       {
         id: 2,
-        title:
-          "Eknath Shinde Initiates Skill Development Programs for Youth Empowerment",
+
+        image: "/actor/2.png"
       },
-    ],
-  },
+      {
+        id: 3,
 
+        image: "/actor/3.png"
+      },
+      {
+        id: 4,
 
-  {
-    id: 7,
-    type: "profile",
-    title: "References",
-    sections: [
-      "Biography",
-      "Timeline",
-      "Films",
-      "Career Entry",
-      "Family",
-      "FilmFare Awards",
-      "Trivia",
-      "Songs",
-      "Wife",
-      "Brands"
-    ]
-  },
-  {
-    id: 8,
-    type: "topFilms",
-    title: "Related Personalities",
-    items: [
+        image: "/actor/4.png"
+      },
+      {
+        id: 5,
+
+        image: "/actor/1.png"
+      },
       {
         id: 1,
-        name: "Kabhi Khushi Kabhie Gham",
-        subtitle: "Chief Minister of Maharashtra",
-        image: "/actor/cm.png"
+
+        image: "/actor/1.png"
       },
       {
         id: 2,
-        name: "Nitesh Rane",
-        subtitle: "Cabinet minister in Government of Maharashtra",
-        image: "/actor/nitesh.png"
-      },
 
+        image: "/actor/2.png"
+      },
+      {
+        id: 3,
+
+        image: "/actor/3.png"
+      },
+      {
+        id: 4,
+
+        image: "/actor/4.png"
+      },
+      {
+        id: 5,
+
+        image: "/actor/1.png"
+      },
+        {
+        id: 3,
+
+        image: "/actor/3.png"
+      },
+      {
+        id: 4,
+
+        image: "/actor/4.png"
+      },
+      {
+        id: 5,
+
+        image: "/actor/1.png"
+      }
     ]
   },
+
+  // {
+  //   id: 7,
+  //   type: "profile",
+  //   title: "References",
+  //   sections: [
+  //     "Biography",
+  //     "Timeline",
+  //     "Films",
+  //     "Career Entry",
+  //     "Family",
+  //     "FilmFare Awards",
+  //     "Trivia",
+  //     "Songs",
+  //     "Wife",
+  //     "Brands"
+  //   ]
+  // },
+  // {
+  //   id: 8,
+  //   type: "topFilms",
+  //   title: "Related Personalities",
+  //   items: [
+  //     {
+  //       id: 1,
+  //       name: "Kabhi Khushi Kabhie Gham",
+  //       subtitle: "Chief Minister of Maharashtra",
+  //       image: "/actor/cm.png"
+  //     },
+  //     {
+  //       id: 2,
+  //       name: "Nitesh Rane",
+  //       subtitle: "Cabinet minister in Government of Maharashtra",
+  //       image: "/actor/nitesh.png"
+  //     },
+
+  //   ]
+  // },
   {
     id: 5,
     type: "hitSongs",
@@ -147,24 +234,19 @@ export const sidebarData = [
     items: [
       {
         id: 1,
-        name: "Twinkle Khanna",
-        subtitle: "Actress",
-        image: "/celebrities/tk.png"
+        name: "Devendra Fadnavis",
+        subtitle: "Chief Minister of Maharashtra",
+        image: "/celebrities/dev.png"
       },
       {
         id: 2,
-        name: "Jhon Abraham",
-        subtitle: "Actor",
-        image: "/celebrities/ji.png"
-      },
-      {
-        id: 3,
-        name: "Katrina Kaif",
-        subtitle: "Actress",
-        image: "/celebrities/kk.png"
+        name: "Nitesh Rane",
+        subtitle: "Cabinet minister in Government of Maharashtra",
+        image: "/celebrities/nitesh.svg"
       }
     ]
   },
+  
 
 
 ];
@@ -201,7 +283,8 @@ const ActorData = {
   Languages: ["Marathi", "Hindi"],
   BirthDate: "9 September 1967",
   BirthPlace: "Amritsar, Punjab, India",
-  profileimg: "/actor/eknath.png"
+  profileimg: "/actor/eknath.png",
+   discription:"Eknasth shinde (born September 9, 1967, Amritsar, Punjab, India) is an Indian actor and producer, chiefly known for his work in Bollywood comedies and action films. Kumar, whose career spans more than three decades, has starred in more"
 
 
 };
@@ -277,7 +360,7 @@ const MediaInterviewsPress = {
 };
 const Speeches = {
   id: 3,
-  title: "Speeches ",
+  title: "Read ",
   type: "read",
     link:"/read",
   items: [
@@ -297,29 +380,29 @@ const Speeches = {
     },
   ],
 };
-const controversiesData = {
-  id: 3,
-  title: "Controversies",
-  type: "read",
-    link:"/read",
-  items: [
-    {
-      id: 1,
-      source: "Source • 02-01-2026",
-      title:
-        "Eknath Shinde Faces Criticism Over Land Allocation Policies",
-      dis: "Shinde's Land Policy Sparks Debate: Transparency and Fairness Questioned"
-    },
-    {
-      id: 2,
-      image: "/read2.png",
-      source: "Source • 02-01-2026",
-      title:
-        "Eknath Shinde Faces Criticism Over Land Allocation Policies",
-      dis: "Shinde's Land Policy Sparks Debate: Transparency and Fairness Questioned"
-    },
-  ],
-};
+// const controversiesData = {
+//   id: 3,
+//   title: "Controversies",
+//   type: "read",
+//     link:"/read",
+//   items: [
+//     {
+//       id: 1,
+//       source: "Source • 02-01-2026",
+//       title:
+//         "Eknath Shinde Faces Criticism Over Land Allocation Policies",
+//       dis: "Shinde's Land Policy Sparks Debate: Transparency and Fairness Questioned"
+//     },
+//     {
+//       id: 2,
+//       image: "/read2.png",
+//       source: "Source • 02-01-2026",
+//       title:
+//         "Eknath Shinde Faces Criticism Over Land Allocation Policies",
+//       dis: "Shinde's Land Policy Sparks Debate: Transparency and Fairness Questioned"
+//     },
+//   ],
+// };
 const PublicCampaignsData = {
   id: 3,
   title: "Public Campaigns",
@@ -502,11 +585,11 @@ export default function EknathShinde() {
   return (<><div className=''>
     <ul className='flex gap-2 px-6 py-2 bg-[#4285F4]'>
       <li className='text-[#fff] ptimary-font text-[12px]'><a href="#!">Home</a></li>
-      <li className='text-[#fff] ptimary-font text-[12px]'>-</li>
+      <li className='text-[#fff] ptimary-font text-[12px]'>/</li>
       <li className='text-[#fff] ptimary-font text-[12px]'>Celebrites</li>
-      <li className='text-[#fff] ptimary-font text-[12px]'>-</li>
+      <li className='text-[#fff] ptimary-font text-[12px]'>/</li>
       <li className='text-[#fff] ptimary-font text-[12px]'>Actors</li>
-      <li className='text-[#fff] ptimary-font text-[12px]'>-</li>
+      <li className='text-[#fff] ptimary-font text-[12px]'>/</li>
       <li className='text-[#fff] ptimary-font text-[12px]'>Eknath Shinde</li>
     </ul>
 
@@ -519,69 +602,7 @@ export default function EknathShinde() {
 
 
       <div className="grid grid-cols-12 px-2 gap-4" >
-        <div className="col-span-12 p-2 md:hidden block">
-          <div className="flex  gap-2 relative  rounded-2xl ">
-            <img
-              src="/actor/eknath.png"
-              className="w-[124px] h-[186px] rounded-[8px] object-cover"
-              alt=""
-            />
-            <div className="flex flex-col justify-between h-auto">
-              <div>
-                {
-                  ActorData.Roles.map((item, index) => (
-                    <span
-                      key={index}
-                      className={`text-[12px] text-[#fff] primary-font relative inline-flex items-center ${index !== ActorData.Roles.length - 1
-                        ? "mr-2 after:content-[''] after:inline-block after:h-[4px] after:w-[4px] after:bg-white after:rounded-full after:ml-2"
-                        : ""
-                        }`}
-                    >
-                      {item}
-                    </span>
-                  ))
-                }
-                <h1 className="text-3xl mt-1 font-bold text-[#fff] berlin">{ActorData.Name}</h1>
-
-                {
-                  ActorData.Languages.map((item, index) => (
-                    <span
-                      key={index}
-                      className={`text-[12px] text-[#fff] primary-font relative inline-flex items-center ${index !== ActorData.Languages.length - 1
-                        ? "mr-2 after:content-[''] after:inline-block after:h-[4px] after:w-[4px] after:bg-white after:rounded-full after:ml-2"
-                        : ""
-                        }`}
-                    >
-                      {item}
-                    </span>
-                  ))
-                }
-
-                <div className="mt-6 flex flex-wrap justify-start items-center gap-[5px]">
-                  <Link className="px-5 py-2 flex w-fit rounded-[24px] primary-font text-[16px] text-[#fff] items-center gap-2 bg-[#4285F4]">follow <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 1V15M1 8H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg></Link>
-                  <Link className="px-4 h-[42px] py-2 flex w-fit rounded-[24px] primary-font text-[16px] text-[#fff] items-center gap-2 bg-[#fff]"> <Bookmark color="#4285F4" /></Link>
-                  <Link className="px-4 h-[42px] py-2 flex w-fit rounded-[24px] primary-font text-[16px] text-[#fff] items-center gap-2 bg-[#fff]"> <Share color="#4285F4" /></Link>
-                </div>
-
-                {/* <Bookmark /> */}
-              </div>
-
-
-            </div>
-            {/* <Link className="absolute top-2 right-2 z-10">
-              <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0.5" y="0.5" width="41" height="41" rx="20.5" fill="white" fill-opacity="0.2" />
-                <rect x="0.5" y="0.5" width="41" height="41" rx="20.5" stroke="white" />
-                <path d="M19.0002 22C19.4297 22.5741 19.9776 23.0491 20.6067 23.3929C21.2359 23.7367 21.9317 23.9411 22.6468 23.9923C23.362 24.0435 24.0798 23.9403 24.7515 23.6897C25.4233 23.4392 26.0333 23.047 26.5402 22.54L29.5402 19.54C30.451 18.597 30.955 17.3339 30.9436 16.023C30.9322 14.712 30.4063 13.4579 29.4793 12.5309C28.5523 11.6038 27.2982 11.078 25.9872 11.0666C24.6762 11.0552 23.4132 11.5592 22.4702 12.47L20.7502 14.18M23.0002 20C22.5707 19.4258 22.0228 18.9508 21.3936 18.607C20.7645 18.2633 20.0687 18.0588 19.3535 18.0076C18.6384 17.9564 17.9206 18.0596 17.2489 18.3102C16.5771 18.5608 15.9671 18.9529 15.4602 19.46L12.4602 22.46C11.5494 23.403 11.0454 24.666 11.0568 25.977C11.0682 27.288 11.5941 28.542 12.5211 29.4691C13.4481 30.3961 14.7022 30.9219 16.0132 30.9333C17.3242 30.9447 18.5872 30.4408 19.5302 29.53L21.2402 27.82" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </Link> */}
-          </div>
-          <div className="mt-3">
-            <p className="line-clamp-4 text-[16px] primary-font text-[#fff]">Eknath Shinde (born September 9, 1967, Amritsar, Punjab, India) is an Indian actor and producer, chiefly known for his work in Bollywood comedies and action films. Kumar, whose career spans more than three decades, has starred in more than 100 films more    and is one of the most popular Bollywood actors in India. He was awarded the Padma Shri, one of the highest Indian civilian honors, in 2009.</p>
-          </div>
-        </div>
+             <MobileProfileCard ActorData={ActorData}/>
         <div className="col-span-12  md:hidden block">
           {profileData.map((section, index) => {
             const isOpen = openRight === index;
@@ -596,7 +617,7 @@ export default function EknathShinde() {
                   onClick={() => toggleRight(index)}
                   className="flex justify-between items-center cursor-pointer"
                 >
-                  <h3 className="primary-font text-[16px] font-[600]">
+                  <h3 className="primary-font text-[16px] font-[500]">
                     {section.title}
                   </h3>
 
@@ -651,7 +672,7 @@ export default function EknathShinde() {
                   onClick={() => toggle(index)}
                   className="flex justify-between items-center cursor-pointer"
                 >
-                  <h3 className="primary-font text-[16px] font-[600]">
+                  <h3 className="primary-font text-[16px] font-[500] text-[#1E1E1E]">
                     {section.title}
                   </h3>
 
@@ -699,7 +720,7 @@ export default function EknathShinde() {
                             <div key={mediaItem.id} className="space-y-2 mb-6">
 
 
-                              <p className="text-[12px] text-gray-500">
+                              <p className="text-[12px] font-[500] text-[#868484]">
                                 {mediaItem.source}
                               </p>
 
@@ -722,9 +743,9 @@ export default function EknathShinde() {
 
 
                     {section.type !== "profile" && (
-                      <p className="text-[#4285F4] text-[14px] text-center font-primary font-[700] mt-2 cursor-pointer hover:underline">
+                      <a href={section.link} className="text-[#4285F4] block text-[14px] text-center font-primary font-[700] mt-2 cursor-pointer hover:underline">
                         see more
-                      </p>
+                      </a>
                     )}
 
                   </div>
@@ -907,7 +928,7 @@ export default function EknathShinde() {
                       <div>
 
                         <h3 className="mt-1 primary-font text-[#1E1E1E] font-[500]">{item.name}</h3>
-                        <p className="mt-1 text-[14px] text-[#757575]">{item.disk}</p>
+                        <p className="mt-1 text-[14px] primary-font text-[#757575]">{item.disk}</p>
 
                       </div>
                     </div>
@@ -1018,7 +1039,7 @@ export default function EknathShinde() {
         </div>
 
         {/* RIGHT SIDEBAR */}
-        <div className="md:col-span-3 h-fit col-span-12 md:px-[16px] py-[20px] rounded-[8px] space-y-4 bg-[#fff]">
+        <div className="md:col-span-3 h-fit col-span-12 md:px-[0px] pt-[10px] rounded-[8px] space-y-4 bg-[#fff]">
             {profileData.map((section, index) => {
             const isOpen = openRight === index;
 
@@ -1097,15 +1118,15 @@ export default function EknathShinde() {
           {/* <MediaContent item={watchData} /> */}
 
 
-          <MediaContent item={readData} />
+          {/* <MediaContent item={readData} /> */}
 
-          <NewsContent item={controversiesData} />
-
-
+          {/* <NewsContent item={controversiesData} /> */}
 
 
 
-          <NewsContent item={PublicCampaignsData} />
+
+
+          {/* <NewsContent item={PublicCampaignsData} /> */}
 
 
 

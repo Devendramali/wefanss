@@ -7,25 +7,29 @@ const Banner = () => {
       id: 1,
       title: "Akshay Kumar",
       catogary: "Actor",
-      img: "/actor/akshay.png"
+      img: "/actor/akshay.png",
+      link:"/profile"
     },
     {
       id: 2,
       title: "Amitabh Bachchan",
       catogary: "Actor",
-      img: "/actor/amitab.png"
+      img: "/actor/amitab.png",
+      link:"/profile"
     },
     {
       id: 3,
       title: "Amit Shah",
       catogary: "Politician",
-      img: "/actor/shah.png"
+      img: "/actor/shah.png",
+      link:"/eknath-shinde"
     },
     {
       id: 4,
       title: "Abhishek Bachchan",
       catogary: "Actor",
-      img: "/actor/abhishek.png"
+      img: "/actor/abhishek.png",
+      link:"/jaya-bachhan"
     },
     {
       id: 5,
@@ -47,21 +51,21 @@ const Banner = () => {
     : filteredActors.slice(0, 4)
 
   return (
-    <div className='banner px-5 flex justify-center items-center relative w-full overflow-hidden  min-h-[100vh]'>
+    <div className='banner px-5 flex justify-center relative w-full overflow-hidden h-[100%] min-h-[650px] md:min-h-[805px]'>
 
       {/* Background Image */}
-      <img
+      {/* <img
         src="/banner/banner.png"
-        className='absolute top-0 inset-0 h-full object-cover w-full z-10'
+        className='absolute top-0 inset-0 h-full object-cover w-full z-10 transition duration-3000'
         alt=""
-      />
+      /> */}
 
-      <div className='relative  z-20'>
-        <h1 className='berlin text-[#FFFFFF] md:text-[96px] text-[50px] md:!leading-relaxed !leading-[50px] text-center'>
+      <div className='relative md:pt-[233px] pt-[166px] mb-[50px] z-20'>
+        <h1 className='berlin text-[#FFFFFF] md:text-[96px] text-[50px] font-[700] !leading-[50px] text-center'>
           Discover Icons of Fame
         </h1>
 
-        <div className="mt-[30px] max-w-[516px] bg-[#f5f5f5] m-auto rounded-[24px] overflow-hidden">
+        <div className="mt-[40px] max-w-[516px] bg-[#f5f5f5] m-auto rounded-[24px] overflow-hidden">
 
           {/* Search Input */}
           <div className='relative'>
@@ -73,22 +77,23 @@ const Banner = () => {
                 setSearch(e.target.value)
                 setShowAll(false) // reset when typing again
               }}
-              className='bg-[#fff] h-[45px] w-full p-6 rounded-[24px] outline-none'
+              className='bg-[#fff] text-[16px] primary-font text-[#1E1E1E] h-[44px] w-full p-[4px] pl-[20px] rounded-[24px] outline-none'
             />
 
-            <button className='bg-[#4285F4] absolute top-[3px] right-[2px] z-20 px-[30px] text-[#FFFFFF] rounded-[100px] w-fit h-[43px] flex items-center justify-center'>
-              <img src="/search.svg" alt="" />
+            <button className='bg-[#4285F4] absolute top-[4px] right-[4px] z-20  text-[#FFFFFF] rounded-[100px] w-[64px] h-[36px] flex items-center justify-center'>
+              <img src="/search.svg" className='object-cover h-[15px]' alt="" />
             </button>
           </div>
 
           {/* Search Result */}
-          {search && (
-            <div className="searchresult p-4 bg-[#f5f5f5]">
+          {search && (<>
+            <div className="searchresult pt-2 p-4 bg-[#f5f5f5] ">
+              <p className='mb-2 px-3 text-[14px] primary-font text-[#1E1E1E]'>{search}</p>
 
               {filteredActors.length > 0 ? (
                 <>
                   {visibleActors.map((item) => (
-                    <div
+                    <a href={item.link}
                       key={item.id}
                       className='grid grid-cols-10 py-2 gap-2 group items-center px-3 rounded-[24px] hover:bg-[#F4FBFF] transition'
                     >
@@ -100,7 +105,7 @@ const Banner = () => {
                         <h4 className="text-[14px] text-[#1E1E1E] primary-font">
                           {item.title}
                         </h4>
-                        <p className="text-sm text-[#757575]">
+                        <p className="text-sm text-[#757575] primary-font">
                           {item.catogary}
                         </p>
                       </div>
@@ -123,17 +128,17 @@ const Banner = () => {
 
                         )}
                       </div>
-                    </div>
+                    </a>
                   ))}
 
                   {/* See More / See Less */}
                   {filteredActors.length > 4 && (
                     <div className="text-center mt-3">
-                      <a href='#!'
+                      <a href='/search-result'
                         onClick={() => setShowAll(!showAll)}
-                        className="text-[#4285F4] text-[12px] font-[500]"
+                        className="text-[#4285F4] text-[12px] primary-font font-[500]"
                       >
-                        {showAll ? "See Less" : "See More"}
+                        see more
                       </a>
                     </div>
                   )}
@@ -144,7 +149,7 @@ const Banner = () => {
                 </p>
               )}
 
-            </div>
+            </div></>
           )}
 
         </div>

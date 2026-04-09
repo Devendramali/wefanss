@@ -120,7 +120,7 @@ const Profilecard = ({ ActorData }) => {
                                     </ul>
                                 </div>
 
-                                <button onClick={() => setcreatecollecton(!createcollecton)} type="button" className='bg-[#4285F4] hover:cursor-pointer flex justify-center w-full p-2 items-center gap-[8px] text-[#fff] primary-font text-[16px] font-[600]' ><span className='bg-[#fff] block h-[40px] w-[40px] flex items-center justify-center rounded-[8px]'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <button onClick={() => {setcreatecollecton(!createcollecton),setsavecollection(!savecollection)}} type="button" className='bg-[#4285F4] hover:cursor-pointer flex justify-center w-full p-2 items-center gap-[8px] text-[#fff] primary-font text-[16px] font-[600]' ><span className='bg-[#fff] block h-[40px] w-[40px] flex items-center justify-center rounded-[8px]'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M8 1V15M1 8H15" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg></span>Create New Collection</button>
 
@@ -212,7 +212,7 @@ const Profilecard = ({ ActorData }) => {
                     {/* <Bookmark /> */}
                 </div>
                 <div>
-                    <p className="line-clamp-4 text-[16px] primary-font text-[#fff]">Akshay Kumar (born September 9, 1967, Amritsar, Punjab, India) is an Indian actor and producer, chiefly known for his work in Bollywood comedies and action films. Kumar, whose career spans more than three decades, has starred in more than 100 films more    and is one of the most popular Bollywood actors in India. He was awarded the Padma Shri, one of the highest Indian civilian honors, in 2009.</p>
+                    <p className="line-clamp-4 text-[16px] primary-font text-[#fff]">{ActorData.discription}</p>
                 </div>
 
             </div>

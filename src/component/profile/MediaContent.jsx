@@ -47,7 +47,7 @@ const MediaContent = ({ item }) => {
           </div>
 
           {mediaItem.source && (
-            <p className="text-[12px] text-gray-500">
+            <p className="text-[12px] font-[500] text-[#868484]">
               {mediaItem.source}
             </p>
           )}
