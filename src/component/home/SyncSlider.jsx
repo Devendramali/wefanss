@@ -50,7 +50,8 @@ const swiperRef = useRef(null)
      
         <div className="col-span-12 md:hidden block">
             <h2 className="text-[48px] text-center berlin text-white mb-[20px]">
-            {slides[activeIndex].title}
+            {/* {slides[activeIndex].title} */}
+            Trivia
           </h2>
         </div>
         {/* TEXT */}
@@ -58,7 +59,8 @@ const swiperRef = useRef(null)
         <div className="col-span-12 md:col-span-5 md:order-1 order-2">
 
           <h2 className="text-[48px] md:block hidden berlin text-white mb-[40px]">
-            {slides[activeIndex].title}
+            {/* {slides[activeIndex].title} */}
+            Trivia
           </h2>
 
           <p className="text-[24px] primary-font text-white">

@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CelebritySlider from '../component/catogeries/CelebritySlider'
 import FilterCatogeries from '../component/catogeries/FilterCatogeries'
 import Pagination from '../component/Pagination'
 
 const Categories = () => {
+    useEffect(() => {
+    document.title = "Actors | We Fanss";
+  }, []);
   return (
     <>
         <div className=''>

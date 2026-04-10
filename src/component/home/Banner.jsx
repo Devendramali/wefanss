@@ -132,7 +132,7 @@ const Banner = () => {
                   ))}
 
                   {/* See More / See Less */}
-                  {filteredActors.length > 4 && (
+                  {/* {filteredActors.length > 4 && ( */}
                     <div className="text-center mt-3">
                       <a href='/search-result'
                         onClick={() => setShowAll(!showAll)}
@@ -141,7 +141,7 @@ const Banner = () => {
                         see more
                       </a>
                     </div>
-                  )}
+                  {/* )} */}
                 </>
               ) : (
                 <p className="text-center text-gray-500">

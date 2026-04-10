@@ -85,6 +85,30 @@ const FilterCatogeries = () => {
      img: "/catogary/cat6.jpg",
       link:"/profiles"
   },
+   {
+    id: 3,
+    name: "Tom Hiddleston",
+    gender: "Male",
+     cardcalss:"lg:col-span-1 md:col-span-2 col-span-4",
+    language: ["Hindi"],
+    age: 58,
+    totalMovies: 45,
+    totalAwards: 40,
+      img: "/catogary/cat5.png",
+       link:"/profiles"
+  },
+  {
+    id: 4,
+    name: "Priyanka Chopra",
+    gender: "Female",
+     cardcalss:"lg:col-span-1 md:col-span-2 col-span-4",
+    language: ["Hindi", "English"],
+    age: 41,
+    totalMovies: 35,
+    totalAwards: 28,
+     img: "/catogary/cat4.jpg",
+      link:"/profiles"
+  },
 
 ];
     const [gender, setGender] = useState("All");
@@ -182,27 +206,34 @@ return genderMatch && languageMatch && ageMatch && searchMatch;
                         showFilters ? "md:min-w-[250px] md:w-[250px]    opacity-100" : " "
                     }`}>
                     <button className='h-[56px] w-[56px] rounded-[8px] flex justify-center border-[#B2B2B2] border items-center'   onClick={() => setShowFilters(!showFilters)}>
-                        <SlidersHorizontal/>
+                        {/* <SlidersHorizontal/> */}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                              <path d="M1.30078 1.3V2.9C1.30078 3.1 1.40078 3.3 1.50078 3.4L7.60078 10.3V18.7C7.60078 19 7.80078 19.3 8.00078 19.4C8.10078 19.5 8.20078 19.5 8.40078 19.5C8.60078 19.5 8.70078 19.4 8.90078 19.3L12.1008 16.9C12.3008 16.8 12.4008 16.5 12.4008 16.3V10.3L18.5008 3.4C18.6008 3.3 18.7008 3.1 18.7008 2.9V1.3C18.7008 0.9 18.3008 0.5 17.9008 0.5H2.10078C1.60078 0.5 1.30078 0.9 1.30078 1.3Z" fill="#2C2C2C"/>
+                            </svg>
                     </button>
                     <button  onClick={() =>
                         setSortOrder((prev) =>
                         prev === "asc" ? "desc" : prev === "desc" ? null : "asc"
                         )
                     }  className='h-[56px] w-[56px] rounded-[8px] flex justify-center border-[#B2B2B2] border items-center'>
-                        <ArrowUpDown/>
+                        {/* <ArrowUpDown/>   */}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4992 18C14.4992 18 15.2992 17.2 15.2992 16.2V9.40004C15.2992 9.30005 15.3992 9.30005 15.3992 9.40004L16.7992 10.8C17.4992 11.5 18.5992 11.5 19.2992 10.8C19.9992 10.1 19.9992 9.00005 19.2992 8.30005L12.9992 1.80005C12.4992 1.30005 11.6992 1.60005 11.6992 2.30005V16.2C11.7992 17.2 12.5992 18 13.4992 18Z" fill="#2C2C2C"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.29922 1.5C5.29922 1.5 4.59922 2.3 4.59922 3.2V10.1C4.59922 10.2 4.49922 10.2 4.49922 10.1L3.09922 8.8C2.39922 8.1 1.29922 8.1 0.599219 8.8C-0.100781 9.5 -0.100781 10.6 0.599219 11.3L6.79922 17.8C7.29922 18.3 8.09922 18 8.09922 17.3V3.3C8.09922 2.3 7.29922 1.5 6.29922 1.5Z" fill="#2C2C2C"/>
+                          </svg>
                        
                     </button>
 
                 </div>
-                <div className="search group  bg-[#4285F4] rounded-[8px] relative">
+                <div className="search group  bg-[#4285F4] rounded-[100px] relative">
                     <input
                     type="text"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    className="w-[154px] hover:w-[250px] outline-none transition-all duration-500 placeholder-white h-[56px] placeholder:text-[16px] primary-font p-4 text-[#fff]"
+                    className="w-[154px] hover:w-[250px] outline-none transition-all duration-500 placeholder-white h-[56px] placeholder:text-[20px] primary-font p-4 px-[24px] font-[400] text-[#fff]"
                     placeholder="Search"
                     />
-                    <span  className='absolute top-0 right-0 -translate-x-3 translate-y-4'>
+                    <span  className='absolute top-0 right-0 -translate-x-5 translate-y-4'>
                     <Search color='#fff'/>
 
                     </span>

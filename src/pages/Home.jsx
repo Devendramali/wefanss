@@ -7,13 +7,20 @@ import SyncSlider from '../component/home/SyncSlider'
 import PopularPeople from '../component/home/PopularSection'
 import CtaSection from '../component/home/Cta'
 import ContinuousSlider from '../component/home/ContinuousSlider'
+import TrendingCelebrities2 from '../component/home/TrendingCelebrities2'
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+  document.title = "Home | We Fanss";
+}, []);
+  
   return (
     <>
       <Banner/>
       <Categories/>
-      <TrendingCelebrities/>
+      {/* <TrendingCelebrities/> */}
+      <TrendingCelebrities2/>
       <RecentlyAddedProfiles/>
       <SyncSlider/>
       <ContinuousSlider/>
