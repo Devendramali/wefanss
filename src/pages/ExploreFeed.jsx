@@ -30,7 +30,7 @@ const Sidebar = () => {
           <NavLink to="/explorer-feed"
            
             className={({ isActive }) =>
-              `w-full flex p-[16px] rounded-lg gap-3 text-left primary-font text-[16px] transition-all
+              `w-full flex p-[16px] rounded-lg text-left primary-font text-[16px] transition-all
               ${isActive 
                 ? "bg-[#4285F4] text-[#E3E3E3]" 
                 : "text-[#1E1E1E] hover:bg-[#4285F4] hover:text-white"
@@ -46,8 +46,7 @@ const Sidebar = () => {
                 <rect width="20" height="20" />
                 </clipPath>
             </defs>
-            </svg>
-          <span>Home</span>
+            </svg>Home
           </NavLink>
           <NavLink to="/profile"
             // onClick={() => setActive(item)}
