@@ -110,7 +110,7 @@ const FilterCatogeries = () => {
       link:"/profiles"
   },
 
-];
+      ];
     const [gender, setGender] = useState("All");
   const [languages, setLanguages] = useState([]);
 const [searchLang, setSearchLang] = useState("");

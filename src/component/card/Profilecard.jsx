@@ -1,4 +1,4 @@
-import { Bookmark, Share } from 'lucide-react';
+import { Bookmark, LinkIcon, Maximize2, Share } from 'lucide-react';
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
@@ -49,7 +49,7 @@ const Profilecard = ({ ActorData }) => {
 
                     <div className="mt-6 flex justify-start items-center gap-[10px]">
                         <Link onClick={() => setfollow(!follow)} className={`px-5 py-2  transition-all duration-300 ease-in-out flex w-fit rounded-[24px] primary-font text-[16px]  items-center gap-2  
-                  ${follow
+                            ${follow
                                 ? "bg-[#4285F4] text-[#fff]"
                                 : "bg-[#fff] text-[#4285F4]"
                             }`
@@ -64,10 +64,10 @@ const Profilecard = ({ ActorData }) => {
                                 <path d="M8 1V15M1 8H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg></Link>
                         <div className='relative'>
-                            <Link onClick={() => setsavecollection(!savecollection)} className={`px-4 h-[42px] py-2 flex w-fit rounded-[24px] primary-font text-[16px] text-[#fff] items-center gap-2 bg-[#fff] ${saveprofile
+                            <Link onClick={() => setsavecollection(!savecollection)} className={`px-[10px] h-[42px] py-[10px] flex w-fit rounded-[8px] primary-font text-[16px] text-[#fff] items-center gap-2 bg-[#fff] ${saveprofile
                                 ? "bg-[#fff]"
                                 : "bg-[4285F4]"
-                                }`}> <Bookmark color="#4285F4" /></Link>
+                                }`}> <Bookmark color="#4285F4" height={24}/></Link>
                             <div
                                 className={`w-[290px]  bg-[#F4FBFF] z-100  rounded-[8px] overflow-hidden  absolute left-[-150px] top-[70px] rounded-[16px]
                                 transition-all duration-300 ease-in-out
@@ -155,58 +155,134 @@ const Profilecard = ({ ActorData }) => {
                            
                         </div>
                         <div className="relative">
-                        <Link onClick={() => setSharelink(!Sharelink)} className="px-4 h-[42px] py-2 flex w-fit rounded-[24px] primary-font text-[16px] text-[#fff] items-center gap-2 bg-[#fff]"> <Share color="#4285F4" /></Link>
-                <div
-                    className={`w-[266px] bg-[#fff] z-100 px-3 py-6 absolute left-[-150px] top-[70px] rounded-[16px]
-              transition-all duration-300 ease-in-out
-              ${Sharelink
-                            ? "opacity-100 translate-y-0 pointer-events-auto"
-                            : "opacity-0 -translate-y-5 pointer-events-none"
-                        }`}
-                >
-                    <h3 className="text-[#1E1E1E] primary-font text-[14px] font-[500] text-center">Share to</h3>
-                    <ul className="mt-5 flex flex-wrap gap-[10px]">
-                        
-                        <li className="group">
-                            <Link className="flex flex-col transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                            <img src="/share/Facebook.png" alt="" />
-                            <h3 className="flex text-[8px] mt-[6px] gap-2 primary-font font-[500] items-center">
-                                <span>Facebook</span></h3>
-                            </Link>
-                        </li>
-                        <li className="group">
-                            <Link className="flex flex-col transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                            <img src="/share/Twitter.png" className='h-[24px] w-[24px]' alt="" />
-                            <h3 className="flex text-[8px] mt-[6px] gap-2 primary-font font-[500] items-center">
-                                <span>X</span></h3>
-                            </Link>
-                        </li>
-                        <li className="group">
-                            <Link className="flex flex-col transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                            <img src="/share/Linkedin.png" alt="" />
-                            <h3 className="flex text-[8px] mt-[6px] gap-2 primary-font font-[500] items-center">
-                                <span>Linkedin</span></h3>
-                            </Link>
-                        </li>
-                        <li className="group">
-                            <Link className="flex flex-col transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                            <img src="/share/Whatsapp.png" alt="" />
-                            <h3 className="flex text-[8px] mt-[6px] gap-2 primary-font font-[500] items-center">
-                                <span>Whatsapp</span></h3>
-                            </Link>
-                        </li>
-                        <li className="group">
-                            <Link className="flex flex-col transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                            <img src="/share/copy.svg" alt="" />
-                            <h3 className="flex text-[8px] mt-[6px] gap-2 primary-font font-[500] items-center">
-                                <span>Copy Link</span></h3>
-                            </Link>
-                        </li>
-                       
-                    </ul>
+                        <Link onClick={() => setSharelink(!Sharelink)} className="px-[10px] h-[42px] py-[10px] flex w-fit rounded-[8px] primary-font text-[16px] text-[#fff] items-center gap-2 bg-[#fff]"> <Share color="#4285F4" height={24} /></Link>
+                            <div
+                                className={`w-[266px] bg-[#fff] z-100 px-3 py-6 absolute left-[-150px] top-[70px] rounded-[16px]
+                            transition-all duration-300 ease-in-out
+                            ${Sharelink
+                                        ? "opacity-100 translate-y-0 pointer-events-auto"
+                                        : "opacity-0 -translate-y-5 pointer-events-none"
+                                    }`}
+                            >
+                                <h3 className="text-[#1E1E1E] primary-font text-[14px] font-[500] text-center">Share to</h3>
+                                <ul className="mt-5 flex flex-wrap gap-[10px]">
+                                    
+                                    <li className="group">
+                                        <Link className="flex flex-col transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
+                                        <img src="/share/Facebook.png" alt="" />
+                                        <h3 className="flex text-[8px] mt-[6px] gap-2 primary-font font-[500] items-center">
+                                            <span>Facebook</span></h3>
+                                        </Link>
+                                    </li>
+                                    <li className="group">
+                                        <Link className="flex flex-col transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
+                                        <img src="/share/Twitter.png" className='h-[24px] w-[24px]' alt="" />
+                                        <h3 className="flex text-[8px] mt-[6px] gap-2 primary-font font-[500] items-center">
+                                            <span>X</span></h3>
+                                        </Link>
+                                    </li>
+                                    <li className="group">
+                                        <Link className="flex flex-col transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
+                                        <img src="/share/Linkedin.png" alt="" />
+                                        <h3 className="flex text-[8px] mt-[6px] gap-2 primary-font font-[500] items-center">
+                                            <span>Linkedin</span></h3>
+                                        </Link>
+                                    </li>
+                                    <li className="group">
+                                        <Link className="flex flex-col transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
+                                        <img src="/share/Whatsapp.png" alt="" />
+                                        <h3 className="flex text-[8px] mt-[6px] gap-2 primary-font font-[500] items-center">
+                                            <span>Whatsapp</span></h3>
+                                        </Link>
+                                    </li>
+                                    <li className="group">
+                                        <Link className="flex flex-col transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
+                                        <img src="/share/copy.svg" alt="" />
+                                        <h3 className="flex text-[8px] mt-[6px] gap-2 primary-font font-[500] items-center">
+                                            <span>Copy Link</span></h3>
+                                        </Link>
+                                    </li>
+                                
+                                </ul>
 
-                </div>
+                            </div>
                         </div>
+                          <div className="relative">
+                                <Link onClick={() => setQuick(!Quick)} className={`px-[10px] share h-[42px] py-[10px] flex w-fit rounded-[8px] primary-font text-[16px] text-[#fff] items-center gap-2 bg-[#fff] ${saveprofile
+                                                ? "bg-[#fff]"
+                                                : "bg-[4285F4]"
+                                                }`}>
+                                <LinkIcon color="#4285F4" height={24}/>
+                                </Link>
+                                <div
+                                    className={`w-[290px] bg-[#fff] z-100 px-3 py-6 absolute left-[-150px] top-[70px] rounded-[16px]
+                            transition-all duration-300 ease-in-out
+                            ${Quick
+                                            ? "opacity-100 translate-y-0 pointer-events-auto"
+                                            : "opacity-0 -translate-y-5 pointer-events-none"
+                                        }`}
+                                >
+                                    <h3 className="text-[#1E1E1E] primary-font text-[14px] font-[500] text-center">Quick links</h3>
+                                    <ul className="mt-5 flex flex-col gap-[10px]">
+                                        <li className="group">
+                                            <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
+                                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="/share/Instagram.png" alt="" />
+                                                    <span>Instagram</span></h3>
+                                                <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                                    <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round" />
+                                                </svg>
+                                            </Link>
+                                        </li>
+                                        <li className="group">
+                                            <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
+                                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="/share/Facebook.png" alt="" />
+                                                    <span>Facebook</span></h3>
+                                                <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                                    <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round" />
+                                                </svg>
+                                            </Link>
+                                        </li>
+                                        <li className="group">
+                                            <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
+                                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img className="object-contain" src="/share/Twitter.png" alt="" />
+                                                    <span>X</span></h3>
+                                                <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                                    <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round" />
+                                                </svg>
+                                            </Link>
+                                        </li>
+                                        <li className="group">
+                                            <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
+                                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="/share/Linkedin.png" alt="" />
+                                                    <span>Linkedin</span></h3>
+                                                <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                                    <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round" />
+                                                </svg>
+                                            </Link>
+                                        </li>
+                                        <li className="group">
+                                            <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
+                                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="/share/Threads.png" alt="" />
+                                                    <span>Threads</span></h3>
+                                                <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                                    <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round" />
+                                                </svg>
+                                            </Link>
+                                        </li>
+                                        <li className="group">
+                                            <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
+                                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="/share/globe.svg" alt="" />
+                                                    <span>Website1</span></h3>
+                                                <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                                    <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round" />
+                                                </svg>
+                                            </Link>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                             </div>
+                        
                     </div>
 
                     {/* <Bookmark /> */}
@@ -217,80 +293,10 @@ const Profilecard = ({ ActorData }) => {
 
             </div>
             <div className="relative">
-                <Link onClick={() => setQuick(!Quick)} className="absolute share top-2 right-2 z-10">
-                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.5" y="0.5" width="41" height="41" rx="20.5" fill="white" fill-opacity="0.2" />
-                        <rect x="0.5" y="0.5" width="41" height="41" rx="20.5" stroke="white" />
-                        <path d="M19.0002 22C19.4297 22.5741 19.9776 23.0491 20.6067 23.3929C21.2359 23.7367 21.9317 23.9411 22.6468 23.9923C23.362 24.0435 24.0798 23.9403 24.7515 23.6897C25.4233 23.4392 26.0333 23.047 26.5402 22.54L29.5402 19.54C30.451 18.597 30.955 17.3339 30.9436 16.023C30.9322 14.712 30.4063 13.4579 29.4793 12.5309C28.5523 11.6038 27.2982 11.078 25.9872 11.0666C24.6762 11.0552 23.4132 11.5592 22.4702 12.47L20.7502 14.18M23.0002 20C22.5707 19.4258 22.0228 18.9508 21.3936 18.607C20.7645 18.2633 20.0687 18.0588 19.3535 18.0076C18.6384 17.9564 17.9206 18.0596 17.2489 18.3102C16.5771 18.5608 15.9671 18.9529 15.4602 19.46L12.4602 22.46C11.5494 23.403 11.0454 24.666 11.0568 25.977C11.0682 27.288 11.5941 28.542 12.5211 29.4691C13.4481 30.3961 14.7022 30.9219 16.0132 30.9333C17.3242 30.9447 18.5872 30.4408 19.5302 29.53L21.2402 27.82" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                <Link onClick={() => setQuick(!Quick)} className="absolute h-[42px] w-[42px] flex justify-center items-center rounded-[50%] border border-1 border-[#fff] bg-[#FFFFFF33] share top-2 right-2 z-10">
+                    <Maximize2 height={18} color='#fff'/>
                 </Link>
-                <div
-                    className={`w-[290px] bg-[#fff] z-100 px-3 py-6 absolute left-[-150px] top-[70px] rounded-[16px]
-              transition-all duration-300 ease-in-out
-              ${Quick
-                            ? "opacity-100 translate-y-0 pointer-events-auto"
-                            : "opacity-0 -translate-y-5 pointer-events-none"
-                        }`}
-                >
-                    <h3 className="text-[#1E1E1E] primary-font text-[14px] font-[500] text-center">Quick links</h3>
-                    <ul className="mt-5 flex flex-col gap-[10px]">
-                        <li className="group">
-                            <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="/share/Instagram.png" alt="" />
-                                    <span>Instagram</span></h3>
-                                <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                    <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round" />
-                                </svg>
-                            </Link>
-                        </li>
-                        <li className="group">
-                            <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="/share/Facebook.png" alt="" />
-                                    <span>Facebook</span></h3>
-                                <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                    <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round" />
-                                </svg>
-                            </Link>
-                        </li>
-                        <li className="group">
-                            <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img className="object-contain" src="/share/Twitter.png" alt="" />
-                                    <span>X</span></h3>
-                                <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                    <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round" />
-                                </svg>
-                            </Link>
-                        </li>
-                        <li className="group">
-                            <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="/share/Linkedin.png" alt="" />
-                                    <span>Linkedin</span></h3>
-                                <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                    <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round" />
-                                </svg>
-                            </Link>
-                        </li>
-                        <li className="group">
-                            <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="/share/Threads.png" alt="" />
-                                    <span>Threads</span></h3>
-                                <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                    <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round" />
-                                </svg>
-                            </Link>
-                        </li>
-                        <li className="group">
-                            <Link className="flex transition-all duration-300 group-hover:bg-[#F4FBFF] p-2 w-full justify-between items-center" >
-                                <h3 className="flex text-[14px] gap-2 primary-font font-[600] items-center"><img src="/share/globe.svg" alt="" />
-                                    <span>Website1</span></h3>
-                                <svg className="opacity-0 transition-all duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                    <path d="M4.2002 4.2002H10.2002M10.2002 4.2002V10.2002M10.2002 4.2002L4.2002 10.2002" stroke="#4285F4" stroke-width="1.2" stroke-linejoin="round" />
-                                </svg>
-                            </Link>
-                        </li>
-                    </ul>
-
-                </div>
+             
             </div>
         </div>
     )

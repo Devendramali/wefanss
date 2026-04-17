@@ -20,7 +20,64 @@ const MoviesDetails = ({context}) => {
             <div className="relative bg-[#fff]">
                 <div className="absolute  inset-0 h-fit md:top-[30px] top-[20px] z-30">
                     <div className="flex gap-1 border border-1 border-[#D9D9D9] m-auto w-fit bg-[#fff] rounded-[50px] p-1">
-                        <Link to="/movies" className={`flex  justify-center items-center primary-font text-[14px]  gap-2 rounded-[50px] px-[20px] py-[10px]  ${context.Contenttype === "Movies" ? "bg-[#4285F4] text-[#fff]" : " text-[#000]"}`}>
+
+                        {
+                             (context.Contenttype === "Elections" || context.Contenttype === "PositionsHeld") &&(
+<>
+                        <Link to="/elections-contested" className={`flex  justify-center items-center primary-font text-[14px]  gap-2 rounded-[50px] px-[20px] py-[10px]  ${context.Contenttype === "Elections" ? "bg-[#4285F4] text-[#fff]" : " text-[#000]"}`}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <g clip-path="url(#clip0_1460_3563)">
+                                    <path d="M18.1992 12.4H1.79922C1.59922 12.4 1.39922 12.4 1.19922 12.3V19.4C1.19922 19.7 1.49922 20 1.79922 20H18.0992C18.3992 20 18.6992 19.7 18.6992 19.4V12.3C18.5992 12.4 18.3992 12.4 18.1992 12.4Z" fill={`${context.Contenttype === "Elections" ? "#fff" : "#000"}`}/>
+                                    <path d="M1.79922 11.2H18.0992C18.4992 11.2 18.7992 10.8 18.6992 10.5L17.3992 5.5C17.3992 5.2 17.1992 5 16.8992 5H15.5992V7.5C16.3992 7.5 16.3992 8.6 15.5992 8.7H4.39922C3.59922 8.7 3.59922 7.6 4.39922 7.5V5H3.09922C2.79922 5 2.59922 5.2 2.49922 5.5L1.19922 10.5C1.19922 10.7 1.19922 10.9 1.29922 11C1.49922 11.1 1.69922 11.2 1.79922 11.2Z" fill={`${context.Contenttype === "Elections" ? "#fff" : "#000"}`}/>
+                                    <path d="M14.3977 0.6C14.3977 0.3 14.0977 0 13.7977 0H6.19766C5.89766 0 5.59766 0.3 5.59766 0.6V7.5H14.3977V0.6ZM12.2977 2.9L9.79766 5.4C9.59766 5.7 9.19766 5.7 8.99766 5.4L7.69766 4.2C7.49766 4 7.49766 3.6 7.69766 3.4C7.89766 3.2 8.29766 3.2 8.49766 3.4L9.29766 4.2L11.3977 2.1C11.5977 1.9 11.9977 1.9 12.1977 2.1C12.4977 2.3 12.4977 2.7 12.2977 2.9Z" fill={`${context.Contenttype === "Elections" ? "#fff" : "#000"}`}/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1460_3563">
+                                    <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                                </svg>
+                            
+                             {
+                                context.Contenttype === "Elections" &&(
+                                   <>Elections Contested</>
+                                )
+                            }
+
+                        </Link>
+                        <Link to="/positions-held" className={`flex  justify-center items-center primary-font text-[14px]  gap-2 rounded-[50px] px-[20px] py-[10px]  ${context.Contenttype === "PositionsHeld" ? "bg-[#4285F4] text-[#fff]" : " text-[#000]"}`}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <g clip-path="url(#clip0_1460_3539)">
+                                    <path d="M15.5 10.8V11.8H13.9V10.7C13.9 10.4 13.6 10.1 13.3 10.1C13 10.1 12.7 10.4 12.7 10.7V11.8H7.2V10.7C7.2 10.4 6.9 10.1 6.6 10.1C6.3 10.1 6 10.4 6 10.7V11.8H4.5V10.8C4.5 9.29998 5.4 8.09998 6.7 7.59998C6.8 7.69998 6.8 7.79998 6.9 7.79998C7.6 8.59998 8.5 8.99998 9.4 9.09998V9.99998C9.4 10.3 9.7 10.6 10 10.6C10.3 10.6 10.6 10.3 10.6 9.99998V9.09998C11.5 8.99998 12.4 8.49998 13.1 7.89998C13.2 7.79998 13.3 7.69998 13.3 7.69998C14.6 8.09998 15.5 9.39998 15.5 10.8Z" fill={`${context.Contenttype === "PositionsHeld" ? "#fff" : "#000"}`}/>
+                                    <path d="M17.1992 17.3L16.7992 19.5C16.7992 19.8 16.4992 20 16.1992 20H3.69922C3.39922 20 3.19922 19.8 3.09922 19.5L2.69922 17.3H17.1992Z" fill={`${context.Contenttype === "PositionsHeld" ? "#fff" : "#000"}`}/>
+                                    <path d="M17.9016 8.99998V11.9H16.7016V8.99998C16.7016 8.39998 16.5016 7.79998 16.0016 7.29998L15.0016 6.29998C14.8016 6.09998 14.8016 5.69998 15.0016 5.49998C15.2016 5.29998 15.6016 5.29998 15.8016 5.49998L16.8016 6.49998C17.5016 7.19998 17.9016 8.09998 17.9016 8.99998Z" fill={`${context.Contenttype === "PositionsHeld" ? "#fff" : "#000"}`}/>
+                                    <path d="M5.00156 6.29995L4.00156 7.29995C3.60156 7.79995 3.30156 8.39995 3.30156 9.09995V11.9H2.10156V9.09995C2.10156 8.09995 2.50156 7.29995 3.10156 6.59995L4.10156 5.59995C4.30156 5.39995 4.70156 5.39995 4.90156 5.59995C5.30156 5.69995 5.30156 6.09995 5.00156 6.29995Z" fill={`${context.Contenttype === "PositionsHeld" ? "#fff" : "#000"}`}/>
+                                    <path d="M18.6008 13H1.40078C1.10078 13 0.800781 13.3 0.800781 13.6V15.5C0.800781 15.8 1.10078 16.1 1.40078 16.1H18.5008C18.8008 16.1 19.1008 15.8 19.1008 15.5V13.6C19.2008 13.3 18.9008 13 18.6008 13Z" fill={`${context.Contenttype === "PositionsHeld" ? "#fff" : "#000"}`}/>
+                                    <path d="M7.40234 2.8H6.90234C7.10234 1.2 8.40234 0 10.0023 0C10.9023 0 11.7023 0.4 12.2023 0.9C12.7023 1.4 13.0023 2.1 13.1023 2.8H12.7023C11.4023 2.8 11.0023 2 11.0023 2C10.9023 1.8 10.7023 1.6 10.5023 1.6C10.2023 1.7 10.0023 1.8 9.90234 2C9.80234 2.1 9.30234 3 7.40234 2.8Z" fill={`${context.Contenttype === "PositionsHeld" ? "#fff" : "#000"}`}/>
+                                    <path d="M13.1023 3.99995V4.79995C13.1023 6.59995 11.7023 7.99995 10.0023 7.99995C8.30234 7.99995 6.90234 6.59995 6.90234 4.79995V3.99995H7.30234C9.00234 4.19995 9.90234 3.69995 10.4023 3.19995C10.8023 3.59995 11.6023 3.99995 12.7023 3.99995H13.1023Z" fill={`${context.Contenttype === "PositionsHeld" ? "#fff" : "#000"}`}/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1460_3539">
+                                    <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            
+                             {
+                                context.Contenttype === "PositionsHeld" &&(
+                                   <> positions-held</>
+                                )
+                            }
+
+                        </Link>
+                        </>
+                            )
+                        }
+                      
+                      {
+                        (context.Contenttype !== "Elections" && context.Contenttype !== "PositionsHeld")&& (
+                            <>
+                               <Link to="/movies" className={`flex  justify-center items-center primary-font text-[14px]  gap-2 rounded-[50px] px-[20px] py-[10px]  ${context.Contenttype === "Movies" ? "bg-[#4285F4] text-[#fff]" : " text-[#000]"}`}>
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.8752 3.52065C5.87591 4.03787 5.72314 4.54368 5.43623 4.97404C5.14932 5.40439 4.74117 5.73994 4.26345 5.93821C3.78573 6.13647 3.25992 6.18853 2.7526 6.0878C2.24527 5.98707 1.77924 5.73807 1.41351 5.37234C1.04777 5.0066 0.798778 4.54057 0.698047 4.03325C0.597315 3.52593 0.649377 3.00012 0.84764 2.5224C1.0459 2.04468 1.38145 1.63653 1.81181 1.34962C2.24216 1.06271 2.74797 0.909935 3.2652 0.910647C3.60795 0.910647 3.94734 0.978157 4.264 1.10932C4.58066 1.24049 4.86839 1.43274 5.11075 1.6751C5.35311 1.91746 5.54536 2.20518 5.67653 2.52184C5.80769 2.8385 5.8752 3.1779 5.8752 3.52065ZM9.1404 0.910647C8.62333 0.910647 8.11787 1.06402 7.68799 1.35137C7.25811 1.63871 6.92312 2.04712 6.72541 2.5249C6.5277 3.00268 6.47615 3.52837 6.57729 4.03546C6.67842 4.54255 6.9277 5.00824 7.29358 5.37361C7.65946 5.73899 8.1255 5.98763 8.63272 6.08807C9.13995 6.1885 9.66557 6.13623 10.1431 5.93786C10.6206 5.73949 11.0285 5.40394 11.3153 4.97366C11.602 4.54339 11.7547 4.03772 11.754 3.52065C11.753 2.8281 11.4773 2.16425 10.9872 1.67488C10.4972 1.18551 9.83295 0.910646 9.1404 0.910647ZM12.4056 10.051V13.9678C12.4056 14.6604 12.1307 15.3246 11.6414 15.8147C11.152 16.3047 10.4881 16.5805 9.7956 16.5814H2.5956C1.90555 16.5767 1.24539 16.2992 0.759131 15.8096C0.272872 15.32 -1.63648e-05 14.6579 7.36057e-10 13.9678L7.36057e-10 10.051C-3.25593e-07 9.70799 0.0676284 9.36831 0.199018 9.05141C0.330408 8.73452 0.522981 8.44663 0.765724 8.20422C1.00847 7.96182 1.29662 7.76964 1.61369 7.63869C1.93077 7.50773 2.27055 7.44057 2.6136 7.44105H9.8136C10.5027 7.4458 11.1619 7.72288 11.6475 8.21183C12.1331 8.70079 12.4056 9.36194 12.4056 10.051ZM14.8068 8.67225L13.7268 9.16905V14.2306L14.8068 14.731C15.984 15.271 18 14.8894 18 14.1262V9.27345C18 8.51385 15.984 8.13225 14.8068 8.66865V8.67225Z" fill={`${context.Contenttype === "Movies" ? "#fff" : "#000"}`} />
                             </svg>  {
@@ -42,6 +99,10 @@ const MoviesDetails = ({context}) => {
 
 
                         </Link>
+                            </>
+                         )
+                      }
+                     
                      
                         <Link to="/watch" className={`flex  justify-center items-center primary-font text-[14px] text-[#fff] gap-2 rounded-[50px] px-[20px] py-[10px]  ${context.Contenttype === "Watch" ? "bg-[#4285F4]" : ""}`}>
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,7 +140,158 @@ const MoviesDetails = ({context}) => {
                     </div>
 
                 </div>
+                {(context.Contenttype === "Elections") && (
+                    <>
+                   <div className="pt-[120px] pb-[90px] px-4">
+                        <div className="md:max-w-[1130px] electopnbox m-auto space-y-[27px]">
 
+                            {/* Row */}
+                            {[
+                            { year: "2019", election: "Lok Sabha", party: "Shivsena", result: "Won" },
+                            { year: "2020", election: "Municipal", party: "BJP", result: "Lost" },
+                            { year: "2021", election: "Panchayat", party: "NCP", result: "Won" },
+                            { year: "2022", election: "State Assembly", party: "Congress", result: "Lost" },
+                            ].map((item, i) => (
+                            
+                            <div
+                                key={i}
+                                className="flex flexbox1 items-center bg-[#F4FBFF] rounded-[8px] overflow-hidden "
+                            >
+                                {/* Image */}
+                                <div className="pr-[24px]">
+                                <img
+                                    src="/actor/eknath.png"
+                                    alt=""
+                                    className="h-[120px] w-[100px] object-cover md:rounded-0 rounded-[8px]"
+                                />
+                                </div>
+
+                                {/* Year */}
+                                <div className="border-l border-[#D9D9D9] px-[24px] min-w-[120px]">
+                                <h4 className="text-[#757575] text-[16px] primary-font">Year</h4>
+                                <h2 className="berlin text-[36px] mt-[4px]">{item.year}</h2>
+                                </div>
+
+                                {/* Election */}
+                                <div className="border-l border-[#D9D9D9] px-[24px] min-w-[300px]">
+                                <h4 className="text-[#757575] text-[16px] primary-font">Election</h4>
+                                <h2 className="berlin text-[36px] mt-[4px]">{item.election}</h2>
+                                </div>
+
+                                {/* Party */}
+                                <div className="border-l border-[#D9D9D9] px-[24px] min-w-[200px]">
+                                <h4 className="text-[#757575] text-[16px] primary-font">Party</h4>
+                                <h2 className="berlin text-[36px] mt-[4px]">{item.party}</h2>
+                                </div>
+
+                                {/* Result */}
+                                <div className="border-l border-[#D9D9D9] px-[24px] flex-1">
+                                <h4 className="text-[#757575] text-[16px] primary-font">Result</h4>
+                                <h2 className="berlin text-[36px] mt-[4px]">{item.result}</h2>
+                                </div>
+
+                                {/* Button */}
+                                <a href="#!" className="ml-auto bg-[#4285F4] h-[120px]  flex items-center p-[20px] text-white text-[16px] text-center">
+                                    <div className="flex flex-col justify-center items-center">
+                                        <div className="text-[18px] mb-[4px]">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <g clip-path="url(#clip0_1460_3613)">
+                                                <path d="M14.2016 17.8L13.9016 19C13.1016 19.3 12.4016 19.6 11.9016 19.8C11.4016 20 10.8016 20.1 10.2016 20.1C9.20156 20.1 8.40156 19.9 7.80156 19.4C7.20156 18.9 7.00156 18.3 7.00156 17.5C7.00156 17.2 7.00156 16.9 7.10156 16.6C7.10156 16.3 7.20156 15.9 7.30156 15.5L8.30156 11.8C8.40156 11.4 8.50156 11.1 8.50156 10.8C8.60156 10.5 8.60156 10.2 8.60156 9.9C8.60156 9.4 8.50156 9.1 8.30156 8.9C8.10156 8.7 7.70156 8.6 7.10156 8.6C6.80156 8.6 6.50156 8.6 6.30156 8.7C6.00156 8.8 5.80156 8.9 5.60156 8.9L5.90156 7.8C6.60156 7.5 7.20156 7.3 7.90156 7.1C8.50156 6.9 9.10156 6.8 9.70156 6.8C10.7016 6.8 11.5016 7 12.0016 7.5C12.5016 8 12.8016 8.6 12.8016 9.4C12.8016 9.6 12.8016 9.8 12.7016 10.3C12.7016 10.7 12.6016 11.1 12.5016 11.4L11.5016 15.1C11.4016 15.4 11.3016 15.7 11.3016 16.1C11.2016 16.5 11.2016 16.8 11.2016 17C11.2016 17.5 11.3016 17.8 11.5016 18C11.7016 18.2 12.1016 18.3 12.6016 18.3C12.9016 18.3 13.1016 18.3 13.5016 18.2C13.8016 18 14.0016 17.9 14.2016 17.8ZM14.4016 2.3C14.4016 2.9 14.2016 3.5 13.7016 3.9C13.2016 4.4 12.6016 4.6 11.9016 4.6C11.2016 4.6 10.7016 4.4 10.2016 4C9.70156 3.5 9.40156 3 9.40156 2.3C9.40156 1.7 9.60156 1.1 10.1016 0.6C10.7016 0.2 11.2016 0 11.9016 0C12.6016 0 13.2016 0.2 13.7016 0.7C14.2016 1.1 14.4016 1.7 14.4016 2.3Z" fill="white"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_1460_3613">
+                                                <rect width="20" height="20" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                            </svg>
+                                        </div>
+                                          Read <br /> More
+                                      
+                                    </div>
+                                </a>
+                            </div>
+
+                            ))}
+                        </div>
+                    </div>
+
+                   
+                    </>
+                )}
+                 {(context.Contenttype === "PositionsHeld") && (
+                    <>
+                   <div className="pt-[120px] pb-[90px] px-4">
+                        <div className="md:max-w-[1130px] electopnbox m-auto space-y-[27px]">
+
+                            {/* Row */}
+                            {[
+                            { Department: "Minister of Urban Development", party: "Shivsena", Heldoffice: "2019-2022" },
+                            { Department: "Minister of Health", party: "BJP", Heldoffice: "2020-2023" },
+                            { Department: "Minister of Education", party: "NCP", Heldoffice: "2018-2021" },
+                            { Department: "Minister of Finance", party: "Congress", Heldoffice: "2019-2024" },
+                            ].map((item, i) => (
+                            
+                            <div
+                                key={i}
+                                className="flex flexbox1 items-center bg-[#F4FBFF] rounded-[8px] overflow-hidden "
+                            >
+                                {/* Image */}
+                                <div className="pr-[24px]">
+                                <img
+                                    src="/actor/eknath.png"
+                                    alt=""
+                                    className="h-[120px] w-[100px] object-cover md:rounded-0 rounded-[8px]"
+                                />
+                                </div>
+
+                                {/* Year */}
+                                <div className="border-l border-[#D9D9D9] px-[24px] flex-1">
+                                <h4 className="text-[#757575] text-[16px] primary-font">Department</h4>
+                                <h2 className="berlin text-[36px] mt-[4px]">{item.Department}</h2>
+                                </div>
+
+                               
+
+                                {/* Party */}
+                                <div className="border-l border-[#D9D9D9] px-[24px] min-w-[200px]">
+                                <h4 className="text-[#757575] text-[16px] primary-font">Party</h4>
+                                <h2 className="berlin text-[36px] mt-[4px]">{item.party}</h2>
+                                </div>
+
+                                {/* Result */}
+                                <div className="border-l border-[#D9D9D9] px-[24px] flex-1">
+                                <h4 className="text-[#757575] text-[16px] primary-font">Held office</h4>
+                                <h2 className="berlin text-[36px] mt-[4px]">{item.Heldoffice}</h2>
+                                </div>
+
+                                {/* Button */}
+                                <a href="#!" className="ml-auto bg-[#4285F4] h-[120px]  flex items-center p-[20px] text-white text-[16px] text-center">
+                                    <div className="flex flex-col justify-center items-center">
+                                        <div className="text-[18px] mb-[4px]">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <g clip-path="url(#clip0_1460_3613)">
+                                                <path d="M14.2016 17.8L13.9016 19C13.1016 19.3 12.4016 19.6 11.9016 19.8C11.4016 20 10.8016 20.1 10.2016 20.1C9.20156 20.1 8.40156 19.9 7.80156 19.4C7.20156 18.9 7.00156 18.3 7.00156 17.5C7.00156 17.2 7.00156 16.9 7.10156 16.6C7.10156 16.3 7.20156 15.9 7.30156 15.5L8.30156 11.8C8.40156 11.4 8.50156 11.1 8.50156 10.8C8.60156 10.5 8.60156 10.2 8.60156 9.9C8.60156 9.4 8.50156 9.1 8.30156 8.9C8.10156 8.7 7.70156 8.6 7.10156 8.6C6.80156 8.6 6.50156 8.6 6.30156 8.7C6.00156 8.8 5.80156 8.9 5.60156 8.9L5.90156 7.8C6.60156 7.5 7.20156 7.3 7.90156 7.1C8.50156 6.9 9.10156 6.8 9.70156 6.8C10.7016 6.8 11.5016 7 12.0016 7.5C12.5016 8 12.8016 8.6 12.8016 9.4C12.8016 9.6 12.8016 9.8 12.7016 10.3C12.7016 10.7 12.6016 11.1 12.5016 11.4L11.5016 15.1C11.4016 15.4 11.3016 15.7 11.3016 16.1C11.2016 16.5 11.2016 16.8 11.2016 17C11.2016 17.5 11.3016 17.8 11.5016 18C11.7016 18.2 12.1016 18.3 12.6016 18.3C12.9016 18.3 13.1016 18.3 13.5016 18.2C13.8016 18 14.0016 17.9 14.2016 17.8ZM14.4016 2.3C14.4016 2.9 14.2016 3.5 13.7016 3.9C13.2016 4.4 12.6016 4.6 11.9016 4.6C11.2016 4.6 10.7016 4.4 10.2016 4C9.70156 3.5 9.40156 3 9.40156 2.3C9.40156 1.7 9.60156 1.1 10.1016 0.6C10.7016 0.2 11.2016 0 11.9016 0C12.6016 0 13.2016 0.2 13.7016 0.7C14.2016 1.1 14.4016 1.7 14.4016 2.3Z" fill="white"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_1460_3613">
+                                                <rect width="20" height="20" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                            </svg>
+                                        </div>
+                                          Read <br /> More
+                                      
+                                    </div>
+                                </a>
+                            </div>
+
+                            ))}
+                        </div>
+                    </div>
+
+                   
+                    </>
+                )}
                {(context.Contenttype === "Movies" || context.Contenttype === "Webseries") && (<>
                     <BannerSlider data={context.MoviesSliderdata.bannerSlider} /> 
 

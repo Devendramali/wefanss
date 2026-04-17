@@ -29,6 +29,9 @@ import SearchResult from './pages/SearchResult'
 import Gallery from './pages/Gallery'
 import NoSearcfound from './component/NoSearcfound'
 import Contact from './pages/Contact'
+import ExplorerFeed, { Profilepage,FollowedCelebrities,MyCollections, CollectionsDetails, ChangePassword } from './pages/ExploreFeed'
+import ElectionsContested from './pages/ElectionsContested'
+import PositionsHeld from './pages/PositionsHeld'
 
 
 function App() {
@@ -66,6 +69,14 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/no-search-found" element={<NoSearcfound/>} />
           <Route path="/contact" element={<Contact/>} />
+          <Route path="/explorer-feed" element={<ExplorerFeed/>} />
+          <Route path="/profile" element={<Profilepage/>} />
+          <Route path="/followed-celebrities" element={<FollowedCelebrities/>} />
+          <Route path="/my-collections" element={<MyCollections/>} />
+          <Route path="/collection-details" element={<CollectionsDetails/>} />
+          <Route path="/change-password" element={<ChangePassword/>} />
+          <Route path="/elections-contested" element={<ElectionsContested/>} />
+          <Route path="/positions-held" element={<PositionsHeld/>} />
         </Route>
       </Routes>
     </BrowserRouter>

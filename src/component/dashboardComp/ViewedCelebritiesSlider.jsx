@@ -12,10 +12,10 @@ const ViewedCelebritiesSlider = ({data}) => {
   return (
     <div className={` max-w-[1352px] m-auto md:px-[40px] px-5 ${data.cardClass} `}>
       <div className="flex justify-between">
-         <h3 className="flex gap-2 items-center berlin mb-8 text-[#1E1E1E] md:text-[36px] text-[24px] text-[400]">{data.title}</h3>
+         <h3 className="flex gap-2 items-center berlin mb-[24px] text-[#1E1E1E] md:text-[36px] text-[24px] text-[400]">{data.title}</h3>
           {
             data.btnlink && (
-              <Button btntext="View All"/>
+              <Button btntext="View All" btnlink={data.btnlink} btnclass={data.btnclass}/>
             )
           }
       </div>

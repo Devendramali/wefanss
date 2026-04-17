@@ -10,6 +10,8 @@ import Button from '../component/Button'
 const UserDashboard = () => {
   const ViewedCelebrities = {
   title:"Recently Viewed Celebrities",
+  btnlink:"/",
+  btnclass:"h-fit text-[20px] primary-font !font-[500] !px-[24px] !py-[14px]",
   slider:[
         {
     id: 1,
@@ -76,6 +78,7 @@ const UserDashboard = () => {
   const FollowedCelebrities = {
   title:"Followed Celebrities",
   btnlink:"/",
+    btnclass:"h-fit text-[20px] primary-font !font-[500] !px-[24px] !py-[14px]",
   cardClass:"py-[70px]",
   slider:[
         {
@@ -143,6 +146,7 @@ const UserDashboard = () => {
   const Collectionbox = {
   title:"Followed Celebrities",
   btnlink:"/",
+    btnclass:"h-fit text-[20px] primary-font !font-[500] !px-[24px] !py-[14px]",
   cardClass:"py-[70px] pt-[20px]",
   slider:[
         {
@@ -294,10 +298,10 @@ const UserDashboard = () => {
           <div className="flex justify-between">
          <h3 className="flex gap-2 items-center berlin mb-8 text-[#1E1E1E] md:text-[36px] text-[24px] text-[400]">Latest Feed</h3>
        
-              <Button btntext="Explore Feed"/>
+              <Button btntext="Explore Feed"   btnclass="h-fit text-[20px] primary-font !font-[500] !px-[24px] !py-[14px]"/>
               </div>
          
-        <div className='flex flex-wrap gap-4'>
+        <div className='flex flex-wrap justify-between gap-4'>
            {
         items.map((mediaItem) => (
               <Card3 key={mediaItem.id}  mediaItem={mediaItem}/>
@@ -305,7 +309,7 @@ const UserDashboard = () => {
       }
         </div>
          
-        <div className='flex flex-wrap gap-4 mt-6'>
+        <div className='flex flex-wrap justify-between gap-4 mt-6'>
            {
         items2.map((mediaItem) => (
               <Card3 key={mediaItem.id}  mediaItem={mediaItem}/>
@@ -313,21 +317,7 @@ const UserDashboard = () => {
       }
         </div>
     </div>
-     <div className='max-w-[1352px] m-auto px-[20px] py-[30px] pt-0'>
-       <div className="flex justify-between mb-4">
-         <h3 className="flex gap-2 items-center berlin  text-[#1E1E1E] md:text-[36px] text-[24px] text-[400]">Trivia</h3>
-       
-              <Button btntext="Explore Feed"/>
-              </div>
-         
-        <div className='flex flex-wrap gap-4'>
-           {
-        Trivia.map((mediaItem) => (
-              <Card3 key={mediaItem.id}  mediaItem={mediaItem}/>
-          ))
-      }
-        </div>
-     </div>
+ 
 
     </div>
   )

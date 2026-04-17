@@ -16,7 +16,7 @@ const Collection = ({data}) => {
          <h3 className="flex gap-2 items-center berlin mb-8 text-[#1E1E1E] md:text-[36px] text-[24px] text-[400]">{data.title}</h3>
           {
             data.btnlink && (
-              <Button btntext="View All"/>
+              <Button btntext="View All" btnclass={data.btnclass} btnlink={data.btnlink}/>
             )
           }
       </div>

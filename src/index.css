@@ -132,7 +132,14 @@ background: linear-gradient(266.11deg, rgba(0, 0, 0, 0.9) 45.25%, rgba(0, 0, 0, 
 
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
 /* **************************************** */
 .slider1 .swiper-slide {
   transition: all 0.4s ease;
@@ -312,6 +319,77 @@ background: #00000066;
   height: 500px;
 }
 
+@media (max-width:1024px) {
+  .sidemulink{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+  .treviawiidth{
+    width: 100%;
+  }
+  .sidemulink a span{
+    display: none;
+  }
+  .paddmone{
+    padding: 0;
+    gap: 0;
+  }
+  .sidemulink a svg{
+    margin: 0;
+  }
+  .sidemulink a{
+    width: fit-content;
+  }
+  .bodyslide{
+    height: 100%;
+  }
+  .slidebarboyfull{
+    width: 100%;
+    position: relative;
+  }
+  .maomcontflex{
+    flex-direction: column;
+  }
+  .electopnbox .flexbox1 a br{
+    display: none;
+  }
+  .electopnbox .flexbox1 a div div{
+    width: fit-content;
+  }
+  .electopnbox .flexbox1 a div{
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+  }
+  .electopnbox .flexbox1 a{
+    width: 100%;
+    height: 52px;
+    border-radius: 8px;
+  }
+  .electopnbox .flexbox1 > div{
+    padding: 0;
+    border: none;
+  }
+  .electopnbox .flexbox1{
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+    gap: 16px;
+    padding: 16px;
+
+  }
+}
+@media (max-width:600px) {
+.sidemulink{
+  gap: 10px;
+}
+.sidemulink a{
+  padding: 10px;
+}
+}
 @media (max-width:480px) {
   .syncslider .swiper-slide ,
 .syncslider .swiper-slide.swiper-slide-active > div{
