@@ -4,6 +4,7 @@ import Button from "../component/Button";
 import CatogeriesCard from "../component/catogeries/CatogeriesCard";
 import Card2 from "../component/card/Card2";
 import { NavLink } from "react-router-dom";
+import img12 from "../../public/feed/1.png"
 
 
 const Sidebar = () => {
@@ -145,7 +146,7 @@ const FeedCard = () => {
       </h2>
 
       <img
-        src="../../public/feed/1.png"
+        src={img12}
         alt=""
         className="rounded-lg my-[16px] w-full"
       />
