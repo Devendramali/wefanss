@@ -198,7 +198,17 @@ const Trending = () => {
 };
 
 export default  function ExplorerFeed() {
-  return (
+  return (<>
+    <div className=''>
+    <ul className='flex gap-2 px-6 py-2 bg-[#4285F4]'>
+      <li className='text-[#fff] ptimary-font text-[12px]'><a href="#!">Home</a></li>
+      <li className='text-[#fff] ptimary-font text-[12px]'>/</li>
+      <li className='text-[#fff] ptimary-font text-[12px]'>Explorer</li>
+    </ul>
+
+
+  </div>
+  
     <div className=" md:h-screen bodyslide p-4 flex flex-col overflow-hidden ">
     
 
@@ -222,7 +232,7 @@ export default  function ExplorerFeed() {
           <Trending />
         </div>
       </div>
-    </div>
+    </div></>
   );
 }
 
@@ -251,7 +261,16 @@ export function Profilepage() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-  return (
+  return (<>
+    <div className=''>
+    <ul className='flex gap-2 px-6 py-2 bg-[#4285F4]'>
+      <li className='text-[#fff] ptimary-font text-[12px]'><a href="#!">Home</a></li>
+      <li className='text-[#fff] ptimary-font text-[12px]'>/</li>
+      <li className='text-[#fff] ptimary-font text-[12px]'>Profile Page</li>
+    </ul>
+
+
+  </div>
        <div className=" md:h-screen bodyslide p-4 flex flex-col overflow-hidden ">
     
 
@@ -400,6 +419,7 @@ export function Profilepage() {
       
       </div>
     </div>
+    </>
   );
 }
 
@@ -721,7 +741,16 @@ export function FollowedCelebrities() {
 
       ];
   
-  return (
+  return (<>
+    <div className=''>
+    <ul className='flex gap-2 px-6 py-2 bg-[#4285F4]'>
+      <li className='text-[#fff] ptimary-font text-[12px]'><a href="#!">Home</a></li>
+      <li className='text-[#fff] ptimary-font text-[12px]'>/</li>
+      <li className='text-[#fff] ptimary-font text-[12px]'>Followed Celebrities</li>
+    </ul>
+
+
+  </div>
       <div className=" md:h-screen bodyslide p-4 flex flex-col overflow-hidden ">
     
 
@@ -749,7 +778,7 @@ export function FollowedCelebrities() {
 
       
       </div>
-    </div>
+    </div></>
   );
 }
 
@@ -828,7 +857,16 @@ export function MyCollections() {
 }
 
   
-  return (
+  return (<>
+    <div className=''>
+    <ul className='flex gap-2 px-6 py-2 bg-[#4285F4]'>
+      <li className='text-[#fff] ptimary-font text-[12px]'><a href="#!">Home</a></li>
+      <li className='text-[#fff] ptimary-font text-[12px]'>/</li>
+      <li className='text-[#fff] ptimary-font text-[12px]'>My Collections</li>
+    </ul>
+
+
+  </div>
       <div className=" md:h-screen bodyslide p-4 flex flex-col overflow-hidden ">
     
 
@@ -858,7 +896,7 @@ export function MyCollections() {
 
       
       </div>
-    </div>
+    </div></>
   );
 }
 
@@ -1048,7 +1086,16 @@ export function CollectionsDetails() {
 
       ];
   
-  return (
+  return (<>
+    <div className=''>
+    <ul className='flex gap-2 px-6 py-2 bg-[#4285F4]'>
+      <li className='text-[#fff] ptimary-font text-[12px]'><a href="#!">Home</a></li>
+      <li className='text-[#fff] ptimary-font text-[12px]'>/</li>
+      <li className='text-[#fff] ptimary-font text-[12px]'>Collections Details</li>
+    </ul>
+
+
+  </div>
     <div className=" md:h-screen bodyslide p-4 flex flex-col overflow-hidden ">
     
 
@@ -1077,14 +1124,23 @@ export function CollectionsDetails() {
 
       
       </div>
-    </div>
+    </div></>
   );
 }
 
 
 export function ChangePassword() {
  
-  return (
+  return (<>
+    <div className=''>
+    <ul className='flex gap-2 px-6 py-2 bg-[#4285F4]'>
+      <li className='text-[#fff] ptimary-font text-[12px]'><a href="#!">Home</a></li>
+      <li className='text-[#fff] ptimary-font text-[12px]'>/</li>
+      <li className='text-[#fff] ptimary-font text-[12px]'>Change Password</li>
+    </ul>
+
+
+  </div>
     <div className=" md:h-screen bodyslide p-4 flex flex-col overflow-hidden ">
     
 
@@ -1131,6 +1187,6 @@ export function ChangePassword() {
 
       
       </div>
-    </div>
+    </div></>
   );
 }

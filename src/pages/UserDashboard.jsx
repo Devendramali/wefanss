@@ -10,9 +10,7 @@ import Button from '../component/Button'
 const UserDashboard = () => {
   const ViewedCelebrities = {
   title:"Recently Viewed Celebrities",
-  btnlink:"/",
-  btnclass:"h-fit text-[20px] primary-font !font-[500] !px-[24px] !py-[14px]",
-  slider:[
+ slider:[
         {
     id: 1,
     name: "Chris Evans",
@@ -78,7 +76,7 @@ const UserDashboard = () => {
   const FollowedCelebrities = {
   title:"Followed Celebrities",
   btnlink:"/",
-    btnclass:"h-fit text-[20px] primary-font !font-[500] !px-[24px] !py-[14px]",
+    btnclass:"h-fit text-[20px] primary-font !font-[500] !px-[24px] !py-[10px]",
   cardClass:"py-[70px]",
   slider:[
         {
@@ -146,7 +144,7 @@ const UserDashboard = () => {
   const Collectionbox = {
   title:"Followed Celebrities",
   btnlink:"/",
-    btnclass:"h-fit text-[20px] primary-font !font-[500] !px-[24px] !py-[14px]",
+   btnclass:"h-fit text-[20px] primary-font !font-[500] !px-[24px] !py-[10px]",
   cardClass:"py-[70px] pt-[20px]",
   slider:[
         {
@@ -298,7 +296,7 @@ const UserDashboard = () => {
           <div className="flex justify-between">
          <h3 className="flex gap-2 items-center berlin mb-8 text-[#1E1E1E] md:text-[36px] text-[24px] text-[400]">Latest Feed</h3>
        
-              <Button btntext="Explore Feed"   btnclass="h-fit text-[20px] primary-font !font-[500] !px-[24px] !py-[14px]"/>
+              <Button btntext="Explore Feed"   btnclass="h-fit text-[20px] primary-font !font-[500] !px-[24px] !py-[10px]"/>
               </div>
          
         <div className='flex flex-wrap justify-between gap-4'>

@@ -1,6 +1,7 @@
 import { Bookmark, LinkIcon, Maximize2, Share } from 'lucide-react';
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
+import { MyContext } from '../hooks/MyContext ';
 
 const Profilecard = ({ ActorData }) => {
     const [Quick, setQuick] = useState(false);
@@ -9,6 +10,8 @@ const Profilecard = ({ ActorData }) => {
     const [createcollecton, setcreatecollecton] = useState(false);
     const [saveprofile, setsaveprofile] = useState(false);
     const [follow, setfollow] = useState(false);
+
+    const {setActive} = useContext(MyContext)
     return (
         <div className="md:flex hidden  gap-6 relative  rounded-2xl ">
             <img
@@ -293,7 +296,7 @@ const Profilecard = ({ ActorData }) => {
 
             </div>
             <div className="relative">
-                <Link onClick={() => setQuick(!Quick)} className="absolute h-[42px] w-[42px] flex justify-center items-center rounded-[50%] border border-1 border-[#fff] bg-[#FFFFFF33] share top-2 right-2 z-10">
+                <Link onClick={() => setActive(prev => !prev)} className="absolute h-[42px] w-[42px] flex justify-center items-center rounded-[50%] border border-1 border-[#fff] bg-[#FFFFFF33] share top-2 right-2 z-10">
                     <Maximize2 height={18} color='#fff'/>
                 </Link>
              

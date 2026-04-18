@@ -20,13 +20,13 @@ const MoviesSlider = ({ data }) => {
 
   return (
     <>
-      <div className={`py-[60px] md:px-[30px] px-5 ${data?.mainclass}`}>
+      <div className={`py-[40px] md:px-[30px] px-5 ${data?.mainclass}`}>
         <h3 className="berlin text-[36px] text-[#1E1E1E]">{data?.title}</h3>
 
         <div className="w-full mt-[30px]">
           <Swiper
             slidesPerView={3}
-            spaceBetween={30}
+            spaceBetween={16}
             loop={true}
             centeredSlides={false}
             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
@@ -246,7 +246,7 @@ const MoviesSlider = ({ data }) => {
                                            
                                             <p className="text-[#F5F5F5] text-[16px] mt-6">{selectedItem1.desc}</p>
                                             <div className="flex gap-4 mt-6">
-                                                <button onClick={() => setOpen1(true)} className="text-[#F3F3F3] primary-font font-[600] rounded-[4px] border flex items-center justify-center w-fit border-[#D9D9D9] h-[48px] px-[20px]">More Details</button>
+                                                <button onClick={() => setOpen1(true)} className="text-[#F3F3F3] primary-font font-[600] rounded-[4px] border flex items-center justify-center w-fit border-[#D9D9D9] h-[48px] px-[16px]">More Details</button>
                                                 <Link className="text-[#F3F3F3] bg-[#4285F4] gap-2 primary-font font-[600] rounded-[50px] border flex items-center justify-end w-fit border-[#4285F4] h-[48px] px-[2px] pl-[20px]">Watch on <svg width="47" height="45" viewBox="0 0 47 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <rect width="46.4" height="44.8" rx="22.4" fill="white" fill-opacity="0.8" />
                                                     <g clip-path="url(#clip0_1130_1498)">

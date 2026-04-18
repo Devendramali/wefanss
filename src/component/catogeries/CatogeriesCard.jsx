@@ -32,11 +32,11 @@ const CatogeriesCard = ({ data }) => {
 
         {/* Content */}
         <div className="px-1 space-y-2">
-          <h2 className="text-[16px] font-[700] text-[#1E1E1E]">
+          <h2 className="text-[32px] font-[700] berlin text-[#1E1E1E]">
             {data.name}
           </h2>
 
-          <p className="text-[#757575] text-[16px] flex justify-between">
+          <p className="text-[#757575] text-[16px] primary-font font-[500] flex justify-between">
             <span>{data.totalMovies}+ Movies</span>
             <span>{data.totalAwards}+ Awards</span>
           </p>

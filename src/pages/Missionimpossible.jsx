@@ -141,7 +141,7 @@ const MoviesCotext = {
 
     Adventure: {
         title: "Adventure",
-        mainclass: "bg-[#fff]",
+        mainclass: "bg-[#F4FBFF]",
         type: "suggestion",
         movies: [
             {
@@ -450,7 +450,7 @@ const MoviesCotext = {
     },
     Action: {
         title: "Action",
-        mainclass: "bg-[#F4FBFF]",
+        mainclass: "bg-[#fff]",
         type: "suggestion",
         movies: [
             {

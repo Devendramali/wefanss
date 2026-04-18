@@ -16,6 +16,7 @@ import ActorTabs from "./ActorTabs";
 import Profilecard from "../card/Profilecard";
 import MobileProfileCard from "../card/MobileProfileCard";
 // import { ChevronDown } from "lucide-react";
+import { MyContext } from "../hooks/MyContext ";
 
 export const sidebarData = [
   {
@@ -438,12 +439,14 @@ const media = [
 
 
 export default function AkshayProfile() {
+  const [active, setActive] = useState(false)
   const [openIndexes, setOpenIndexes] = useState(
     sidebarData.map((_, index) => index) // all open by default
   );
   const [openRight, setOpenRight] = useState(0);
   const [openShare, setOpenShare] = useState(false);
   const [follow, setfollow] = useState(false);
+  
 
 
   const toggleRight = (id) => {
@@ -462,12 +465,13 @@ export default function AkshayProfile() {
 
 
   return (
+    <MyContext.Provider value={{ active, setActive }}>
     <div
       className="py-[20px] px-[0px] bg-cover bg-center"
       style={{ backgroundImage: 'url("/profilebg.png")' }}
     >
 
-      <div className="grid grid-cols-12 gap-4 px-2" >
+      <div className={` gap-4 px-2 ${active ? "boxvtive":"smallxod grid grid-cols-12"}`}  >
          <MobileProfileCard ActorData={ActorData}/>
         <div className="col-span-12  md:hidden block">
            {profileData.map((section, index) => {
@@ -523,7 +527,7 @@ export default function AkshayProfile() {
         </div>
 
         {/* LEFT SIDEBAR */}
-        <div className="md:col-span-3  col-span-12 md:px-[16px] px-[10px] py-[20px] h-fit  rounded-[8px] space-y-4 bg-[#fff]">
+        <div className="md:col-span-3 leftbox  col-span-12 md:px-[16px] px-[10px] py-[20px] h-fit  rounded-[8px] space-y-4 bg-[#fff]">
 
           {sidebarData.map((section, index) => {
             const isOpen = openIndexes.includes(index);
@@ -605,7 +609,7 @@ export default function AkshayProfile() {
 
 
         {/* CENTER CONTENT */}
-        <div className="md:col-span-6 col-span-12 md:px-2 px-0 space-y-6">
+        <div className={`${active ? "max-w-[70%] m-auto":"md:col-span-6 col-span-12"} md:px-2 px-0 space-y-6`}>
           
 
           <Profilecard ActorData={ActorData}/>
@@ -874,7 +878,7 @@ export default function AkshayProfile() {
         </div>
 
         {/* RIGHT SIDEBAR */}
-        <div className="md:col-span-3 h-fit col-span-12 md:px-[0px] pt-[10px] rounded-[8px] space-y-4 bg-[#fff]">
+        <div className="md:col-span-3 h-fit rightbox col-span-12 md:px-[0px] pt-[10px] rounded-[8px] space-y-4 bg-[#fff]">
           {profileData.map((section, index) => {
             const isOpen = openRight === index;
 
@@ -966,5 +970,6 @@ export default function AkshayProfile() {
 
       </div>
     </div>
+    </MyContext.Provider>
   );
 }

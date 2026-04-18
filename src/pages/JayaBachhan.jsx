@@ -17,7 +17,7 @@ import Profilecard from "../component/card/Profilecard";
 import Elections from "../component/profile/Elections";
 import MobileProfileCard from "../component/card/MobileProfileCard";
 // import { ChevronDown } from "lucide-react";
-
+import { MyContext } from "../component/hooks/MyContext ";
 export const sidebarData = [
   {
     id: 1,
@@ -635,7 +635,7 @@ export default function JayaBachhan() {
   const [openRight, setOpenRight] = useState(0);
     const [openShare, setOpenShare] = useState(false);
   const [follow, setfollow] = useState(false);
-
+ const [active, setActive] = useState(false)
   const toggleRight = (id) => {
     setOpenRight(openRight === id ? null : id);
   };
@@ -651,7 +651,7 @@ export default function JayaBachhan() {
 
 
 
-  return (<>
+  return (<MyContext.Provider value={{ active, setActive }}>
   <div className=''>
           <ul className='flex gap-2 px-6 py-2 bg-[#4285F4]'>
               <li className='text-[#fff] ptimary-font text-[12px]'><a href="#!">Home</a></li>
@@ -671,64 +671,9 @@ export default function JayaBachhan() {
     >
       
 
-      <div className="grid grid-cols-12 gap-4  px-2" >
+      <div className={` gap-4 px-2 ${active ? "boxvtive":"smallxod grid grid-cols-12"}`} >
       
-          {/* <div className="flex  gap-2 relative  rounded-2xl ">
-            <img
-              src="/actor/Jaya Bachchan.png"
-              className="w-[124px] h-[186px] rounded-[8px] object-cover"
-              alt=""
-            />
-            <div className="flex flex-col justify-between h-auto">
-              <div>
-                {
-                  ActorData.Roles.map((item, index) => (
-                    <span
-                      key={index}
-                      className={`text-[12px] text-[#fff] primary-font relative inline-flex items-center ${index !== ActorData.Roles.length - 1
-                        ? "mr-2 after:content-[''] after:inline-block after:h-[4px] after:w-[4px] after:bg-white after:rounded-full after:ml-2"
-                        : ""
-                        }`}
-                    >
-                      {item}
-                    </span>
-                  ))
-                }
-                <h1 className="text-3xl mt-1 font-bold text-[#fff] berlin">{ActorData.Name}</h1>
-
-                {
-                  ActorData.Languages.map((item, index) => (
-                    <span
-                      key={index}
-                      className={`text-[12px] text-[#fff] primary-font relative inline-flex items-center ${index !== ActorData.Languages.length - 1
-                        ? "mr-2 after:content-[''] after:inline-block after:h-[4px] after:w-[4px] after:bg-white after:rounded-full after:ml-2"
-                        : ""
-                        }`}
-                    >
-                      {item}
-                    </span>
-                  ))
-                }
-
-                
-               <div className="mt-6 flex flex-wrap justify-start items-center gap-[5px]">
-                  <Link className="px-5 py-2 flex w-fit rounded-[24px] primary-font text-[16px] text-[#fff] items-center gap-2 bg-[#4285F4]">follow <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 1V15M1 8H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg></Link>
-                  <Link className="px-4 h-[42px] py-2 flex w-fit rounded-[24px] primary-font text-[16px] text-[#fff] items-center gap-2 bg-[#fff]"> <Bookmark color="#4285F4" /></Link>
-                  <Link className="px-4 h-[42px] py-2 flex w-fit rounded-[24px] primary-font text-[16px] text-[#fff] items-center gap-2 bg-[#fff]"> <Share color="#4285F4" /></Link>
-                </div>
-
-               
-              </div>
-
-
-            </div>
-           
-          </div>
-          <div className="mt-3">
-            <p className="line-clamp-4 text-[16px] primary-font text-[#fff]">Jaya Bachchan (born September 9, 1967, Amritsar, Punjab, India) is an Indian actor and producer, chiefly known for his work in Bollywood comedies and action films. Kumar, whose career spans more than three decades, has starred in more than 100 films more    and is one of the most popular Bollywood actors in India. He was awarded the Padma Shri, one of the highest Indian civilian honors, in 2009.</p>
-          </div> */}
+          
           <MobileProfileCard ActorData={ActorData}/>
       
             <div className="col-span-12  md:hidden block">
@@ -785,7 +730,7 @@ export default function JayaBachhan() {
         </div>
 
         {/* LEFT SIDEBAR */}
-        <div className="md:col-span-3 col-span-12 md:px-[10px] px-[10px] py-[20px] h-fit rounded-[8px] space-y-4 bg-[#fff]">
+        <div className="md:col-span-3 leftbox col-span-12 md:px-[10px] px-[10px] py-[20px] h-fit rounded-[8px] space-y-4 bg-[#fff]">
 
           {sidebarData.map((section, index) => {
             const isOpen = openIndexes.includes(index);
@@ -896,7 +841,7 @@ export default function JayaBachhan() {
 
 
         {/* CENTER CONTENT */}
-        <div className="md:col-span-6 col-span-12 space-y-6">
+        <div className={`${active ? "max-w-[70%] m-auto":"md:col-span-6 col-span-12"} md:px-2 px-0 space-y-6`}>
           {/*bg-white/10 backdrop-blur-lg shadow-xl*/}
 
           <Profilecard ActorData={ActorData}/>
@@ -1167,7 +1112,7 @@ export default function JayaBachhan() {
         </div>
 
         {/* RIGHT SIDEBAR */}
-        <div className="md:col-span-3 h-fit col-span-12 pt-[10px]  rounded-[8px] space-y-4 bg-[#fff]">
+        <div className="md:col-span-3 rightbox h-fit col-span-12 pt-[10px]  rounded-[8px] space-y-4 bg-[#fff]">
          
 
 
@@ -1269,6 +1214,6 @@ export default function JayaBachhan() {
 
 
       </div>
-    </div></>
+    </div></MyContext.Provider>
   );
 }

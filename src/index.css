@@ -318,7 +318,10 @@ background: #00000066;
 .syncslider .swiper-slide.swiper-slide-active > div{
   height: 500px;
 }
-
+.boxvtive .leftbox,
+.boxvtive .rightbox{
+  display: none;
+}
 @media (max-width:1024px) {
   .sidemulink{
     display: flex;
@@ -336,6 +339,10 @@ background: #00000066;
     padding: 0;
     gap: 0;
   }
+  .boxvtive .leftbox,
+.boxvtive .rightbox{
+  display: block;
+}
   .sidemulink a svg{
     margin: 0;
   }

@@ -17,6 +17,7 @@ import Elections from "../component/profile/Elections";
 import Profilecard from "../component/card/Profilecard";
 import MobileProfileCard from "../component/card/MobileProfileCard";
 // import { ChevronDown } from "lucide-react";
+import { MyContext } from "../component/hooks/MyContext ";
 
 export const sidebarData = [
   {
@@ -566,6 +567,7 @@ export default function EknathShinde() {
   const [openRight, setOpenRight] = useState(0);
   const [openShare, setOpenShare] = useState(false);
   const [follow, setfollow] = useState(false);
+   const [active, setActive] = useState(false)
 
   const toggleRight = (id) => {
     setOpenRight(openRight === id ? null : id);
@@ -582,7 +584,9 @@ export default function EknathShinde() {
 
 
 
-  return (<><div className=''>
+  return ( 
+  <MyContext.Provider value={{ active, setActive }}>
+  <div className=''>
     <ul className='flex gap-2 px-6 py-2 bg-[#4285F4]'>
       <li className='text-[#fff] ptimary-font text-[12px]'><a href="#!">Home</a></li>
       <li className='text-[#fff] ptimary-font text-[12px]'>/</li>
@@ -601,7 +605,7 @@ export default function EknathShinde() {
     >
 
 
-      <div className="grid grid-cols-12 px-2 gap-4" >
+      <div className={` gap-4 px-2 ${active ? "boxvtive":"smallxod grid grid-cols-12"}`}  >
              <MobileProfileCard ActorData={ActorData}/>
         <div className="col-span-12  md:hidden block">
           {profileData.map((section, index) => {
@@ -657,7 +661,7 @@ export default function EknathShinde() {
         </div>
 
         {/* LEFT SIDEBAR */}
-        <div className="md:col-span-3  col-span-12 md:px-[16px] px-2 py-[20px] h-fit rounded-[8px] space-y-4 bg-[#fff]">
+        <div className="md:col-span-3 leftbox col-span-12 md:px-[16px] px-2 py-[20px] h-fit rounded-[8px] space-y-4 bg-[#fff]">
 
           {sidebarData.map((section, index) => {
             const isOpen = openIndexes.includes(index);
@@ -767,7 +771,7 @@ export default function EknathShinde() {
 
 
         {/* CENTER CONTENT */}
-        <div className="md:col-span-6 col-span-12 space-y-6">
+        <div className={`${active ? "max-w-[70%] m-auto":"md:col-span-6 col-span-12"} md:px-2 px-0 space-y-6`}>
           {/*bg-white/10 backdrop-blur-lg shadow-xl*/}
 
           <Profilecard ActorData={ActorData} />
@@ -1039,7 +1043,7 @@ export default function EknathShinde() {
         </div>
 
         {/* RIGHT SIDEBAR */}
-        <div className="md:col-span-3 h-fit col-span-12 md:px-[0px] pt-[10px] rounded-[8px] space-y-4 bg-[#fff]">
+        <div className="md:col-span-3 rightbox h-fit col-span-12 md:px-[0px] pt-[10px] rounded-[8px] space-y-4 bg-[#fff]">
             {profileData.map((section, index) => {
             const isOpen = openRight === index;
 
@@ -1142,6 +1146,7 @@ export default function EknathShinde() {
 
 
       </div>
-    </div></>
+    </div> 
+    </MyContext.Provider >
   );
 }

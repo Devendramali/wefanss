@@ -142,12 +142,12 @@ const [open, setOpen] = useState(false);
                                         }
                                        
                                         <p className="text-[#F5F5F5] text-[16px] mt-6">{item.dis}</p>
-                                        <div className="flex gap-4 mt-6">
-                                            <button   onClick={() => {
+                                        <div className="flex gap-4 mt-6 items-center">
+                                            <Link   onClick={() => {
     setSelectedItem(item);
     setOpen(true);
-  }} className="text-[#F3F3F3] primary-font font-[600] rounded-[4px] border flex items-center justify-center w-fit border-[#D9D9D9] h-[48px] px-[20px]">More Details</button>
-                                            <Link className="text-[#F3F3F3] bg-[#4285F4] gap-2 primary-font font-[600] rounded-[50px] border flex items-center justify-end w-fit border-[#4285F4] h-[48px] px-[2px] pl-[20px]">Watch on <svg width="47" height="45" viewBox="0 0 47 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+  }} className="text-[#F3F3F3] primary-font font-[600] rounded-[4px] border flex items-center hover:curser-pointer justify-center w-fit border-[#D9D9D9] h-[48px] px-[16px]">More Details</Link>
+                                            <Link className="text-[#F3F3F3] bg-[#4285F4] gap-2 primary-font font-[600] rounded-[50px] border flex items-center justify-end w-fit border-[#4285F4] p-[4px] pl-[20px]">Watch on <svg width="47" height="45" viewBox="0 0 47 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <rect width="46.4" height="44.8" rx="22.4" fill="white" fill-opacity="0.8" />
                                                 <g clip-path="url(#clip0_1130_1498)">
                                                     <path d="M18.7682 14.7521C17.3282 13.9281 16.1602 14.6001 16.1602 16.2641V28.5361C16.1602 30.2001 17.3282 30.8721 18.7682 30.0481L29.4962 23.8961C30.9362 23.0961 30.9362 21.7281 29.4962 20.9041L18.7682 14.7521Z" fill="#4285F4" />
@@ -301,9 +301,9 @@ const [open, setOpen] = useState(false);
                                         }
                                        
                                         <p className="text-[#F5F5F5] text-[16px] mt-6">{selectedItem.dis}</p>
-                                        <div className="flex gap-4 mt-6">
-                                            <button onClick={() => setOpen(true)} className="text-[#F3F3F3] primary-font font-[600] rounded-[4px] border flex items-center justify-center w-fit border-[#D9D9D9] h-[48px] px-[20px]">More Details</button>
-                                            <Link className="text-[#F3F3F3] bg-[#4285F4] gap-2 primary-font font-[600] rounded-[50px] border flex items-center justify-end w-fit border-[#4285F4] h-[48px] px-[2px] pl-[20px]">Watch on <svg width="47" height="45" viewBox="0 0 47 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <div className="flex gap-4 mt-6 items-center">
+                                            <button onClick={() => setOpen(true)} className="text-[#F3F3F3] primary-font font-[600] rounded-[4px] border flex items-center justify-center w-fit border-[#D9D9D9] h-[48px] px-[16px]">More Details</button>
+                                            <Link className="text-[#F3F3F3] bg-[#4285F4] gap-2 primary-font font-[600] rounded-[50px] border flex items-center justify-end w-fit border-[#4285F4]  p-[4px] pl-[20px]">Watch on <svg width="47" height="45" viewBox="0 0 47 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <rect width="46.4" height="44.8" rx="22.4" fill="white" fill-opacity="0.8" />
                                                 <g clip-path="url(#clip0_1130_1498)">
                                                     <path d="M18.7682 14.7521C17.3282 13.9281 16.1602 14.6001 16.1602 16.2641V28.5361C16.1602 30.2001 17.3282 30.8721 18.7682 30.0481L29.4962 23.8961C30.9362 23.0961 30.9362 21.7281 29.4962 20.9041L18.7682 14.7521Z" fill="#4285F4" />
