@@ -21,19 +21,19 @@ const Trivia = () => {
   }, []);
 
   const options = [
-    "Personal Life",
-    "Movies",
-    "Awards",
-    "Career"
+    "Filter",
+    "Filter",
+    "Filter",
+    "Filter"
   ];
   return (
     <div className="mt-4 md:overflow-y-auto h-screen  no-scrollbar">
        {/* ✅ CUSTOM SELECT */}
-      <div className="filter relative w-full mb-[24px]" ref={dropdownRef}>
+      <div className="filter relative w-fit mb-[24px]" ref={dropdownRef}>
         
         <button
           onClick={() => setOpen(!open)}
-          className="bg-[#4285F4] px-[24px] py-[12px]  primary-font font-semibold text-white rounded-[8px] flex items-center"
+          className="bg-[#4285F4] px-[24px] hover:cursor-pointer py-[12px]  primary-font font-semibold text-white rounded-[8px] flex items-center"
         >
           {selected}
           <svg
@@ -50,7 +50,7 @@ const Trivia = () => {
 
         {/* Dropdown */}
         {open && (
-          <ul className="absolute left-0 mt-2 w-full bg-white rounded-[8px] shadow-lg overflow-hidden z-50">
+          <ul className="absolute left-0 mt-2 p-1 w-full bg-white rounded-[8px] shadow-lg overflow-hidden z-50">
             {options.map((item, index) => (
               <li
                 key={index}
@@ -58,7 +58,7 @@ const Trivia = () => {
                   setSelected(item);
                   setOpen(false);
                 }}
-                className="px-4 py-2 text-[14px] primary-font cursor-pointer hover:bg-gray-100"
+                className="bg-[#fff] px-[24px] py-[12px] berlin text-[16px] font-[300] hover:bg-[#F4FBFF] text-center hover:cursor-pointer flex justify-center text-[#000] rounded-[8px] flex items-center"
               >
                 {item}
               </li>
